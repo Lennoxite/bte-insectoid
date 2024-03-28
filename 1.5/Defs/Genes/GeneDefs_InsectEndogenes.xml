@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--MEGASPIDER-->
+
+  
+  <GeneDef ParentName="GeneTailBase">
+    <defName>BTEIst_MegaspiderTail</defName>
+    <label>megaspider thorax</label>
+    <description>Carriers of this gene grow a megaspider thorax.</description>
+    <iconPath>Genes/Icons/BTEIst_MegaspiderTailIcon</iconPath>
+    <iconColor>(0.75, 0.75, 0.75)</iconColor>
+    <displayOrderInCategory>3</displayOrderInCategory>
+    <displayCategory>BTE_Insectoid</displayCategory>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>0</biostatMet>
+	<renderNodeProperties>
+      <li>
+        <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+        <texPath>Things/Pawn/Humanlike/BodyAttachments/MegaspiderTail/MegaspiderTail</texPath>
+        <colorType>Skin</colorType>
+        <overrideMeshSize>(1, 1)</overrideMeshSize>
+        <parentTagDef>Body</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+          <defaultData>
+            <layer>-2</layer>
+          </defaultData>
+          <dataNorth>
+            <offset>(0, 0, -0.25)</offset>
+            <layer>90</layer>
+          </dataNorth>
+          <dataSouth>
+            <offset>(0, 0, -0.25)</offset>
+          </dataSouth>
+          <dataEast>
+            <offset>(-0.5, 0, -0.15)</offset>
+          </dataEast>
+          <dataWest>
+            <offset>(0.5, 0, -0.15)</offset>
+          </dataWest>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+	</GeneDef>
+
+  <GeneDef ParentName="GeneJawBase">
+	<defName>BTEIst_MegaspiderHead</defName>
+	<label>megaspider head</label>
+	<description>Carriers of this gene have a sharp megaspider head.</description>
+	<iconPath>Genes/Icons/BTEIst_MegaspiderHeadIcon</iconPath>
+	<forcedHeadTypes>
+	  <li>BTEIst_MegaspiderHead</li>
+	</forcedHeadTypes>
+	<displayCategory>BTE_Insectoid</displayCategory>
+	<displayOrderInCategory>5</displayOrderInCategory>
+	<renderNodeProperties>
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <parentTagDef>Head</parentTagDef>
+        <colorType>Skin</colorType>
+        <useRottenColor>true</useRottenColor>
+        <useSkinShader>true</useSkinShader>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <texPath>Things/Pawn/Humanlike/Heads/Genes/MegaspiderCrest/MegaspiderCrest</texPath>
+        <narrowCrownHorizontalOffset>0.03</narrowCrownHorizontalOffset>
+        <drawData>
+          <defaultData>
+            <layer>70</layer>
+          </defaultData>
+          <dataEast>
+		  <offset>(0, 0, 0)</offset>
+          </dataEast>
+          <dataWest>
+		  <offset>(0, 0, 0)</offset>
+          </dataWest>
+          <dataSouth>
+		  <offset>(0, 0, 0)</offset>
+            <layer>6</layer>
+          </dataSouth>
+          <dataNorth>
+		  <offset>(0, 0, 0)</offset>
+          </dataNorth>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+  
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>BTEIst_MegaspiderHead</defName>
+    <graphicPath>Things/Pawn/Humanlike/Heads/Genes/MegaspiderHead/MegaspiderHead</graphicPath>
+    <randomChosen>false</randomChosen>
+    <gender>None</gender>
+    <requiredGenes>
+      <li>BTEIst_MegaspiderHead</li>
+    </requiredGenes>
+    <eyeOffsetEastWest>(0.15, 0, 0.175)</eyeOffsetEastWest>
+  </HeadTypeDef>
+  
+
+  <GeneDef ParentName="GeneSkinColorOverride">
+    <defName>BTEIst_MegaspiderSkin</defName>
+    <label>megaspider skin</label>
+    <description>Carriers of this gene produce a pigment that turns their skin a color similar to that of megaspiders.</description>
+    <skinColorOverride>(154,125,94)</skinColorOverride>
+	<displayCategory>BTE_Insectoid</displayCategory>
+    <displayOrderInCategory>99</displayOrderInCategory>
+  </GeneDef>
+  <GeneDef>
+    <defName>BTEMIst_JellyProducer</defName>
+    <label>chemfuel generator</label>
+    <description>Carriers of this gene produce insect jelly, which they must regurgitate out every so often.</description>
+    <geneClass>BTE.Gene_ExcessMilkProduction</geneClass>
+    <iconPath>Genes/Icons/BTEMa_ChemfuelProducerIcon</iconPath>
+    <displayCategory>BTE_Insectoid</displayCategory>
+    <displayOrderInCategory>90</displayOrderInCategory>
+	<modExtensions>
+		<li Class="BTE.GeneMaterialProduced">
+			<produces>InsectJelly</produces>
+			<intervalDays>1</intervalDays>
+			<amount>11</amount>
+		</li>
+	</modExtensions>
+    <exclusionTags>
+      <li>Milk</li>
+    </exclusionTags>
+    <minAgeActive>18</minAgeActive>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>-2</biostatMet>
+  </GeneDef>
+  
+	<GeneDef>
+	<defName>BTEIst_ToxSmog</defName>
+	<label>toxic smog exhaust</label>
+	<description>Carriers of this gene have toxic pustules lining their respiratory tract. They may release the toxins within as a toxic smog at will.</description>
+	<iconPath>Genes/Icons/BTEIst_ToxSmogIcon</iconPath>
+    <displayCategory>BTE_Insectoid</displayCategory>
+    <displayOrderInCategory>93</displayOrderInCategory>
+    <descriptionHyperlinks>
+      <AbilityDef>BTEIst_ToxSmog</AbilityDef>
+    </descriptionHyperlinks>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>-1</biostatMet>
+    <abilities>
+      <li>BTEIst_ToxSmog</li>
+    </abilities>
+  </GeneDef>
+  
+
+	<GeneDef>
+	<defName>BTEIst_ToxicHalo</defName>
+	<label>toxic halo</label>
+	<description>Carriers of this gene release wisps of toxic gas during combat as a show of aggression.</description>
+	<iconPath>Genes/Icons/BTEIst_ToxicHaloIcon</iconPath>
+	<renderNodeProperties>
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>BTE.PawnRenderNodeWorker_OnlyDraftedPulsing</workerClass>
+        <parentTagDef>Head</parentTagDef>
+        <!-- <colorType>Skin</colorType> -->
+		<color>(255, 255, 255)</color>
+        <useRottenColor>true</useRottenColor>
+        <useSkinShader>true</useSkinShader>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/ToxicHalo/ToxicHalo</texPath>
+        <narrowCrownHorizontalOffset>0.03</narrowCrownHorizontalOffset>
+        <drawData>
+          <defaultData>
+            <layer>90</layer>
+          </defaultData>
+          <dataSouth>
+            <layer>2</layer>
+          </dataSouth>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+    <displayCategory>BTE_Insectoid</displayCategory>
+    <displayOrderInCategory>10</displayOrderInCategory>
+
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>0</biostatMet>
+  </GeneDef>
+</Defs>

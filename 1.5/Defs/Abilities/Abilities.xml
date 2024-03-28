@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <AbilityDef>
+    <defName>BTEIst_ToxSmog</defName>
+    <label>toxic smog exhaust</label>
+    <description>Compress toxic pustules in the throat, creating a deadly fog of toxic gas.</description>
+    <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+    <iconPath>Genes/Icons/BTEIst_ToxSmogIcon</iconPath>
+    <cooldownTicksRange>2500</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <ai_SearchAOEForTargets>true</ai_SearchAOEForTargets>
+    <targetRequired>false</targetRequired>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <showCastingProgressBar>true</showCastingProgressBar>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <warmupTime>1</warmupTime>
+      <requireLineOfSight>false</requireLineOfSight>
+      <range>5</range>
+      <drawAimPie>false</drawAimPie>      
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="BTE_IST.CompProperties_AbilityToxpop">
+        <smokeRadius>5</smokeRadius>
+      </li>	
+      <li Class="BTE.CompProperties_AbilityHungerCost">
+        <hungerCost>0.1</hungerCost>
+      </li>	
+    </comps>
+  </AbilityDef> 
+</Defs>

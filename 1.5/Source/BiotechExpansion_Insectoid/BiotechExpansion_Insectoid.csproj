@@ -47,6 +47,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompAbilityEffect_Toxpop.cs" />
+    <Compile Include="CompProperties_AbilityToxpop.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
