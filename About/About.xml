@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ModMetaData>
+	<name>Biotech Expansion - Insectoid</name>
+	<author>Lennoxicon</author>
+	<supportedVersions>
+		<li>1.4</li>
+		<li>1.5</li>
+	</supportedVersions>
+	<packageId>biotexpans.insect</packageId>
+	<modDependencies>
+		<li>
+			<packageId>ludeon.rimworld.biotech</packageId>
+			<displayName>Biotech</displayName>
+		</li>
+		<li>
+			<packageId>biotexpans.core</packageId>
+			<displayName>Biotech Expansion - Core</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2884018485</steamWorkshopUrl>
+		</li>
+	</modDependencies>
+	<loadAfter>
+		<li>ludeon.rimworld.biotech</li>
+		<li>biotexpans.core</li>
+	</loadAfter>
+	<description>
+Gene set based on Rimworld's insectoids. Become a powerful abberation of multiple bug types! Use powerful venoms and toxic gas to lead your hive to victory!
+	</description>
+	<modIconPath IgnoreIfNoMatchingField="True">BiotechExpansionCoreIcon</modIconPath>
+</ModMetaData>
