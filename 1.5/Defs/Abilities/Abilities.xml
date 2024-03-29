@@ -4,7 +4,7 @@
   <AbilityDef>
     <defName>BTEIst_ToxSmog</defName>
     <label>toxic smog exhaust</label>
-    <description>Compress toxic pustules in the throat, creating a deadly fog of toxic gas.</description>
+    <description>Compress toxic pustules in the throat, creating a deadly fog of toxic gas. Range is doubled if the user is metabolizing jelly.</description>
     <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
     <iconPath>Genes/Icons/BTEIst_ToxSmogIcon</iconPath>
     <cooldownTicksRange>5000</cooldownTicksRange>
@@ -18,7 +18,7 @@
       <verbClass>Verb_CastAbility</verbClass>
       <warmupTime>1</warmupTime>
       <requireLineOfSight>false</requireLineOfSight>
-      <range>4</range>
+      <range>3</range>
       <drawAimPie>false</drawAimPie>      
       <targetParams>
         <canTargetSelf>true</canTargetSelf>
@@ -26,7 +26,7 @@
     </verbProperties>
     <comps>
       <li Class="BTE_IST.CompProperties_AbilityToxpop">
-        <smokeRadius>4</smokeRadius>
+        <smokeRadius>3</smokeRadius>
       </li>	
       <li Class="BTE.CompProperties_AbilityHungerCost">
         <hungerCost>0.1</hungerCost>

@@ -26,7 +26,12 @@ namespace BTE_IST
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
             base.Apply(target, dest);
-            GenExplosion.DoExplosion(target.Cell, parent.pawn.MapHeld, Props.smokeRadius, DamageDefOf.Smoke, null, -1, -1f, null, null, null, null, null, 0f, 1, GasType.ToxGas);
+            float JellyFactor = 1f;
+            if (parent.pawn.health.hediffSet.HasHediff(BTEIst_HediffDefOf.BTEIst_JellyEnergized))
+            {
+                JellyFactor = 2f;
+            }
+            GenExplosion.DoExplosion(target.Cell, parent.pawn.MapHeld, Props.smokeRadius*JellyFactor, DamageDefOf.Smoke, null, -1, -1f, null, null, null, null, null, 0f, 1, GasType.ToxGas);
         }
 
         public override void DrawEffectPreview(LocalTargetInfo target)

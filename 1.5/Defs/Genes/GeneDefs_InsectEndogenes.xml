@@ -140,7 +140,7 @@
 	<GeneDef>
 	<defName>BTEIst_ToxSmog</defName>
 	<label>toxic smog exhaust</label>
-	<description>Carriers of this gene have toxic pustules lining their respiratory tract. They may release the toxins within as a toxic smog at will.</description>
+	<description>Carriers of this gene have toxic pustules lining their respiratory tract. They may release the toxins within as a toxic smog at will. Range is doubled if the user is metabolizing jelly.</description>
 	<iconPath>Genes/Icons/BTEIst_ToxSmogIcon</iconPath>
     <displayCategory>BTE_Insectoid</displayCategory>
     <displayOrderInCategory>4</displayOrderInCategory>
@@ -193,7 +193,7 @@
     <defName>BTEIst_JellyLover</defName>
 	<geneClass>BTE_IST.Gene_JellyLover</geneClass>
     <label>insect jelly metabolism</label>
-    <description>Carriers of this gene have their biology optimized towards consuming insect jelly. They are less active without it, but become much more active than normal with it.</description>
+    <description>Carriers of this gene have their biology optimized towards consuming insect jelly. They are less active without it, but become much more active than normal with it. Some insectoid abilities are empowered while metabolizing jelly.</description>
     <iconPath>Genes/Icons/BTEIst_JellyLoverIcon</iconPath>
     <displayCategory>BTE_Insectoid</displayCategory>
     <displayOrderInCategory>6</displayOrderInCategory>
