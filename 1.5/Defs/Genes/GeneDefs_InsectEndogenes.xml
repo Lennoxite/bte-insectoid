@@ -193,7 +193,7 @@
     <defName>BTEIst_JellyLover</defName>
 	<geneClass>BTE_IST.Gene_JellyLover</geneClass>
     <label>insect jelly metabolism</label>
-    <description>Carriers of this gene have their biology optimized towards consuming insect jelly. They are less active without it, and vice versa.</description>
+    <description>Carriers of this gene have their biology optimized towards consuming insect jelly. They are less active without it, but become much more active than normal with it.</description>
     <iconPath>Genes/Icons/BTEIst_JellyLoverIcon</iconPath>
     <displayCategory>BTE_Insectoid</displayCategory>
     <displayOrderInCategory>6</displayOrderInCategory>
