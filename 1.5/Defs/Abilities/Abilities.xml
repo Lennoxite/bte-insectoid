@@ -7,7 +7,7 @@
     <description>Compress toxic pustules in the throat, creating a deadly fog of toxic gas.</description>
     <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
     <iconPath>Genes/Icons/BTEIst_ToxSmogIcon</iconPath>
-    <cooldownTicksRange>2500</cooldownTicksRange>
+    <cooldownTicksRange>5000</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>
     <ai_SearchAOEForTargets>true</ai_SearchAOEForTargets>
     <targetRequired>false</targetRequired>
@@ -18,7 +18,7 @@
       <verbClass>Verb_CastAbility</verbClass>
       <warmupTime>1</warmupTime>
       <requireLineOfSight>false</requireLineOfSight>
-      <range>5</range>
+      <range>4</range>
       <drawAimPie>false</drawAimPie>      
       <targetParams>
         <canTargetSelf>true</canTargetSelf>
@@ -26,7 +26,44 @@
     </verbProperties>
     <comps>
       <li Class="BTE_IST.CompProperties_AbilityToxpop">
-        <smokeRadius>5</smokeRadius>
+        <smokeRadius>4</smokeRadius>
+      </li>	
+      <li Class="BTE.CompProperties_AbilityHungerCost">
+        <hungerCost>0.1</hungerCost>
+      </li>	
+    </comps>
+  </AbilityDef> 
+  <AbilityDef>
+    <defName>BTEIst_ToxInject</defName>
+    <label>toxin injection</label>
+    <description>Use the thorax to inject toxins directly into a target.</description>
+    <jobDef>CastAbilityOnThingMelee</jobDef>
+    <iconPath>Genes/Icons/BTEIst_MegaspiderTailIcon</iconPath>
+    <cooldownTicksRange>2500</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <ai_SearchAOEForTargets>false</ai_SearchAOEForTargets>
+    <targetRequired>true</targetRequired>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <showCastingProgressBar>true</showCastingProgressBar>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <warmupTime>1</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <range>-1</range>
+      <drawAimPie>true</drawAimPie>      
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetMechs>false</canTargetMechs>
+        <canTargetBloodfeeders>true</canTargetBloodfeeders>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <severity>0.2</severity>
+		<hediffDef>ToxicBuildup</hediffDef>
+		<compClass>CompAbilityEffect_GiveHediff</compClass>
       </li>	
       <li Class="BTE.CompProperties_AbilityHungerCost">
         <hungerCost>0.1</hungerCost>

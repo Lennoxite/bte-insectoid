@@ -7,13 +7,13 @@
   <GeneDef ParentName="GeneTailBase">
     <defName>BTEIst_MegaspiderTail</defName>
     <label>megaspider thorax</label>
-    <description>Carriers of this gene grow a megaspider thorax.</description>
+    <description>Carriers of this gene grow a megaspider thorax. It also has toxins within its stinger, which may be used to inject toxins in combat.</description>
     <iconPath>Genes/Icons/BTEIst_MegaspiderTailIcon</iconPath>
     <iconColor>(0.75, 0.75, 0.75)</iconColor>
-    <displayOrderInCategory>3</displayOrderInCategory>
+    <displayOrderInCategory>1</displayOrderInCategory>
     <displayCategory>BTE_Insectoid</displayCategory>
     <biostatCpx>1</biostatCpx>
-    <biostatMet>0</biostatMet>
+    <biostatMet>-1</biostatMet>
 	<renderNodeProperties>
       <li>
         <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
@@ -43,6 +43,12 @@
         </drawData>
       </li>
     </renderNodeProperties>
+    <abilities>
+      <li>BTEIst_ToxInject</li>
+    </abilities>
+    <descriptionHyperlinks>
+      <AbilityDef>BTEIst_ToxInject</AbilityDef>
+    </descriptionHyperlinks>
 	</GeneDef>
 
   <GeneDef ParentName="GeneJawBase">
@@ -54,7 +60,7 @@
 	  <li>BTEIst_MegaspiderHead</li>
 	</forcedHeadTypes>
 	<displayCategory>BTE_Insectoid</displayCategory>
-	<displayOrderInCategory>5</displayOrderInCategory>
+	<displayOrderInCategory>2</displayOrderInCategory>
 	<renderNodeProperties>
       <li>
         <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
@@ -106,7 +112,7 @@
     <description>Carriers of this gene produce a pigment that turns their skin a color similar to that of megaspiders.</description>
     <skinColorOverride>(154,125,94)</skinColorOverride>
 	<displayCategory>BTE_Insectoid</displayCategory>
-    <displayOrderInCategory>99</displayOrderInCategory>
+    <displayOrderInCategory>3</displayOrderInCategory>
   </GeneDef>
   <GeneDef>
     <defName>BTEMIst_JellyProducer</defName>
@@ -137,7 +143,7 @@
 	<description>Carriers of this gene have toxic pustules lining their respiratory tract. They may release the toxins within as a toxic smog at will.</description>
 	<iconPath>Genes/Icons/BTEIst_ToxSmogIcon</iconPath>
     <displayCategory>BTE_Insectoid</displayCategory>
-    <displayOrderInCategory>93</displayOrderInCategory>
+    <displayOrderInCategory>4</displayOrderInCategory>
     <descriptionHyperlinks>
       <AbilityDef>BTEIst_ToxSmog</AbilityDef>
     </descriptionHyperlinks>
@@ -177,9 +183,24 @@
       </li>
     </renderNodeProperties>
     <displayCategory>BTE_Insectoid</displayCategory>
-    <displayOrderInCategory>10</displayOrderInCategory>
+    <displayOrderInCategory>5</displayOrderInCategory>
 
     <biostatCpx>1</biostatCpx>
     <biostatMet>0</biostatMet>
+  </GeneDef>
+  
+  <GeneDef ParentName="GeneSleepBase">
+    <defName>BTEIst_JellyLover</defName>
+	<geneClass>BTE_IST.Gene_JellyLover</geneClass>
+    <label>insect jelly metabolism</label>
+    <description>Carriers of this gene have their biology optimized towards consuming insect jelly. They are less active without it, and vice versa.</description>
+    <iconPath>Genes/Icons/BTEIst_JellyLoverIcon</iconPath>
+    <displayCategory>BTE_Insectoid</displayCategory>
+    <displayOrderInCategory>6</displayOrderInCategory>
+    <statOffsets>
+      <RestFallRateFactor>0.4</RestFallRateFactor>
+	  <InjuryHealingFactor>-0.2</InjuryHealingFactor>
+    </statOffsets>
+    <biostatMet>3</biostatMet>
   </GeneDef>
 </Defs>
