@@ -6,7 +6,7 @@
     <label>jelly metabolizing</label>
     <description>Eating insect jelly boosts the body's metabolism.</description>
     <defaultLabelColor>(0.8, 0.8, 0.5)</defaultLabelColor>
-    <initialSeverity>1</initialSeverity>
+    <initialSeverity>0</initialSeverity>
     <maxSeverity>1</maxSeverity>
     <hediffClass>HediffWithComps</hediffClass>
     <everCurableByItem>false</everCurableByItem>

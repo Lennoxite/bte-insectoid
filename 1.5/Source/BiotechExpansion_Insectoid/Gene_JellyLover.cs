@@ -14,7 +14,8 @@ namespace BTE_IST
 		{
 			if (thing.def == ThingDefOf.InsectJelly)
 			{
-				this.pawn.health.AddHediff(BTEIst_HediffDefOf.BTEIst_JellyEnergized);
+				Hediff he = this.pawn.health.GetOrAddHediff(BTEIst_HediffDefOf.BTEIst_JellyEnergized);
+				he.Severity += numTaken * 0.05f;
 			}	
 		}
 	}
