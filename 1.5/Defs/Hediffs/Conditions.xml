@@ -27,5 +27,53 @@
     </comps>
   </HediffDef>
   
+    <HediffDef>
+    <defName>BTEIst_VolatileVenom</defName>
+    <label>volatile venom</label>
+    <description>Volatile venom in the body. Will cause an explosion on death, size increasing with severity.</description>
+    <defaultLabelColor>(1,0.5,0.1)</defaultLabelColor>
+    <initialSeverity>0</initialSeverity>
+    <maxSeverity>1</maxSeverity>
+    <hediffClass>HediffWithComps</hediffClass>
+    <everCurableByItem>false</everCurableByItem>
+    <stages>
+      <li>
+        <label>hot</label>
+      </li>
+    </stages>
+    <comps>
+      <li Class="BTE_IST.HediffCompProperties_ExplodeOnDeathSeverityBased">
+		<radiusAtHalf>3.5</radiusAtHalf>
+		<damageType>Flame</damageType>
+      </li>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-3</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>BTE.PawnRenderNodeWorker_ScaleWithSeverity</workerClass>
+        <parentTagDef>Head</parentTagDef>
+        <!-- <colorType>Skin</colorType> -->
+		<color>(255, 255, 255)</color>
+        <useRottenColor>true</useRottenColor>
+        <useSkinShader>true</useSkinShader>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/VolatileHead/VolatileHead</texPath>
+        <narrowCrownHorizontalOffset>0.03</narrowCrownHorizontalOffset>
+        <drawData>
+          <defaultData>
+            <layer>-3</layer>
+          </defaultData>
+          <dataSouth>
+            <layer>-3</layer>
+          </dataSouth>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </HediffDef> 
+ 
  
 </Defs>

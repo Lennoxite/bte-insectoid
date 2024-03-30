@@ -10,7 +10,6 @@
     <genes>
       <li>DarkVision</li>
       <li>BTEIst_MegaspiderHead</li> 
-      <li>Hair_Gray</li>
       <li>BTE_FeralMight</li>
       <li>AptitudeStrong_Shooting</li>
       <li>VoiceRoar</li>
@@ -18,7 +17,6 @@
       <li>BTEIst_JellyLover</li>
       <li>Aggression_Aggressive</li>
 	  <li>StrongStomach</li>
-      <li>RobustDigestion</li>
       <li>AptitudePoor_Animals</li>
       <li>AptitudeTerrible_Artistic</li>
       <li>AptitudeTerrible_Medicine</li>
@@ -37,6 +35,45 @@
       <li>PollutionRush</li>
       <li>BTEIst_ToxSmog</li>
       <li>BTEIst_ToxicHalo</li>
+      <li>UVSensitivity_Mild</li>
+      <li>Beauty_VeryUgly</li>
+    </genes>
+    <!--<forbiddenWeaponClasses>
+      <li>Melee</li>
+	  <li>Ranged</li>
+    </forbiddenWeaponClasses>-->
+  </XenotypeDef>
+  <XenotypeDef>
+    <defName>BTEIst_Spelopede</defName>
+    <label>spelo-splice</label>
+    <description>Cunning and deadly, spelo-splices are born from an unethical insectoid gene operation. Spelo-splices possess a honed mind and act as the thinkers of a splice hive, and they rely on ranged abilities to defend themselves.</description>
+    <descriptionShort>Spelo-splices possess a honed mind and act as the thinkers of a splice hive, and they rely on ranged abilities to defend themselves.</descriptionShort>
+    <iconPath>UI/Xenotypes/Spelo_Splice</iconPath>
+    <inheritable>true</inheritable>
+    <genes>
+      <li>DarkVision</li>
+      <li>BTEIst_SpelopedeHead</li> 
+      <li>AptitudeRemarkable_Shooting</li>
+      <li>VoiceRoar</li>
+      <li>Beard_NoBeardOnly</li>
+      <li>BTEIst_JellyLover</li>
+      <li>Aggression_Aggressive</li>
+	  <li>StrongStomach</li>
+      <li>AptitudePoor_Animals</li>
+      <li>AptitudeRemarkable_Medicine</li>
+      <li>AptitudeStrong_Intellectual</li>
+      <li>AptitudePoor_Melee</li>
+      <li>Delicate</li>
+      <li>BTEIst_ToxicStingerLauncher</li>
+      <li>Learning_Fast</li>
+      <li>MeleeDamage_Weak</li>
+      <li>FireWeakness</li>
+      <li>BTEIst_SpelopedeTail</li>
+      <li>Hair_BaldOnly</li>
+      <li>BTEIst_SpelopedeSkin</li>
+      <li>ToxicEnvironmentResistance_Total</li>
+      <li>PollutionRush</li>
+      <li>BTEIst_VolatileStingerLauncher</li>
       <li>UVSensitivity_Mild</li>
       <li>Beauty_VeryUgly</li>
     </genes>

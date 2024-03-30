@@ -70,4 +70,119 @@
       </li>	
     </comps>
   </AbilityDef> 
+
+  <AbilityDef>
+    <defName>BTEIst_ToxicStingLauncher</defName>
+    <label>toxic sting launcher</label>
+    <description>Fire a toxic stinger at a target. Damage (and severity) are doubled if the user is metabolizing jelly.</description>
+    <iconPath>Genes/Icons/BTEIst_ToxicInjectorIcon</iconPath>
+    <cooldownTicksRange>60</cooldownTicksRange>
+    <displayOrder>200</displayOrder>
+    <aiCanUse>true</aiCanUse>
+    <ai_SearchAOEForTargets>false</ai_SearchAOEForTargets>
+    <targetRequired>true</targetRequired>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>20</range>
+      <warmupTime>0.25</warmupTime>
+      <soundCast>PiercingSpine_Launch</soundCast>
+    </verbProperties>
+    <comps>
+      <li Class="BTE.CompProperties_AbilityHungerCost">
+        <hungerCost>0.1</hungerCost>
+      </li>	
+      <li Class="BTE_IST.CompProperties_AbilityLaunchProjectileJellyBuffable">
+        <projectileDef>BTEIst_ToxicSting</projectileDef>
+        <jellyBuffProjectileDef>BTEIst_ToxicStingBuffed</jellyBuffProjectileDef>
+      </li>
+    </comps>
+  </AbilityDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>BTEIst_ToxicSting</defName>
+    <label>toxic stinger</label>
+    <graphicData>
+      <texPath>Things/Projectile/PiercingSpine</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>BTEIst_ToxicStab</damageDef>
+      <damageAmountBase>10</damageAmountBase>
+      <armorPenetrationBase>1</armorPenetrationBase>
+      <stoppingPower>1</stoppingPower>
+      <speed>100</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>BTEIst_ToxicStingBuffed</defName>
+    <label>toxic stinger</label>
+    <graphicData>
+      <texPath>Things/Projectile/PiercingSpine</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>BTEIst_ToxicStab</damageDef>
+      <damageAmountBase>20</damageAmountBase>
+      <armorPenetrationBase>1</armorPenetrationBase>
+      <stoppingPower>1</stoppingPower>
+      <speed>100</speed>
+    </projectile>
+  </ThingDef>
+  
+
+  <AbilityDef>
+    <defName>BTEIst_VolatileStingLauncher</defName>
+    <label>volatile sting launcher</label>
+    <description>Fire a stinger with volatile toxins at a target which detonate on death. Very low damage, but high severity infliction. Severity is doubled while metabolizing jelly.</description>
+    <iconPath>Genes/Icons/BTEIst_VolatileInjectorIcon</iconPath>
+    <cooldownTicksRange>10000</cooldownTicksRange>
+    <displayOrder>200</displayOrder>
+    <aiCanUse>true</aiCanUse>
+    <ai_SearchAOEForTargets>false</ai_SearchAOEForTargets>
+    <targetRequired>true</targetRequired>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>20</range>
+      <warmupTime>1</warmupTime>
+      <soundCast>PiercingSpine_Launch</soundCast>
+    </verbProperties>
+    <comps>
+      <li Class="BTE.CompProperties_AbilityHungerCost">
+        <hungerCost>0.4</hungerCost>
+      </li>	
+      <li Class="BTE_IST.CompProperties_AbilityLaunchProjectileJellyBuffable">
+        <projectileDef>BTEIst_VolatileSting</projectileDef>
+        <jellyBuffProjectileDef>BTEIst_VolatileStingBuffed</jellyBuffProjectileDef>
+      </li>
+    </comps>
+  </AbilityDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>BTEIst_VolatileSting</defName>
+    <label>volatile stinger</label>
+    <graphicData>
+      <texPath>Things/Projectile/PiercingSpine</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>BTEIst_VolatileStab</damageDef>
+      <damageAmountBase>1</damageAmountBase>
+      <armorPenetrationBase>1</armorPenetrationBase>
+      <stoppingPower>1</stoppingPower>
+      <speed>100</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>BTEIst_VolatileStingBuffed</defName>
+    <label>volatile stinger</label>
+    <graphicData>
+      <texPath>Things/Projectile/PiercingSpine</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>BTEIst_VolatileStab</damageDef>
+      <damageAmountBase>2</damageAmountBase>
+      <armorPenetrationBase>1</armorPenetrationBase>
+      <stoppingPower>1</stoppingPower>
+      <speed>100</speed>
+    </projectile>
+  </ThingDef>
 </Defs>

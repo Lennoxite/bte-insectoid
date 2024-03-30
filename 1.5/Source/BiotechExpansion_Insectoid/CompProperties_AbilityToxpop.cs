@@ -11,7 +11,7 @@ namespace BTE_IST
     public class CompProperties_AbilityToxpop : CompProperties_AbilityEffect
     {
         public float smokeRadius;
-
+        public float jellyBuffFactor = 2f;
         public CompProperties_AbilityToxpop()
         {
             compClass = typeof(CompAbilityEffect_Toxpop);

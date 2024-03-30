@@ -29,7 +29,7 @@ namespace BTE_IST
             float JellyFactor = 1f;
             if (parent.pawn.health.hediffSet.HasHediff(BTEIst_HediffDefOf.BTEIst_JellyEnergized))
             {
-                JellyFactor = 2f;
+                JellyFactor = Props.jellyBuffFactor;
             }
             GenExplosion.DoExplosion(target.Cell, parent.pawn.MapHeld, Props.smokeRadius*JellyFactor, DamageDefOf.Smoke, null, -1, -1f, null, null, null, null, null, 0f, 1, GasType.ToxGas);
         }
