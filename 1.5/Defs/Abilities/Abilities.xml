@@ -51,6 +51,7 @@
       <warmupTime>1</warmupTime>
       <requireLineOfSight>true</requireLineOfSight>
       <range>-1</range>
+      <soundCast>MeleeHit_BionicPunch</soundCast>
       <drawAimPie>true</drawAimPie>      
       <targetParams>
         <canTargetSelf>false</canTargetSelf>
