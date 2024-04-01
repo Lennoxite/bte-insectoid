@@ -25,6 +25,52 @@
         <showHoursToRecover>true</showHoursToRecover>
       </li>
     </comps>
+    <renderNodeProperties>
+      <li  Class="BTE.PawnRenderNodeProperties_VariableRotator">
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>BTE.PawnRenderNodeWorker_VariableRotator</workerClass>
+        <parentTagDef>Head</parentTagDef>
+        <!-- <colorType>Skin</colorType> -->
+		<color>(200, 255, 200)</color>
+        <useRottenColor>true</useRottenColor>
+        <useSkinShader>true</useSkinShader>
+		<drawSize>(0.9, 0.9)</drawSize>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/JellyFlare/JellyFlare</texPath>
+        <narrowCrownHorizontalOffset>0.03</narrowCrownHorizontalOffset>
+		<degreesPerTick>3</degreesPerTick>
+        <drawData>
+          <defaultData>
+            <layer>-4</layer>
+          </defaultData>
+          <dataSouth>
+            <layer>-4</layer>
+          </dataSouth>
+        </drawData>
+      </li>
+      <li  Class="BTE.PawnRenderNodeProperties_VariableRotator">
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>BTE.PawnRenderNodeWorker_VariableRotator</workerClass>
+        <parentTagDef>Head</parentTagDef>
+        <!-- <colorType>Skin</colorType> -->
+		<color>(100, 160, 100)</color>
+        <useRottenColor>true</useRottenColor>
+        <useSkinShader>true</useSkinShader>
+		<drawSize>(1.15, 1.15)</drawSize>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/JellyFlare/JellyFlare</texPath>
+        <narrowCrownHorizontalOffset>0.03</narrowCrownHorizontalOffset>
+		<degreesPerTick>1</degreesPerTick>
+        <drawData>
+          <defaultData>
+            <layer>-5</layer>
+          </defaultData>
+          <dataSouth>
+            <layer>-5</layer>
+          </dataSouth>
+        </drawData>
+      </li>
+    </renderNodeProperties>
   </HediffDef>
   
     <HediffDef>
