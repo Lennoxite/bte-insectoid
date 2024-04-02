@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <FactionDef ParentName="OutlanderRoughBase">
+    <defName>BTEIst_SpliceHive</defName>
+    <label>splice hive</label>
+    <requiredMemes Inherit="False">
+      <li MayRequire="Ludeon.RimWorld.Ideology">Tunneler</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Darkness</li>
+    </requiredMemes>
+    <colorSpectrum  Inherit="False">
+      <li>(0.35, 0.35, 0.35)</li>
+      <li>(0.8, 0.8, 0.8)</li>
+    </colorSpectrum>
+    <xenotypeSet Inherit="False">
+      <xenotypeChances>
+        <BTEIst_Megaspider>0.33</BTEIst_Megaspider>
+        <BTEIst_Spelopede>0.33</BTEIst_Spelopede>
+        <BTEIst_Megascarab>0.34</BTEIst_Megascarab>
+      </xenotypeChances>
+    </xenotypeSet>
+	
+    <factionNameMaker>BTEIst_NamerFactionInsectoid</factionNameMaker>
+    <settlementNameMaker>BTEIst_NamerSettlementInsectoid</settlementNameMaker>
+    <description>These people are insectoid hybrids who have, for one reason or another, created a nest in this area.\n\nSplice hives are almost always hostile to other factions due to their extreme lifestyle differences.</description>
+    <factionIconPath>World/WorldObjects/Expanding/BTEIst_SpliceHive</factionIconPath>
+
+    <pawnGroupMakers Inherit="False">
+      <li>
+        <!-- Normal fights, standard mix -->
+        <kindDef>Combat</kindDef>
+        <options>
+          <Villager>5</Villager>
+          <Town_Guard>10</Town_Guard>
+          <Grenadier_Destructive>1.5</Grenadier_Destructive>
+          <BTEIst_InsectoidSlasher>7</BTEIst_InsectoidSlasher>
+          <BTEIst_InsectoidGunner>10</BTEIst_InsectoidGunner>
+          <BTEIst_InsectoidElite>10</BTEIst_InsectoidElite>
+          <Town_Councilman>10</Town_Councilman>
+        </options>
+      </li>
+      <li>
+        <kindDef>Peaceful</kindDef>
+        <options>
+          <Villager>20</Villager>
+          <Villager_Child MayRequire="Ludeon.RimWorld.Biotech">10</Villager_Child>
+          <Town_Guard>10</Town_Guard>
+          <Town_Councilman>10</Town_Councilman>
+        </options>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+        <traders>
+          <Town_Trader>1</Town_Trader>
+        </traders>
+        <carriers>
+          <Muffalo>6</Muffalo>
+          <Dromedary>5</Dromedary>
+          <Alpaca>2</Alpaca>
+          <Elephant>1</Elephant>
+        </carriers>
+        <guards>
+          <Villager>3</Villager>
+          <Town_Guard>10</Town_Guard>
+          <Grenadier_Destructive>1.5</Grenadier_Destructive>
+          <BTEIst_InsectoidSlasher>7</BTEIst_InsectoidSlasher>
+          <BTEIst_InsectoidGunner>10</BTEIst_InsectoidGunner>
+          <BTEIst_InsectoidElite>10</BTEIst_InsectoidElite>
+        </guards>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <Villager>10</Villager>
+          <Town_Guard>10</Town_Guard>
+          <Grenadier_Destructive>1.5</Grenadier_Destructive>
+          <BTEIst_InsectoidSlasher>7</BTEIst_InsectoidSlasher>
+          <BTEIst_InsectoidGunner>10</BTEIst_InsectoidGunner>
+          <BTEIst_InsectoidElite>10</BTEIst_InsectoidElite>
+          <Town_Councilman>10</Town_Councilman>
+        </options>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <kindDef>Miners</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Miner>1</Miner>
+        </options>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <kindDef>Hunters</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Hunter>1</Hunter>
+        </options>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <kindDef>Loggers</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Logger>1</Logger>
+        </options>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <kindDef>Farmers</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Farmer>1</Farmer>
+        </options>
+      </li>
+    </pawnGroupMakers>
+  </FactionDef>
+ 
+  <PawnKindDef Name="BTEIst_InsectoidMercenaryBase" Abstract="True">
+    <race>Human</race>
+    <defaultFactionType>BTEIst_SpliceHive</defaultFactionType>
+    <chemicalAddictionChance>0.1</chemicalAddictionChance>
+    <invNutrition>2.55</invNutrition>
+	<startingHediffs>
+		<li>
+			<def>BTEIst_JellyEnergized</def>
+			<severity>1</severity>
+		</li>
+	</startingHediffs>
+	<invFoodDef>InsectJelly</invFoodDef>
+    <itemQuality>Normal</itemQuality>
+    <backstoryCryptosleepCommonality>0.08</backstoryCryptosleepCommonality>
+    <maxGenerationAge>65</maxGenerationAge>
+    <combatEnhancingDrugsChance>0.15</combatEnhancingDrugsChance>
+    <combatEnhancingDrugsCount>0~2</combatEnhancingDrugsCount>
+    <biocodeWeaponChance>0.1</biocodeWeaponChance>
+  </PawnKindDef>
+  
+
+  <PawnKindDef ParentName="BTEIst_InsectoidMercenaryBase" Name="BTEIst_InsectoidMidTierBase" Abstract="True">
+    <techHediffsChance>0.15</techHediffsChance>
+    <techHediffsMoney>700~1200</techHediffsMoney>
+    <techHediffsTags>
+      <li>Simple</li>
+      <li>Advanced</li>
+      <li>ImplantEmpireCommon</li>
+    </techHediffsTags>
+    <biocodeWeaponChance>0.2</biocodeWeaponChance>
+    <initialWillRange>2~4</initialWillRange>
+  </PawnKindDef>
+  
+
+    <PawnKindDef ParentName="BTEIst_InsectoidMidTierBase">
+    <defName>BTEIst_InsectoidGunner</defName>
+    <initialResistanceRange>6~10</initialResistanceRange>
+    <label>insectoid gunner</label>
+    <combatPower>85</combatPower>
+    <gearHealthRange>0.7~3.2</gearHealthRange>
+    <apparelTags>
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+      <li>BeltDefensePop</li>
+    </apparelTags>
+    <apparelMoney>1000~1500</apparelMoney>
+    <apparelAllowHeadgearChance>0.5</apparelAllowHeadgearChance>
+    <weaponMoney>330~650</weaponMoney>
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+    <disallowedTraits>
+      <li>Brawler</li>
+    </disallowedTraits>
+    <combatEnhancingDrugsChance>0.05</combatEnhancingDrugsChance>
+    <combatEnhancingDrugsCount>0~2</combatEnhancingDrugsCount>
+    <inventoryOptions>
+      <skipChance>0.9</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>1</countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+    <skills>
+      <li>
+        <skill>Shooting</skill>
+        <range>4~14</range>
+      </li>
+    </skills>
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="BTEIst_InsectoidMidTierBase">
+    <defName>BTEIst_InsectoidSlasher</defName>
+    <label>insectoid slasher</label>
+    <combatPower>140</combatPower>
+    <canBeSapper>true</canBeSapper>
+    <gearHealthRange>0.7~3.2</gearHealthRange>
+    <apparelTags>
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+    </apparelTags>
+    <apparelRequired>
+      <li>Apparel_ShieldBelt</li>
+    </apparelRequired>
+    <apparelMoney>300~1400</apparelMoney>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <weaponMoney>200~500</weaponMoney>
+    <weaponTags>
+      <li>MedievalMeleeDecent</li>
+      <li>MedievalMeleeAdvanced</li>
+    </weaponTags>
+    <inventoryOptions>
+      <skipChance>0.9</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>1</countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+    <initialResistanceRange>10~16</initialResistanceRange>
+  </PawnKindDef>
+  
+  <PawnKindDef Abstract="True" Name="BTEIst_InsectoidEliteTierBase" ParentName="BTEIst_InsectoidMercenaryBase">
+    <combatPower>130</combatPower>
+    <maxGenerationAge>45</maxGenerationAge>
+    <backstoryCryptosleepCommonality>0.25</backstoryCryptosleepCommonality>
+    <gearHealthRange>1~1</gearHealthRange>
+    <apparelTags>
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+      <li>SpacerMilitary</li>
+      <li>BeltDefensePop</li>
+    </apparelTags>
+    <apparelMoney>2500~3500</apparelMoney>
+    <apparelAllowHeadgearChance>0.9</apparelAllowHeadgearChance>
+    <weaponMoney>500~1400</weaponMoney>
+    <weaponTags>
+      <li>IndustrialGunAdvanced</li>
+      <li>MedievalMeleeAdvanced</li>
+    </weaponTags>
+    <disallowedTraits>
+      <li>Brawler</li>
+    </disallowedTraits>
+    <techHediffsMoney>1000~1200</techHediffsMoney>
+    <techHediffsTags>
+      <li>Advanced</li>
+      <li>ImplantEmpireCommon</li>
+    </techHediffsTags>
+    <techHediffsChance>0.35</techHediffsChance>
+    <combatEnhancingDrugsChance>0.80</combatEnhancingDrugsChance>
+    <combatEnhancingDrugsCount>1~2</combatEnhancingDrugsCount>
+    <biocodeWeaponChance>0.3</biocodeWeaponChance>
+    <initialWillRange>3~5</initialWillRange>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="BTEIst_InsectoidEliteTierBase" Name="BTEIst_InsectoidEliteBase" Abstract="True">
+    <label>elite insectoid</label>
+    <labelPlural>elite insectoids</labelPlural>
+    <inventoryOptions>
+      <skipChance>0.9</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>1</countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+    <skills>
+      <li>
+        <skill>Shooting</skill>
+        <range>10~15</range>
+      </li>
+      <li>
+        <skill>Melee</skill>
+        <range>10~15</range>
+      </li>
+    </skills>
+  </PawnKindDef>
+  <PawnKindDef ParentName="BTEIst_InsectoidEliteBase">
+    <defName>BTEIst_InsectoidElite</defName>
+    <initialResistanceRange>15~23</initialResistanceRange>
+  </PawnKindDef>
+  
+
+  <RulePackDef>
+    <defName>BTEIst_NamerFactionInsectoid</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->Splice Hive Geneline [pre][post]</li>
+		
+        <li>pre->AX</li>
+        <li>pre->RV</li>
+        <li>pre->UP</li>
+        <li>pre->EA</li>
+        <li>pre->DT</li>
+		
+        <li>post->999</li>
+        <li>post->567</li>
+        <li>post->195</li>
+        <li>post->899</li>
+        <li>post->000</li>
+
+
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>BTEIst_NamerSettlementInsectoid</defName>
+    <rulePack>
+
+      <rulesStrings>
+        <li>r_name->[adj][hiv] [greek]</li>
+
+
+        <li>adj->steel</li>
+        <li>adj->smoke</li>
+        <li>adj->corpse</li>
+        <li>adj->sharp</li>
+        <li>adj->crawl</li>
+
+        <li>hiv->nest</li>
+        <li>hiv->hive</li>
+		
+        <li>greek->alpha</li>
+        <li>greek->beta</li>
+        <li>greek->omega</li>
+        <li>greek->gamma</li>
+        <li>greek->phi</li>
+        <li>greek->nu</li>
+
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+</Defs>

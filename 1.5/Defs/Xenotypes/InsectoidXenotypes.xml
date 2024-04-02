@@ -59,7 +59,8 @@
       <li>BTEIst_JellyLover</li>
       <li>Aggression_Aggressive</li>
 	  <li>StrongStomach</li>
-      <li>AptitudePoor_Animals</li>
+      <li>AptitudeTerrible_Animals</li>
+      <li>AptitudeTerrible_Cooking</li>
       <li>AptitudeRemarkable_Medicine</li>
       <li>AptitudeStrong_Intellectual</li>
       <li>AptitudePoor_Melee</li>
@@ -67,7 +68,7 @@
       <li>BTEIst_ToxicStingerLauncher</li>
       <li>Learning_Fast</li>
       <li>MeleeDamage_Weak</li>
-      <li>FireWeakness</li>
+      <li>FireResistant</li>
       <li>BTEIst_SpelopedeTail</li>
       <li>Hair_BaldOnly</li>
       <li>BTEIst_SpelopedeSkin</li>
@@ -103,10 +104,10 @@
       <li>AptitudeRemarkable_Plants</li>
       <li>AptitudePoor_Intellectual</li>
       <li>AptitudePoor_Social</li>
-      <li>BTEMIst_JellyConverter</li>
+      <li>BTEIst_JellyConverter</li>
       <li>PsychicAbility_Dull</li>
       <li>NakedSpeed</li>
-      <li>BTEMIst_JellyProducer</li>
+      <li>BTEIst_JellyProducer</li>
       <li>RobustDigestion</li>
       <li>Pain_Extra</li>
       <li>BTEIst_RapidEater</li>

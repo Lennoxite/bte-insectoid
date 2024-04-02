@@ -371,7 +371,7 @@
   
 
   <GeneDef>
-    <defName>BTEMIst_JellyProducer</defName>
+    <defName>BTEIst_JellyProducer</defName>
     <label>insect jelly producer</label>
     <description>Carriers of this gene produce insect jelly, which they must regurgitate out every so often.</description>
     <geneClass>BTE.Gene_ExcessMilkProduction</geneClass>
@@ -393,7 +393,7 @@
     <biostatMet>-2</biostatMet>
   </GeneDef>
   <GeneDef>
-    <defName>BTEMIst_JellyConverter</defName>
+    <defName>BTEIst_JellyConverter</defName>
     <label>insect jelly converter</label>
     <description>Carriers of this gene may process food into insect jelly.</description>
     <iconPath>Genes/Icons/BTEIst_JellyConversionIcon</iconPath>

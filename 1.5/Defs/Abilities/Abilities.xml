@@ -107,7 +107,7 @@
     <label>toxic sting launcher</label>
     <description>Fire a toxic stinger at a target. Damage (and severity) are doubled if the user is metabolizing jelly.</description>
     <iconPath>Genes/Icons/BTEIst_ToxicInjectorIcon</iconPath>
-    <cooldownTicksRange>60</cooldownTicksRange>
+    <cooldownTicksRange>150</cooldownTicksRange>
     <displayOrder>200</displayOrder>
     <aiCanUse>true</aiCanUse>
     <ai_SearchAOEForTargets>false</ai_SearchAOEForTargets>
