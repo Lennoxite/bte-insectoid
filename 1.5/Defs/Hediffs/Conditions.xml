@@ -121,5 +121,33 @@
     </renderNodeProperties>
   </HediffDef> 
  
- 
+   <HediffDef ParentName="NaturalImplantBase">
+    <defName>BTEIst_InsectoidHorn</defName>
+    <label>insectoid horn</label>
+    <defaultLabelColor>(0.8,0.8,0.45)</defaultLabelColor>
+    <labelNoun>insectoid horn</labelNoun>
+    <description>A great chitinous horn affixed to the head, good for striking enemies of the hive.</description>
+    <addedPartProps>
+      <solid>true</solid>
+    </addedPartProps>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>horn</label>
+            <capacities>
+              <li>Stab</li>
+            </capacities>
+            <power>15</power> 
+			<!--<chanceFactor>1.25</chanceFactor>-->
+            <armorPenetration>0.2</armorPenetration>
+            <cooldownTime>2</cooldownTime>
+            <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+            <soundMeleeHit>MeleeHit_BionicSlash</soundMeleeHit>
+            <soundMeleeMiss>MeleeMiss_BionicSlash</soundMeleeMiss>
+          </li>
+        </tools>
+      </li>
+    </comps>
+  </HediffDef>
 </Defs>

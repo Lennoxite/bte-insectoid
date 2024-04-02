@@ -54,12 +54,21 @@
   <GeneDef ParentName="GeneJawBase">
 	<defName>BTEIst_MegaspiderHead</defName>
 	<label>megaspider head</label>
-	<description>Carriers of this gene have a sharp megaspider head.</description>
+	<description>Carriers of this gene have a sharp megaspider head. Comes with a dangerous head horn.</description>
 	<iconPath>Genes/Icons/BTEIst_MegaspiderHeadIcon</iconPath>
 	<forcedHeadTypes>
 	  <li>BTEIst_MegaspiderHead</li>
-	</forcedHeadTypes>
+	</forcedHeadTypes>    
+	<geneClass>BTE.Gene_AddImplant</geneClass>
+	<modExtensions>
+		<li Class="BTE.GeneImplantInfo">
+			<hediffImplant>BTEIst_InsectoidHorn</hediffImplant>
+			<bodyPartImplant>Head</bodyPartImplant>
+		</li>
+	</modExtensions>
 	<displayCategory>BTE_Insectoid</displayCategory>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>-1</biostatMet>
 	<displayOrderInCategory>2</displayOrderInCategory>
 	<renderNodeProperties>
       <li>
