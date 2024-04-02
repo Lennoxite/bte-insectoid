@@ -34,6 +34,36 @@
     </comps>
   </AbilityDef> 
   <AbilityDef>
+    <defName>BTEIst_JellyConversion</defName>
+    <label>food to jelly conversion</label>
+    <description>Spend a significant amount of nutrition to regurgitate precious insect jelly. Inefficient if processed from prepared meals but less so if made from raw foods.</description>
+    <jobDef>CastAbilityOnThing</jobDef>
+    <iconPath>Genes/Icons/BTEIst_JellyConversionIcon</iconPath>
+    <cooldownTicksRange>5000</cooldownTicksRange>
+    <aiCanUse>false</aiCanUse>
+    <targetRequired>false</targetRequired>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <showCastingProgressBar>true</showCastingProgressBar>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <warmupTime>1</warmupTime>
+      <requireLineOfSight>false</requireLineOfSight>
+      <drawAimPie>false</drawAimPie>      
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="BTE_IST.CompProperties_AbilityCreateJelly">
+	  <amount>10</amount>
+      </li>	
+      <li Class="BTE.CompProperties_AbilityHungerCost">
+        <hungerCost>0.5</hungerCost>
+      </li>	
+    </comps>
+  </AbilityDef> 
+  <AbilityDef>
     <defName>BTEIst_ToxInject</defName>
     <label>toxin injection</label>
     <description>Use the thorax to inject toxins directly into a target.</description>

@@ -114,28 +114,6 @@
 	<displayCategory>BTE_Insectoid</displayCategory>
     <displayOrderInCategory>3</displayOrderInCategory>
   </GeneDef>
-  <GeneDef>
-    <defName>BTEMIst_JellyProducer</defName>
-    <label>insect jelly producer</label>
-    <description>Carriers of this gene produce insect jelly, which they must regurgitate out every so often.</description>
-    <geneClass>BTE.Gene_ExcessMilkProduction</geneClass>
-    <iconPath>Genes/Icons/BTEIst_JellyIcon</iconPath>
-    <displayCategory>BTE_Insectoid</displayCategory>
-    <displayOrderInCategory>90</displayOrderInCategory>
-	<modExtensions>
-		<li Class="BTE.GeneMaterialProduced">
-			<produces>InsectJelly</produces>
-			<intervalDays>1</intervalDays>
-			<amount>11</amount>
-		</li>
-	</modExtensions>
-    <exclusionTags>
-      <li>Milk</li>
-    </exclusionTags>
-    <minAgeActive>18</minAgeActive>
-    <biostatCpx>1</biostatCpx>
-    <biostatMet>-2</biostatMet>
-  </GeneDef>
   
 	<GeneDef>
 	<defName>BTEIst_ToxSmog</defName>
@@ -189,7 +167,7 @@
     <biostatMet>0</biostatMet>
   </GeneDef>
   
-  <GeneDef ParentName="GeneSleepBase">
+  <GeneDef>
     <defName>BTEIst_JellyLover</defName>
 	<geneClass>BTE_IST.Gene_JellyLover</geneClass>
     <label>insect jelly metabolism</label>
@@ -312,5 +290,137 @@
     </descriptionHyperlinks>
     <biostatMet>-3</biostatMet>
     <biostatCpx>1</biostatCpx>
+  </GeneDef>
+  
+ 
+<!-- SPLICE-SCARAB -->
+
+  <GeneDef ParentName="GeneTailBase">
+    <defName>BTEIst_MegascarabTail</defName>
+    <label>megascarab thorax</label>
+    <description>Carriers of this gene grow a megascarab thorax.</description>
+    <iconPath>Genes/Icons/BTEIst_MegascarabTailIcon</iconPath>
+    <iconColor>(0.75, 0.75, 0.75)</iconColor>
+    <displayOrderInCategory>20</displayOrderInCategory>
+    <displayCategory>BTE_Insectoid</displayCategory>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>0</biostatMet>
+	<renderNodeProperties>
+      <li>
+        <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+        <texPath>Things/Pawn/Humanlike/BodyAttachments/MegascarabTail/MegascarabTail</texPath>
+        <colorType>Skin</colorType>
+        <overrideMeshSize>(1, 1)</overrideMeshSize>
+        <parentTagDef>Body</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+          <defaultData>
+            <layer>-2</layer>
+          </defaultData>
+          <dataNorth>
+            <offset>(0, 0, -0.25)</offset>
+            <layer>90</layer>
+          </dataNorth>
+          <dataSouth>
+            <offset>(0, 0, -0.25)</offset>
+          </dataSouth>
+          <dataEast>
+            <offset>(-0.5, 0, -0.15)</offset>
+          </dataEast>
+          <dataWest>
+            <offset>(0.5, 0, -0.15)</offset>
+          </dataWest>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+	</GeneDef>
+
+  <GeneDef ParentName="GeneJawBase">
+	<defName>BTEIst_MegascarabHead</defName>
+	<label>Megascarab head</label>
+	<description>Carriers of this gene have a smooth megascarab head.</description>
+	<iconPath>Genes/Icons/BTEIst_MegascarabHeadIcon</iconPath>
+	<forcedHeadTypes>
+	  <li>BTEIst_MegascarabHead</li>
+	</forcedHeadTypes>
+	<displayCategory>BTE_Insectoid</displayCategory>
+	<displayOrderInCategory>21</displayOrderInCategory>
+  </GeneDef>
+  
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>BTEIst_MegascarabHead</defName>
+    <graphicPath>Things/Pawn/Humanlike/Heads/Genes/MegascarabHead/MegascarabHead</graphicPath>
+    <randomChosen>false</randomChosen>
+    <gender>None</gender>
+    <requiredGenes>
+      <li>BTEIst_MegascarabHead</li>
+    </requiredGenes>
+    <eyeOffsetEastWest>(0.15, 0, 0.175)</eyeOffsetEastWest>
+  </HeadTypeDef>
+  
+
+  <GeneDef ParentName="GeneSkinColorOverride">
+    <defName>BTEIst_MegascarabSkin</defName>
+    <label>megascarab skin</label>
+    <description>Carriers of this gene produce a pigment that turns their skin a color similar to that of a megascarab.</description>
+    <skinColorOverride>(114,107,84)</skinColorOverride>
+	<displayCategory>BTE_Insectoid</displayCategory>
+    <displayOrderInCategory>22</displayOrderInCategory>
+  </GeneDef>
+  
+
+  <GeneDef>
+    <defName>BTEMIst_JellyProducer</defName>
+    <label>insect jelly producer</label>
+    <description>Carriers of this gene produce insect jelly, which they must regurgitate out every so often.</description>
+    <geneClass>BTE.Gene_ExcessMilkProduction</geneClass>
+    <iconPath>Genes/Icons/BTEIst_JellyIcon</iconPath>
+    <displayCategory>BTE_Insectoid</displayCategory>
+    <displayOrderInCategory>23</displayOrderInCategory>
+	<modExtensions>
+		<li Class="BTE.GeneMaterialProduced">
+			<produces>InsectJelly</produces>
+			<intervalDays>1</intervalDays>
+			<amount>11</amount>
+		</li>
+	</modExtensions>
+    <exclusionTags>
+      <li>Milk</li>
+    </exclusionTags>
+    <minAgeActive>18</minAgeActive>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>-2</biostatMet>
+  </GeneDef>
+  <GeneDef>
+    <defName>BTEMIst_JellyConverter</defName>
+    <label>insect jelly converter</label>
+    <description>Carriers of this gene may process food into insect jelly.</description>
+    <iconPath>Genes/Icons/BTEIst_JellyConversionIcon</iconPath>
+    <displayCategory>BTE_Insectoid</displayCategory>
+    <displayOrderInCategory>24</displayOrderInCategory>
+    <abilities>
+      <li>BTEIst_JellyConversion</li>
+    </abilities>
+    <descriptionHyperlinks>
+      <AbilityDef>BTEIst_JellyConversion</AbilityDef>
+    </descriptionHyperlinks>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>-1</biostatMet>
+  </GeneDef>
+  
+
+  <GeneDef>
+    <defName>BTEIst_RapidEater</defName>
+    <label>rapid eater</label>
+    <description>Carriers of this gene consume food rapidly.</description>
+    <iconPath>Genes/Icons/BTEIst_RapidEaterIcon</iconPath>
+    <displayCategory>BTE_Insectoid</displayCategory>
+    <displayOrderInCategory>25</displayOrderInCategory>
+    <statOffsets>
+      <EatingSpeed>2</EatingSpeed>
+    </statOffsets>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>-1</biostatMet>
   </GeneDef>
 </Defs>
