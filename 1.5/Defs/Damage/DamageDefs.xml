@@ -7,7 +7,7 @@
     <additionalHediffs>
       <li>
         <hediff>ToxicBuildup</hediff>
-        <severityPerDamageDealt>0.005</severityPerDamageDealt>
+        <severityPerDamageDealt>0.01</severityPerDamageDealt>
         <victimSeverityScaling>ToxicResistance</victimSeverityScaling>
         <inverseStatScaling>true</inverseStatScaling>
         <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
