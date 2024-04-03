@@ -157,6 +157,7 @@
       <li>IndustrialAdvanced</li>
       <li>IndustrialMilitaryBasic</li>
       <li>IndustrialMilitaryAdvanced</li>
+      <li>BeltDefenseTox</li>
       <li>BeltDefensePop</li>
     </apparelTags>
     <apparelMoney>1000~1500</apparelMoney>
@@ -233,6 +234,7 @@
       <li>IndustrialMilitaryAdvanced</li>
       <li>SpacerMilitary</li>
       <li>BeltDefensePop</li>
+      <li>BeltDefenseTox</li>
     </apparelTags>
     <apparelMoney>2500~3500</apparelMoney>
     <apparelAllowHeadgearChance>0.9</apparelAllowHeadgearChance>
