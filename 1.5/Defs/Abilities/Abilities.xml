@@ -42,12 +42,15 @@
     <cooldownTicksRange>5000</cooldownTicksRange>
     <aiCanUse>false</aiCanUse>
     <targetRequired>false</targetRequired>
+	<hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
     <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
     <showCastingProgressBar>true</showCastingProgressBar>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
       <warmupTime>1</warmupTime>
+      <violent>false</violent>
       <requireLineOfSight>false</requireLineOfSight>
       <drawAimPie>false</drawAimPie>      
       <targetParams>
@@ -227,7 +230,9 @@
     <iconPath>Genes/Icons/BTEIst_TameInsectoidIcon</iconPath>
     <cooldownTicksRange>60000</cooldownTicksRange>
     <aiCanUse>false</aiCanUse>
+	<hostile>false</hostile>
     <targetRequired>true</targetRequired>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
     <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
     <showCastingProgressBar>true</showCastingProgressBar>
@@ -236,7 +241,8 @@
       <warmupTime>1</warmupTime>
       <requireLineOfSight>true</requireLineOfSight>
       <range>5</range>
-      <drawAimPie>false</drawAimPie>      
+      <drawAimPie>false</drawAimPie> 
+      <violent>false</violent>     
       <targetParams>
         <canTargetSelf>true</canTargetSelf>
       </targetParams>
