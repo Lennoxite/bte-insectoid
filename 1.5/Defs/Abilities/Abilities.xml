@@ -36,7 +36,7 @@
   <AbilityDef>
     <defName>BTEIst_JellyConversion</defName>
     <label>food to jelly conversion</label>
-    <description>Spend a significant amount of nutrition to regurgitate precious insect jelly. Inefficient if processed from prepared meals but less so if made from raw foods.</description>
+    <description>Spend a significant amount of nutrition to regurgitate precious insect jelly.</description>
     <jobDef>CastAbilityOnThing</jobDef>
     <iconPath>Genes/Icons/BTEIst_JellyConversionIcon</iconPath>
     <cooldownTicksRange>5000</cooldownTicksRange>
