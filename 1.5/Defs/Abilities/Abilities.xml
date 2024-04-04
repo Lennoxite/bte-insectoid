@@ -216,4 +216,34 @@
       <speed>100</speed>
     </projectile>
   </ThingDef>
+  
+  
+ 
+  <AbilityDef>
+    <defName>BTEIst_TameInsectoid</defName>
+    <label>tame insectoid</label>
+    <description>Release calming pheromones to immediately tame an insectoid.</description>
+    <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+    <iconPath>Genes/Icons/BTEIst_TameInsectoidIcon</iconPath>
+    <cooldownTicksRange>60000</cooldownTicksRange>
+    <aiCanUse>false</aiCanUse>
+    <targetRequired>true</targetRequired>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <showCastingProgressBar>true</showCastingProgressBar>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <warmupTime>1</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <range>5</range>
+      <drawAimPie>false</drawAimPie>      
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="BTE_IST.CompProperties_AbilityTameInsectoid">
+      </li>	
+    </comps>
+  </AbilityDef> 
 </Defs>

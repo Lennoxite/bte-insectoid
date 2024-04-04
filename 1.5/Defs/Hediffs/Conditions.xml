@@ -122,11 +122,11 @@
   </HediffDef> 
  
    <HediffDef ParentName="NaturalImplantBase">
-    <defName>BTEIst_InsectoidHorn</defName>
-    <label>insectoid horn</label>
+    <defName>BTEIst_InsectoidClaw</defName>
+    <label>insectoid claw</label>
     <defaultLabelColor>(0.8,0.8,0.45)</defaultLabelColor>
-    <labelNoun>insectoid horn</labelNoun>
-    <description>A great chitinous horn affixed to the head, good for striking enemies of the hive.</description>
+    <labelNoun>insectoid claw</labelNoun>
+    <description>A great chitinous claw affixed to the head, good for striking enemies of the hive.</description>
     <addedPartProps>
       <solid>true</solid>
     </addedPartProps>
@@ -134,7 +134,7 @@
       <li Class="HediffCompProperties_VerbGiver">
         <tools>
           <li>
-            <label>horn</label>
+            <label>claw</label>
             <capacities>
               <li>Stab</li>
             </capacities>

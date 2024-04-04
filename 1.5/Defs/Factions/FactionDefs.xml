@@ -32,7 +32,8 @@
         <kindDef>Combat</kindDef>
         <options>
           <Villager>5</Villager>
-          <Town_Guard>10</Town_Guard>
+          <Town_Guard>5</Town_Guard>
+          <Megaspider>5</Megaspider>
           <Grenadier_Destructive>1.5</Grenadier_Destructive>
           <BTEIst_InsectoidSlasher>7</BTEIst_InsectoidSlasher>
           <BTEIst_InsectoidGunner>10</BTEIst_InsectoidGunner>
@@ -62,7 +63,8 @@
         </carriers>
         <guards>
           <Villager>3</Villager>
-          <Town_Guard>10</Town_Guard>
+          <Town_Guard>5</Town_Guard>
+          <Megaspider>5</Megaspider>
           <Grenadier_Destructive>1.5</Grenadier_Destructive>
           <BTEIst_InsectoidSlasher>7</BTEIst_InsectoidSlasher>
           <BTEIst_InsectoidGunner>10</BTEIst_InsectoidGunner>
@@ -73,7 +75,8 @@
         <kindDef>Settlement</kindDef>
         <options>
           <Villager>10</Villager>
-          <Town_Guard>10</Town_Guard>
+          <Town_Guard>5</Town_Guard>
+          <Megaspider>5</Megaspider>
           <Grenadier_Destructive>1.5</Grenadier_Destructive>
           <BTEIst_InsectoidSlasher>7</BTEIst_InsectoidSlasher>
           <BTEIst_InsectoidGunner>10</BTEIst_InsectoidGunner>

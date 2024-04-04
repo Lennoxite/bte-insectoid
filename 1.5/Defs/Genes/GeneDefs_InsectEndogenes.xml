@@ -54,7 +54,7 @@
   <GeneDef ParentName="GeneJawBase">
 	<defName>BTEIst_MegaspiderHead</defName>
 	<label>megaspider head</label>
-	<description>Carriers of this gene have a sharp megaspider head. Comes with a dangerous head horn.</description>
+	<description>Carriers of this gene have a sharp megaspider head. Comes with a dangerous head claw.</description>
 	<iconPath>Genes/Icons/BTEIst_MegaspiderHeadIcon</iconPath>
 	<forcedHeadTypes>
 	  <li>BTEIst_MegaspiderHead</li>
@@ -62,7 +62,7 @@
 	<geneClass>BTE.Gene_AddImplant</geneClass>
 	<modExtensions>
 		<li Class="BTE.GeneImplantInfo">
-			<hediffImplant>BTEIst_InsectoidHorn</hediffImplant>
+			<hediffImplant>BTEIst_InsectoidClaw</hediffImplant>
 			<bodyPartImplant>Head</bodyPartImplant>
 		</li>
 	</modExtensions>
@@ -431,5 +431,23 @@
     </statOffsets>
     <biostatCpx>1</biostatCpx>
     <biostatMet>-1</biostatMet>
+  </GeneDef>
+  
+
+  <GeneDef>
+    <defName>BTEIst_TameInsectoid</defName>
+    <label>tame insectoid</label>
+    <description>Carriers may release pheromones that pacifies insectoids.</description>
+    <iconPath>Genes/Icons/BTEIst_TameInsectoidIcon</iconPath>
+    <displayCategory>BTE_Insectoid</displayCategory>
+    <displayOrderInCategory>26</displayOrderInCategory>
+    <abilities>
+      <li>BTEIst_TameInsectoid</li>
+    </abilities>
+    <descriptionHyperlinks>
+      <AbilityDef>BTEIst_TameInsectoid</AbilityDef>
+    </descriptionHyperlinks>
+    <biostatMet>-1</biostatMet>
+    <biostatCpx>1</biostatCpx>
   </GeneDef>
 </Defs>
