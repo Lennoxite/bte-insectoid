@@ -65,12 +65,12 @@
       <li>AptitudeStrong_Intellectual</li>
       <li>AptitudePoor_Melee</li>
       <li>Delicate</li>
+      <li>Hair_Gray</li>
       <li>BTEIst_ToxicStingerLauncher</li>
       <li>Learning_Fast</li>
       <li>MeleeDamage_Weak</li>
       <li>FireResistant</li>
       <li>BTEIst_SpelopedeTail</li>
-      <li>Hair_BaldOnly</li>
       <li>BTEIst_SpelopedeSkin</li>
       <li>ToxicEnvironmentResistance_Total</li>
       <li>PollutionRush</li>
@@ -102,8 +102,9 @@
       <li>AptitudeStrong_Crafting</li>
       <li>AptitudeStrong_Animals</li>
       <li>AptitudeRemarkable_Plants</li>
-      <li>AptitudePoor_Intellectual</li>
+      <li>AptitudeTerrible_Intellectual</li>
       <li>AptitudePoor_Social</li>
+      <li>Hair_Gray</li>
       <li>BTEIst_JellyConverter</li>
       <li>PsychicAbility_Dull</li>
       <li>NakedSpeed</li>
@@ -112,7 +113,6 @@
       <li>Pain_Extra</li>
       <li>BTEIst_RapidEater</li>
       <li>BTEIst_MegascarabTail</li>
-      <li>Hair_BaldOnly</li>
       <li>BTEIst_MegascarabSkin</li>
       <li>BTEIst_TameInsectoid</li>
       <li>ToxicEnvironmentResistance_Total</li>

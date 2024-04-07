@@ -427,7 +427,7 @@
     <displayCategory>BTE_Insectoid</displayCategory>
     <displayOrderInCategory>25</displayOrderInCategory>
     <statOffsets>
-      <EatingSpeed>2</EatingSpeed>
+      <EatingSpeed>4</EatingSpeed>
     </statOffsets>
     <biostatCpx>1</biostatCpx>
     <biostatMet>-1</biostatMet>
