@@ -26,5 +26,5 @@
 	<description>
 Gene set based on Rimworld's insectoids. Become a powerful abberation of multiple bug types! Use powerful venoms and toxic gas to lead your hive to victory!
 	</description>
-	<modIconPath IgnoreIfNoMatchingField="True">BiotechExpansionCoreIcon</modIconPath>
+	<modIconPath IgnoreIfNoMatchingField="True">BiotechExpansionInsectoidIcon</modIconPath>
 </ModMetaData>
