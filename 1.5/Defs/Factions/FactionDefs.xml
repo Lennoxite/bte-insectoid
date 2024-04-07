@@ -294,7 +294,7 @@
     <defName>BTEIst_NamerFactionInsectoid</defName>
     <rulePack>
       <rulesStrings>
-        <li>r_name->Splice Hive Geneline [pre][post]</li>
+        <li>r_name->Spliced Geneline [pre][post]</li>
 		
         <li>pre->AX</li>
         <li>pre->RV</li>
