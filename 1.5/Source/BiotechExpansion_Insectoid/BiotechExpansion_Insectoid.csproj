@@ -31,7 +31,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Assembly-CSharp, Version=1.5.8858.39891, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Assembly-CSharp, Version=1.5.8860.34691, Culture=neutral, processorArchitecture=MSIL">
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -56,6 +56,8 @@
     <Compile Include="CompProperties_AbilityLaunchProjectileJellyBuffable.cs" />
     <Compile Include="CompProperties_AbilityTameInsectoid.cs" />
     <Compile Include="CompProperties_AbilityToxpop.cs" />
+    <Compile Include="ConditionalStatAffector_JellyBuffed.cs" />
+    <Compile Include="GeneJellyHediffGiver.cs" />
     <Compile Include="Gene_JellyLover.cs" />
     <Compile Include="HediffCompProperties_ExplodeOnDeathSeverityBased.cs" />
     <Compile Include="HediffComp_ExplodeOnDeathSeverityBased.cs" />

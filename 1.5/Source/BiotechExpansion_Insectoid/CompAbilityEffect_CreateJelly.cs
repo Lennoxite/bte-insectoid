@@ -14,8 +14,15 @@ namespace BTE_IST
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
             base.Apply(target, dest);
+            CreateJelly();
+        }
+
+        public Thing CreateJelly()
+        {
             var jelly = GenSpawn.Spawn(ThingDefOf.InsectJelly, parent.pawn.Position, parent.pawn.Map);
             jelly.stackCount = Props.amount;
+            return jelly;
+
         }
 
 

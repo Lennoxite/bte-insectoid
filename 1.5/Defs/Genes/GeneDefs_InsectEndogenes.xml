@@ -192,6 +192,9 @@
 	  <InjuryHealingFactor>-0.2</InjuryHealingFactor>
     </statOffsets>
     <biostatMet>3</biostatMet>
+    <descriptionHyperlinks>
+      <HediffDef>BTEIst_JellyEnergized</HediffDef>
+    </descriptionHyperlinks>
   </GeneDef>
   
 
@@ -321,6 +324,25 @@
     <biostatCpx>1</biostatCpx>
   </GeneDef>
   
+
+  <GeneDef>
+    <defName>BTEIst_JellyThinker</defName>
+	<geneClass>BTE_IST.Gene_JellyLover</geneClass>
+    <label>insect jelly thinker</label>
+    <description>Carriers of this gene have their brain activity optimized from consuming insect jelly. They are more clever while metabolizing jelly.</description>
+    <iconPath>Genes/Icons/BTEIst_JellyThinkerIcon</iconPath>
+    <displayCategory>BTE_Insectoid</displayCategory>
+    <displayOrderInCategory>15</displayOrderInCategory>
+	<modExtensions>
+		<li Class="BTE_IST.GeneJellyHediffGiver">
+			<hediff>BTEIst_JellyBrained</hediff>
+		</li>
+	</modExtensions>
+    <descriptionHyperlinks>
+      <HediffDef>BTEIst_JellyBrained</HediffDef>
+    </descriptionHyperlinks>
+    <biostatMet>-1</biostatMet>
+  </GeneDef>
  
 <!-- SPLICE-SCARAB -->
 

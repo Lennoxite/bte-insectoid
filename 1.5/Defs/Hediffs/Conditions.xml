@@ -73,6 +73,35 @@
     </renderNodeProperties>
   </HediffDef>
   
+
+    <HediffDef>
+    <defName>BTEIst_JellyBrained</defName>
+    <label>jelly mind empowered</label>
+    <description>Eating insect jelly boosts the mind's thinking ability.</description>
+    <defaultLabelColor>(0.7, 0.7, 0.9)</defaultLabelColor>
+    <initialSeverity>0</initialSeverity>
+    <maxSeverity>1</maxSeverity>
+    <hediffClass>HediffWithComps</hediffClass>
+    <everCurableByItem>false</everCurableByItem>
+    <stages>
+      <li>
+        <label>metabolizing</label>
+		  <statFactors>
+			<ResearchSpeed>1.50</ResearchSpeed>
+		  </statFactors>
+		  <statOffsets>
+			<MedicalTendQuality>0.65</MedicalTendQuality>
+		  </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-2</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+  </HediffDef>
+  
     <HediffDef>
     <defName>BTEIst_VolatileVenom</defName>
     <label>volatile venom</label>

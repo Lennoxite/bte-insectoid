@@ -12,9 +12,16 @@ namespace BTE_IST
 	{
 		public override void Notify_IngestedThing(Thing thing, int numTaken)
 		{
-			if (thing.def == ThingDefOf.InsectJelly)
+			HediffDef hediff = BTEIst_HediffDefOf.BTEIst_JellyEnergized;
+			GeneJellyHediffGiver modE = def.GetModExtension<GeneJellyHediffGiver>();
+			if (modE != null)
 			{
-				Hediff he = this.pawn.health.GetOrAddHediff(BTEIst_HediffDefOf.BTEIst_JellyEnergized);
+				hediff = modE.hediff;
+			}	
+
+            if (thing.def == ThingDefOf.InsectJelly)
+			{
+				Hediff he = this.pawn.health.GetOrAddHediff(hediff);
 				he.Severity += numTaken * 0.05f;
 			}	
 		}
