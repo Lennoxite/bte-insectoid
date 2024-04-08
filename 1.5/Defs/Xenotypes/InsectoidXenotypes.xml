@@ -38,6 +38,7 @@
       <li>BTEIst_ToxicHalo</li>
       <li>UVSensitivity_Mild</li>
       <li>Beauty_VeryUgly</li>
+	  <li>BTEIst_JellyStrength</li>
     </genes>
     <!--<forbiddenWeaponClasses>
       <li>Melee</li>

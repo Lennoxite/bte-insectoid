@@ -214,6 +214,26 @@
     <biostatCpx>1</biostatCpx>
   </GeneDef>
   
+  <GeneDef>
+    <defName>BTEIst_JellyStrength</defName>
+	<geneClass>BTE_IST.Gene_JellyLover</geneClass>
+    <label>insect jelly bodybuilder</label>
+    <description>Carriers of this gene have their muscles optimized from consuming insect jelly. They are much stronger while metabolizing insect jelly.</description>
+    <iconPath>Genes/Icons/BTEIst_JellyBodyIcon</iconPath>
+    <displayCategory>BTE_Insectoid</displayCategory>
+    <displayOrderInCategory>8</displayOrderInCategory>
+    <prerequisite>BTEIst_JellyLover</prerequisite>
+	<modExtensions>
+		<li Class="BTE_IST.GeneJellyHediffGiver">
+			<hediff>BTEIst_JellyStrength</hediff>
+		</li>
+	</modExtensions>
+    <descriptionHyperlinks>
+      <HediffDef>BTEIst_JellyStrength</HediffDef>
+    </descriptionHyperlinks>
+    <biostatMet>-1</biostatMet>
+  </GeneDef>
+  
 <!-- SPELO-SPLICE -->
 
   <GeneDef ParentName="GeneTailBase">
@@ -333,6 +353,7 @@
     <iconPath>Genes/Icons/BTEIst_JellyThinkerIcon</iconPath>
     <displayCategory>BTE_Insectoid</displayCategory>
     <displayOrderInCategory>15</displayOrderInCategory>
+    <prerequisite>BTEIst_JellyLover</prerequisite>
 	<modExtensions>
 		<li Class="BTE_IST.GeneJellyHediffGiver">
 			<hediff>BTEIst_JellyBrained</hediff>

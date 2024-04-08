@@ -103,6 +103,44 @@
   </HediffDef>
   
     <HediffDef>
+    <defName>BTEIst_JellyStrength</defName>
+    <label>jelly muscle power</label>
+    <description>Eating insect jelly boosts the body's muscles.</description>
+    <defaultLabelColor>(0.9, 0.65, 0.5)</defaultLabelColor>
+    <initialSeverity>0</initialSeverity>
+    <maxSeverity>1</maxSeverity>
+    <hediffClass>HediffWithComps</hediffClass>
+    <everCurableByItem>false</everCurableByItem>
+    <stages>
+      <li>
+        <label>metabolizing</label>
+		  <statOffsets>
+			<MeleeDodgeChance>0.25</MeleeDodgeChance>
+		  </statOffsets>
+		  <statFactors>
+			<MeleeDamageFactor>1.33</MeleeDamageFactor>
+		  </statFactors>
+		  <capMods>
+			<li>
+			<capacity>Moving</capacity>
+			<offset>0.5</offset>
+			</li>
+			<li>
+			<capacity>Manipulation</capacity>
+			<offset>0.25</offset>
+			</li>
+		  </capMods>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-2</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+  </HediffDef>
+  
+    <HediffDef>
     <defName>BTEIst_VolatileVenom</defName>
     <label>volatile venom</label>
     <description>Volatile venom in the body. Will cause an explosion on death, size increasing with severity.</description>
