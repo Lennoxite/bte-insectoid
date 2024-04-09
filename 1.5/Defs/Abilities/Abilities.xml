@@ -39,7 +39,7 @@
     <description>Spend a significant amount of nutrition to regurgitate precious insect jelly.</description>
     <jobDef>CastAbilityOnThing</jobDef>
     <iconPath>Genes/Icons/BTEIst_JellyConversionIcon</iconPath>
-    <cooldownTicksRange>5000</cooldownTicksRange>
+    <cooldownTicksRange>60</cooldownTicksRange>
     <aiCanUse>false</aiCanUse>
     <targetRequired>false</targetRequired>
 	<hostile>false</hostile>
