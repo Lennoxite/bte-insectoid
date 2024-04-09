@@ -37,7 +37,7 @@
     <defName>BTEIst_JellyConversion</defName>
     <label>food to jelly conversion</label>
     <description>Spend a significant amount of nutrition to regurgitate precious insect jelly.</description>
-    <jobDef>CastAbilityOnThing</jobDef>
+    <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
     <iconPath>Genes/Icons/BTEIst_JellyConversionIcon</iconPath>
     <cooldownTicksRange>60</cooldownTicksRange>
     <aiCanUse>false</aiCanUse>
@@ -51,6 +51,7 @@
       <verbClass>Verb_CastAbility</verbClass>
       <warmupTime>1</warmupTime>
       <violent>false</violent>
+      <range>-1</range>
       <requireLineOfSight>false</requireLineOfSight>
       <drawAimPie>false</drawAimPie>      
       <targetParams>
@@ -63,6 +64,40 @@
       </li>	
       <li Class="BTE.CompProperties_AbilityHungerCost">
         <hungerCost>0.5</hungerCost>
+      </li>	
+    </comps>
+  </AbilityDef> 
+  <AbilityDef>
+    <defName>BTEIst_JellyTransmutation</defName>
+    <label>food to jelly transmutation</label>
+    <description>Convert some food in the world into precious insect jelly. Wastes a considerable amount of nutrition (20%).</description>
+    <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+    <iconPath>Genes/Icons/BTEIst_JellyConversionIcon</iconPath>
+    <cooldownTicksRange>60000</cooldownTicksRange>
+    <aiCanUse>false</aiCanUse>
+    <targetRequired>true</targetRequired>
+	<hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <showCastingProgressBar>true</showCastingProgressBar>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <warmupTime>1</warmupTime>
+      <violent>false</violent>
+      <range>-1</range>
+      <requireLineOfSight>false</requireLineOfSight>
+      <drawAimPie>false</drawAimPie>      
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+		<canTargetItems>true</canTargetItems>
+		<mapObjectTargetsMustBeAutoAttackable>false</mapObjectTargetsMustBeAutoAttackable>
+		<canTargetPawns>false</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="BTE_IST.CompProperties_AbilityCreateJellyFromThing">
+		<fraction>0.8</fraction>
       </li>	
     </comps>
   </AbilityDef> 

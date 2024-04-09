@@ -31,7 +31,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Assembly-CSharp, Version=1.5.8860.34691, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Assembly-CSharp, Version=1.5.8864.27602, Culture=neutral, processorArchitecture=MSIL">
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -49,10 +49,12 @@
   <ItemGroup>
     <Compile Include="BTEIst_HediffDefOf.cs" />
     <Compile Include="CompAbilityEffect_CreateJelly.cs" />
+    <Compile Include="CompAbilityEffect_CreateJellyFromThing.cs" />
     <Compile Include="CompAbilityEffect_LaunchProjectileJellyBuffable.cs" />
     <Compile Include="CompAbilityEffect_TameInsectoid.cs" />
     <Compile Include="CompAbilityEffect_Toxpop.cs" />
     <Compile Include="CompProperties_AbilityCreateJelly.cs" />
+    <Compile Include="CompProperties_AbilityCreateJellyFromThing.cs" />
     <Compile Include="CompProperties_AbilityLaunchProjectileJellyBuffable.cs" />
     <Compile Include="CompProperties_AbilityTameInsectoid.cs" />
     <Compile Include="CompProperties_AbilityToxpop.cs" />

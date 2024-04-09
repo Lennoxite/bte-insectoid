@@ -477,9 +477,11 @@
     <displayOrderInCategory>24</displayOrderInCategory>
     <abilities>
       <li>BTEIst_JellyConversion</li>
+      <li>BTEIst_JellyTransmutation</li>
     </abilities>
     <descriptionHyperlinks>
       <AbilityDef>BTEIst_JellyConversion</AbilityDef>
+      <AbilityDef>BTEIst_JellyTransmutation</AbilityDef>
     </descriptionHyperlinks>
     <biostatCpx>1</biostatCpx>
     <biostatMet>-1</biostatMet>
