@@ -197,6 +197,12 @@
     <combatPower>140</combatPower>
     <canBeSapper>true</canBeSapper>
     <gearHealthRange>0.7~3.2</gearHealthRange>
+	<startingHediffs Inherit="True">
+		<li>
+			<def>BTEIst_JellyStrength</def>
+			<severity>1</severity>
+		</li>
+	</startingHediffs>
     <apparelTags>
       <li>IndustrialBasic</li>
       <li>IndustrialAdvanced</li>
