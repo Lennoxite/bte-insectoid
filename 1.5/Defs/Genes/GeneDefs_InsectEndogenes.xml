@@ -82,7 +82,11 @@
         <useRottenColor>true</useRottenColor>
         <useSkinShader>true</useSkinShader>
         <rotDrawMode>Fresh, Rotting</rotDrawMode>
-        <texPath>Things/Pawn/Humanlike/Heads/Genes/MegaspiderCrest/MegaspiderCrest</texPath>
+		<texPaths>
+		<li>Things/Pawn/Humanlike/Heads/Genes/MegaspiderCrest/1/MegaspiderCrest</li>
+		<li>Things/Pawn/Humanlike/Heads/Genes/MegaspiderCrest/2/MegaspiderCrest</li>
+		<li>Things/Pawn/Humanlike/Heads/Genes/MegaspiderCrest/3/MegaspiderCrest</li>
+		</texPaths>
         <narrowCrownHorizontalOffset>0.03</narrowCrownHorizontalOffset>
         <drawData>
           <defaultData>
