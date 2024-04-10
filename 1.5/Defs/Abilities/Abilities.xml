@@ -29,7 +29,7 @@
         <smokeRadius>3</smokeRadius>
       </li>	
       <li Class="BTE.CompProperties_AbilityHungerCost">
-        <hungerCost>0.1</hungerCost>
+        <hungerCost>0.2</hungerCost>
       </li>	
     </comps>
   </AbilityDef> 
@@ -98,6 +98,9 @@
     <comps>
       <li Class="BTE_IST.CompProperties_AbilityCreateJellyFromThing">
 		<fraction>0.8</fraction>
+      </li>	
+      <li Class="BTE.CompProperties_AbilityHungerCost">
+        <hungerCost>0.35</hungerCost>
       </li>	
     </comps>
   </AbilityDef> 

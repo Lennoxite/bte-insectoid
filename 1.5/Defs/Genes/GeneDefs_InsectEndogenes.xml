@@ -373,8 +373,8 @@
 
   <GeneDef ParentName="GeneTailBase">
     <defName>BTEIst_MegascarabTail</defName>
-    <label>megascarab thorax</label>
-    <description>Carriers of this gene grow a megascarab thorax.</description>
+    <label>megascarab shell</label>
+    <description>Carriers of this gene grow a megascarab shell.</description>
     <iconPath>Genes/Icons/BTEIst_MegascarabTailIcon</iconPath>
     <iconColor>(0.75, 0.75, 0.75)</iconColor>
     <displayOrderInCategory>20</displayOrderInCategory>
@@ -403,9 +403,11 @@
           </dataSouth>
           <dataEast>
             <offset>(-0.5, 0, -0.15)</offset>
+            <layer>90</layer>
           </dataEast>
           <dataWest>
             <offset>(0.5, 0, -0.15)</offset>
+            <layer>90</layer>
           </dataWest>
         </drawData>
       </li>
