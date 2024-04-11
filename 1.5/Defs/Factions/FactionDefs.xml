@@ -168,6 +168,7 @@
     <weaponMoney>330~650</weaponMoney>
     <weaponTags>
       <li>Gun</li>
+      <li>GrenadeTox</li>
     </weaponTags>
     <disallowedTraits>
       <li>Brawler</li>
@@ -183,6 +184,14 @@
         </li>
       </subOptionsChooseOne>
     </inventoryOptions>
+	<useFactionXenotypes>false</useFactionXenotypes>
+    <xenotypeSet Inherit="False">
+      <xenotypeChances>
+        <BTEIst_Megaspider>0.05</BTEIst_Megaspider>
+        <BTEIst_Spelopede>0.60</BTEIst_Spelopede>
+        <BTEIst_Megascarab>0.35</BTEIst_Megascarab>
+      </xenotypeChances>
+    </xenotypeSet>
     <skills>
       <li>
         <skill>Shooting</skill>
@@ -228,6 +237,12 @@
         </li>
       </subOptionsChooseOne>
     </inventoryOptions>
+    <xenotypeSet Inherit="False">
+      <xenotypeChances>
+        <BTEIst_Megaspider>1</BTEIst_Megaspider>
+      </xenotypeChances>
+    </xenotypeSet>
+	<useFactionXenotypes>false</useFactionXenotypes>
     <initialResistanceRange>10~16</initialResistanceRange>
   </PawnKindDef>
   
