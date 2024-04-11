@@ -34,7 +34,7 @@
           <Villager>5</Villager>
           <Town_Guard>5</Town_Guard>
           <Megaspider>5</Megaspider>
-          <Grenadier_Destructive>1.5</Grenadier_Destructive>
+          <Grenadier_Tox>1.5</Grenadier_Tox>
           <BTEIst_InsectoidSlasher>7</BTEIst_InsectoidSlasher>
           <BTEIst_InsectoidGunner>10</BTEIst_InsectoidGunner>
           <BTEIst_InsectoidElite>10</BTEIst_InsectoidElite>
@@ -65,7 +65,7 @@
           <Villager>3</Villager>
           <Town_Guard>5</Town_Guard>
           <Megaspider>5</Megaspider>
-          <Grenadier_Destructive>1.5</Grenadier_Destructive>
+          <Grenadier_Tox>1.5</Grenadier_Tox>
           <BTEIst_InsectoidSlasher>7</BTEIst_InsectoidSlasher>
           <BTEIst_InsectoidGunner>10</BTEIst_InsectoidGunner>
           <BTEIst_InsectoidElite>10</BTEIst_InsectoidElite>
@@ -77,7 +77,7 @@
           <Villager>10</Villager>
           <Town_Guard>5</Town_Guard>
           <Megaspider>5</Megaspider>
-          <Grenadier_Destructive>1.5</Grenadier_Destructive>
+          <Grenadier_Tox>1.5</Grenadier_Tox>
           <BTEIst_InsectoidSlasher>7</BTEIst_InsectoidSlasher>
           <BTEIst_InsectoidGunner>10</BTEIst_InsectoidGunner>
           <BTEIst_InsectoidElite>10</BTEIst_InsectoidElite>
@@ -168,7 +168,7 @@
     <weaponMoney>330~650</weaponMoney>
     <weaponTags>
       <li>Gun</li>
-      <li>GrenadeTox</li>
+      <!-- <li>GrenadeTox</li> -->
     </weaponTags>
     <disallowedTraits>
       <li>Brawler</li>
