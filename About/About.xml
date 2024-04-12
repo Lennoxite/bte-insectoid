@@ -4,7 +4,6 @@
 	<name>Biotech Expansion - Insectoid</name>
 	<author>Lennoxicon</author>
 	<supportedVersions>
-		<li>1.4</li>
 		<li>1.5</li>
 	</supportedVersions>
 	<packageId>biotexpans.insect</packageId>
