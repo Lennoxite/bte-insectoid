@@ -106,6 +106,41 @@
   </HediffDef>
   
     <HediffDef>
+    <defName>BTEIst_JellyLaborer</defName>
+    <label>jelly focus powered</label>
+    <description>Eating insect jelly boosts the body's muscles.</description>
+    <defaultLabelColor>(0.8, 0.75, 0.75)</defaultLabelColor>
+    <initialSeverity>0</initialSeverity>
+    <maxSeverity>1</maxSeverity>
+    <hediffClass>HediffWithComps</hediffClass>
+    <everCurableByItem>false</everCurableByItem>
+    <stages>
+      <li>
+        <label>metabolizing</label>
+		  <statOffsets>
+			<WorkSpeedGlobal>0.25</WorkSpeedGlobal>
+		  </statOffsets>
+		  <capMods>
+			<li>
+			<capacity>Moving</capacity>
+			<offset>0.25</offset>
+			</li>
+			<li>
+			<capacity>Manipulation</capacity>
+			<offset>0.25</offset>
+			</li>
+		  </capMods>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-2</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+  </HediffDef>
+  
+    <HediffDef>
     <defName>BTEIst_JellyStrength</defName>
     <label>jelly muscle power</label>
     <description>Eating insect jelly boosts the body's muscles.</description>
@@ -130,10 +165,6 @@
 			<capacity>Moving</capacity>
 			<offset>0.5</offset>
 			</li>
-			<li>
-			<capacity>Manipulation</capacity>
-			<offset>0.25</offset>
-			</li>
 		  </capMods>
       </li>
     </stages>
@@ -143,6 +174,32 @@
         <showHoursToRecover>true</showHoursToRecover>
       </li>
     </comps>
+  </HediffDef>
+  
+
+  <HediffDef>
+    <defName>BTEIst_Exogelatin</defName>
+    <label>exogelatin</label>
+    <labelNoun>gleaming sheath of chitin</labelNoun>
+    <description>A hardened layer of chitin strengthened by insect jelly metabolism.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.6, 0.9, 0.6)</defaultLabelColor>
+    <initialSeverity>0</initialSeverity>
+    <maxSeverity>1</maxSeverity>
+    <stages>
+      <li>
+        <statOffsets>
+          <ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+        </statOffsets>
+      </li>
+    </stages>
+	 <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-2</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+	 </comps>
   </HediffDef>
   
     <HediffDef>

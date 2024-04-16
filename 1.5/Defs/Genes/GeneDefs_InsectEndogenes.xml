@@ -238,6 +238,38 @@
     <biostatMet>-2</biostatMet>
   </GeneDef>
   
+  
+  <GeneDef>
+    <defName>BTEIst_HardenedChitin</defName>
+    <label>hardened chitin</label>
+    <description>Carriers of this gene have their bodies reinforced with a hard layer of chitin, granting some protection from physical attacks.</description>
+    <iconPath>Genes/Icons/BTEIst_HardenedChitinIcon</iconPath>
+    <displayCategory>BTE_Insectoid</displayCategory>
+    <displayOrderInCategory>70</displayOrderInCategory>
+	<statOffsets>
+	  <ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+	  <ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+	</statOffsets>
+    <biostatMet>-1</biostatMet>
+  </GeneDef>
+  
+  <GeneDef>
+    <defName>BTEIst_Exogelatin</defName>
+    <label>exogelatin</label>
+    <description>Carriers of this gene will have their chitin become stronger from consuming insect jelly, doubling the natural bonus from hardened chitin.</description>
+    <geneClass>BTE_IST.Gene_JellyLover</geneClass>
+    <iconPath>Genes/Icons/BTEIst_JellyExogelatinIcon</iconPath>
+    <displayCategory>BTE_Insectoid</displayCategory>
+    <prerequisite>BTEIst_HardenedChitin</prerequisite>
+    <displayOrderInCategory>71</displayOrderInCategory>
+	<modExtensions>
+		<li Class="BTE_IST.GeneJellyHediffGiver">
+			<hediff>BTEIst_Exogelatin</hediff>
+		</li>
+	</modExtensions>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>-1</biostatMet>
+  </GeneDef>
 <!-- SPELO-SPLICE -->
 
   <GeneDef ParentName="GeneTailBase">
@@ -520,6 +552,27 @@
     </descriptionHyperlinks>
     <biostatMet>-1</biostatMet>
     <biostatCpx>1</biostatCpx>
+  </GeneDef>
+  
+
+  <GeneDef>
+    <defName>BTEIst_JellyLaborer</defName>
+	<geneClass>BTE_IST.Gene_JellyLover</geneClass>
+    <label>insect jelly laborer</label>
+    <description>Carriers of this gene have their dexterity and focus amplified from consuming insect jelly. They work faster while metabolizing insect jelly.</description>
+    <iconPath>Genes/Icons/BTEIst_JellyLaborerIcon</iconPath>
+    <displayCategory>BTE_Insectoid</displayCategory>
+    <displayOrderInCategory>27</displayOrderInCategory>
+    <prerequisite>BTEIst_JellyLover</prerequisite>
+	<modExtensions>
+		<li Class="BTE_IST.GeneJellyHediffGiver">
+			<hediff>BTEIst_JellyLaborer</hediff>
+		</li>
+	</modExtensions>
+    <descriptionHyperlinks>
+      <HediffDef>BTEIst_JellyLaborer</HediffDef>
+    </descriptionHyperlinks>
+    <biostatMet>-1</biostatMet>
   </GeneDef>
   
 </Defs>

@@ -211,6 +211,11 @@
 			<def>BTEIst_JellyStrength</def>
 			<severity>1</severity>
 		</li>
+		<li>
+			<def>BTEIst_Exogelatin</def>
+			<severity>1</severity>
+			<chance>0.10</chance>
+		</li>
 	</startingHediffs>
     <apparelTags>
       <li>IndustrialBasic</li>

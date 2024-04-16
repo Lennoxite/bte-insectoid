@@ -18,6 +18,7 @@
       <li>Aggression_Aggressive</li>
 	  <li>StrongStomach</li>
       <li>AptitudePoor_Animals</li>
+      <li>AptitudePoor_Cooking</li>
       <li>AptitudeTerrible_Artistic</li>
       <li>AptitudeTerrible_Medicine</li>
       <li>AptitudeTerrible_Intellectual</li>
@@ -35,6 +36,8 @@
       <li>ToxicEnvironmentResistance_Total</li>
       <li>PollutionRush</li>
       <li>BTEIst_ToxSmog</li>
+      <li>BTEIst_HardenedChitin</li>
+      <li>BTEIst_Exogelatin</li>
       <li>BTEIst_ToxicHalo</li>
       <li>UVSensitivity_Mild</li>
       <li>Beauty_VeryUgly</li>
@@ -110,7 +113,8 @@
       <li>AptitudePoor_Social</li>
       <li>Hair_Gray</li>
       <li>BTEIst_JellyConverter</li>
-      <li>PsychicAbility_Dull</li>
+      <li>PsychicAbility_Deaf</li>
+      <li>BTEIst_JellyLaborer</li>
       <li>NakedSpeed</li>
       <li>BTEIst_JellyProducer</li>
       <li>RobustDigestion</li>
