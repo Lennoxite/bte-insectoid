@@ -108,7 +108,7 @@
     <HediffDef>
     <defName>BTEIst_JellyLaborer</defName>
     <label>jelly focus powered</label>
-    <description>Eating insect jelly boosts the body's muscles.</description>
+    <description>Eating insect jelly boosts the body's dexterity and focus.</description>
     <defaultLabelColor>(0.8, 0.75, 0.75)</defaultLabelColor>
     <initialSeverity>0</initialSeverity>
     <maxSeverity>1</maxSeverity>
