@@ -31,7 +31,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Assembly-CSharp, Version=1.5.8864.27602, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Assembly-CSharp, Version=1.5.8874.2866, Culture=neutral, processorArchitecture=MSIL">
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -45,16 +45,25 @@
     <Reference Include="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <Private>False</Private>
     </Reference>
+    <Reference Include="UnityEngine.IMGUIModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BTEIst_AbilityDefOf.cs" />
     <Compile Include="BTEIst_HediffDefOf.cs" />
+    <Compile Include="Command_AbilityXenotypeSelector.cs" />
     <Compile Include="CompAbilityEffect_CreateJelly.cs" />
     <Compile Include="CompAbilityEffect_CreateJellyFromThing.cs" />
+    <Compile Include="CompAbilityEffect_DeleteSelf.cs" />
+    <Compile Include="CompAbilityEffect_InjectEndogenes.cs" />
     <Compile Include="CompAbilityEffect_LaunchProjectileJellyBuffable.cs" />
     <Compile Include="CompAbilityEffect_TameInsectoid.cs" />
     <Compile Include="CompAbilityEffect_Toxpop.cs" />
     <Compile Include="CompProperties_AbilityCreateJelly.cs" />
     <Compile Include="CompProperties_AbilityCreateJellyFromThing.cs" />
+    <Compile Include="CompProperties_AbilityDeleteSelf.cs" />
+    <Compile Include="CompProperties_AbilityInjectEndogenes.cs" />
     <Compile Include="CompProperties_AbilityLaunchProjectileJellyBuffable.cs" />
     <Compile Include="CompProperties_AbilityTameInsectoid.cs" />
     <Compile Include="CompProperties_AbilityToxpop.cs" />
@@ -65,6 +74,7 @@
     <Compile Include="HediffComp_ExplodeOnDeathSeverityBased.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BTEIst_ThoughtDefOf.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

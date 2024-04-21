@@ -270,6 +270,23 @@
     <biostatCpx>1</biostatCpx>
     <biostatMet>-1</biostatMet>
   </GeneDef>
+  
+  
+  <GeneDef>
+    <defName>BTEIst_InjectInsectoidGenes</defName>
+    <label>genetic rewriter - insectoid</label>
+    <description>Carriers of this gene have a biomechanical organ which can permanently rewire another person's endogenetic code. This variant can only inject insectoid endogenes.</description>
+    <iconPath>Genes/Icons/BTEIst_InjectInsectoidGenesIcon</iconPath>
+    <displayCategory>BTE_Insectoid</displayCategory>
+    <displayOrderInCategory>72</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <descriptionHyperlinks>
+      <AbilityDef>BTEIst_InjectInsectoidGenes</AbilityDef>
+    </descriptionHyperlinks>
+    <abilities>
+      <li>BTEIst_InjectInsectoidGenes</li>
+    </abilities>
+  </GeneDef>
 <!-- SPELO-SPLICE -->
 
   <GeneDef ParentName="GeneTailBase">
@@ -511,11 +528,11 @@
     <displayOrderInCategory>24</displayOrderInCategory>
     <abilities>
       <li>BTEIst_JellyConversion</li>
-      <li>BTEIst_JellyTransmutation</li>
+      <li>BTEIst_JellyTransmutationer</li>
     </abilities>
     <descriptionHyperlinks>
       <AbilityDef>BTEIst_JellyConversion</AbilityDef>
-      <AbilityDef>BTEIst_JellyTransmutation</AbilityDef>
+      <AbilityDef>BTEIst_JellyTransmutationer</AbilityDef>
     </descriptionHyperlinks>
     <biostatCpx>1</biostatCpx>
     <biostatMet>-1</biostatMet>

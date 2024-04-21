@@ -42,6 +42,7 @@
       <li>UVSensitivity_Mild</li>
       <li>Beauty_VeryUgly</li>
 	  <li>BTEIst_JellyStrength</li>
+	  <li>BTEIst_InjectInsectoidGenes</li>
     </genes>
     <!--<forbiddenWeaponClasses>
       <li>Melee</li>
@@ -84,6 +85,7 @@
       <li>BTEIst_VolatileStingerLauncher</li>
       <li>UVSensitivity_Mild</li>
       <li>Beauty_VeryUgly</li>
+	  <li>BTEIst_InjectInsectoidGenes</li>
     </genes>
     <forbiddenWeaponClasses>
       <li>Melee</li>
@@ -129,6 +131,7 @@
       <li>LowSleep</li>
       <li>UVSensitivity_Mild</li>
       <li>Beauty_VeryUgly</li>
+	  <li>BTEIst_InjectInsectoidGenes</li>
     </genes>
   </XenotypeDef>
   

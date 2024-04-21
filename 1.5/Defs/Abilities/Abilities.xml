@@ -69,8 +69,8 @@
   </AbilityDef> 
   <AbilityDef>
     <defName>BTEIst_JellyTransmutation</defName>
-    <label>food to jelly transmutation</label>
-    <description>Convert some food in the world into precious insect jelly. Wastes a considerable amount of nutrition (20%).</description>
+    <label>food to jelly transmutation (OBSOLETE)</label>
+    <description>Convert some food in the world into precious insect jelly. Wastes a considerable amount of nutrition (20%). This is an old version of the ability for save compatibility purposes. Please reload the pawn's xenotype for the newer version. (Using this ability again when the pawn has the newer ability will delete this one.)</description>
     <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
     <iconPath>Genes/Icons/BTEIst_JellyConversionIcon</iconPath>
     <cooldownTicksRange>60000</cooldownTicksRange>
@@ -83,6 +83,46 @@
     <showCastingProgressBar>true</showCastingProgressBar>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
+      <warmupTime>1</warmupTime>
+      <violent>false</violent>
+      <range>-1</range>
+      <requireLineOfSight>false</requireLineOfSight>
+      <drawAimPie>false</drawAimPie>      
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+		<canTargetItems>true</canTargetItems>
+		<mapObjectTargetsMustBeAutoAttackable>false</mapObjectTargetsMustBeAutoAttackable>
+		<canTargetPawns>false</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="BTE_IST.CompProperties_AbilityCreateJellyFromThing">
+		<fraction>0.8</fraction>
+      </li>	
+      <li Class="BTE.CompProperties_AbilityHungerCost">
+        <hungerCost>0.35</hungerCost>
+      </li>	
+      <li Class="BTE_IST.CompProperties_AbilityDeleteSelf">
+		<newerAbility>BTEIst_JellyTransmutationer</newerAbility>
+      </li>	
+    </comps>
+  </AbilityDef> 
+  <AbilityDef>
+    <defName>BTEIst_JellyTransmutationer</defName>
+    <label>food to jelly transmutation</label>
+    <description>Convert some food in the world into precious insect jelly. Wastes a considerable amount of nutrition (20%).</description>
+    <jobDef>CastAbilityOnThingMelee</jobDef>
+    <iconPath>Genes/Icons/BTEIst_JellyConversionIcon</iconPath>
+    <cooldownTicksRange>60000</cooldownTicksRange>
+    <aiCanUse>false</aiCanUse>
+    <targetRequired>true</targetRequired>
+	<hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <showCastingProgressBar>true</showCastingProgressBar>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityTouch</verbClass>
       <warmupTime>1</warmupTime>
       <violent>false</violent>
       <range>-1</range>
@@ -277,7 +317,6 @@
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
       <warmupTime>1</warmupTime>
-      <requireLineOfSight>true</requireLineOfSight>
       <range>5</range>
       <drawAimPie>false</drawAimPie> 
       <violent>false</violent>     
@@ -287,6 +326,48 @@
     </verbProperties>
     <comps>
       <li Class="BTE_IST.CompProperties_AbilityTameInsectoid">
+      </li>	
+    </comps>
+  </AbilityDef> 
+  
+
+  <AbilityDef>
+    <defName>BTEIst_InjectInsectoidGenes</defName>
+	<gizmoClass>BTE_IST.Command_AbilityXenotypeSelector</gizmoClass>
+    <label>inject insectoid genes</label>
+    <description>Inject a payload of mechanites that permanently rewires the original endogenetic code of a target. This specialized injection only allows insectoid xenotypes.</description>
+    <jobDef>CastAbilityOnThingMelee</jobDef>
+    <iconPath>Genes/Icons/BTEIst_InjectInsectoidGenesIcon</iconPath>
+    <cooldownTicksRange>900000</cooldownTicksRange>
+    <aiCanUse>false</aiCanUse>
+	<hostile>false</hostile>
+    <targetRequired>true</targetRequired>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <showCastingProgressBar>true</showCastingProgressBar>
+	<stunTargetWhileCasting>true</stunTargetWhileCasting>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityTouch</verbClass>
+      <warmupTime>1</warmupTime>
+      <range>-1</range>
+      <drawAimPie>false</drawAimPie> 
+      <violent>false</violent>     
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+		<onlyTargetColonistsOrPrisonersOrSlaves>true</onlyTargetColonistsOrPrisonersOrSlaves>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityFleckOnTarget">
+        <fleckDef>BloodSplash</fleckDef>
+      </li>
+      <li Class="BTE_IST.CompProperties_AbilityInjectEndogenes">
+	  <xenotypes>
+	  <li>BTEIst_Megaspider</li>
+	  <li>BTEIst_Spelopede</li>
+	  <li>BTEIst_Megascarab</li>
+	  </xenotypes>
       </li>	
     </comps>
   </AbilityDef> 
