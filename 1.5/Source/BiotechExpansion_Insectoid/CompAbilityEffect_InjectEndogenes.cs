@@ -34,6 +34,10 @@ namespace BTE_IST
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
             base.Apply(target, dest);
+            for (var i = target.Pawn.genes.Endogenes.Count - 1; i >= 0; --i)
+            {
+                target.Pawn.genes.RemoveGene(target.Pawn.genes.Endogenes[i]);
+            }
             target.Pawn.genes.SetXenotype(selectedXenotype);
             target.Pawn.health.AddHediff(HediffDefOf.XenogerminationComa);
             target.Pawn.needs.mood.thoughts.memories.TryGainMemory(BTEIst_ThoughtDefOf.BTEIst_TransformedIntoBug);
