@@ -18,5 +18,6 @@ namespace BTE_IST
         }
 
         public static AbilityDef BTEIst_InjectInsectoidGenes;
+        public static AbilityDef BTEIst_JellyTransmutationer;
     }
 }

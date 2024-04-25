@@ -110,6 +110,7 @@
   <AbilityDef>
     <defName>BTEIst_JellyTransmutationer</defName>
     <label>food to jelly transmutation</label>
+	<gizmoClass>BTE_IST.Command_AbilityAutoCastableJelly</gizmoClass>
     <description>Convert some food in the world into precious insect jelly. Wastes a considerable amount of nutrition (20%).</description>
     <jobDef>CastAbilityOnThingMelee</jobDef>
     <iconPath>Genes/Icons/BTEIst_JellyConversionIcon</iconPath>

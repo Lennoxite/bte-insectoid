@@ -13,6 +13,8 @@ namespace BTE_IST
 {
     public class CompAbilityEffect_CreateJellyFromThing : CompAbilityEffect
     {
+        public bool autoCastMe = false;
+
         public new CompProperties_AbilityCreateJellyFromThing Props => (CompProperties_AbilityCreateJellyFromThing)props;
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
@@ -57,6 +59,11 @@ namespace BTE_IST
 
         }
 
+        public override void PostExposeData()
+        {
+            base.PostExposeData();
+            Scribe_Values.Look(ref autoCastMe, "autoCastJellyMaking", false);
+        }
 
 
 
