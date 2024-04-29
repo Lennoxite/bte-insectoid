@@ -40,7 +40,7 @@
       <li>BTEIst_Exogelatin</li>
       <li>BTEIst_ToxicHalo</li>
       <li>UVSensitivity_Mild</li>
-      <li>Beauty_VeryUgly</li>
+      <li>BTEIst_InsectoidPresence</li>
 	  <li>BTEIst_JellyStrength</li>
 	  <li>BTEIst_InjectInsectoidGenes</li>
     </genes>
@@ -84,7 +84,7 @@
       <li>PollutionRush</li>
       <li>BTEIst_VolatileStingerLauncher</li>
       <li>UVSensitivity_Mild</li>
-      <li>Beauty_VeryUgly</li>
+      <li>BTEIst_InsectoidPresence</li>
 	  <li>BTEIst_InjectInsectoidGenes</li>
     </genes>
     <forbiddenWeaponClasses>
@@ -130,7 +130,7 @@
       <li>PollutionRush</li>
       <li>LowSleep</li>
       <li>UVSensitivity_Mild</li>
-      <li>Beauty_VeryUgly</li>
+      <li>BTEIst_InsectoidPresence</li>
 	  <li>BTEIst_InjectInsectoidGenes</li>
     </genes>
   </XenotypeDef>

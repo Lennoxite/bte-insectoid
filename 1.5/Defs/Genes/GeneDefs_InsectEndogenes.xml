@@ -287,6 +287,17 @@
       <li>BTEIst_InjectInsectoidGenes</li>
     </abilities>
   </GeneDef>
+  
+  <GeneDef>
+    <defName>BTEIst_InsectoidPresence</defName>
+    <label>insectoid presence</label>
+    <description>Carriers of this gene demonstrate subtle and explicit behaviors that aliken them to a feral insectoid, such as subconscious chittering and twitching erratically.\n\nThis freaks out people who do not share the same tendencies, but unites those who do, granting an opinion bonus to others with the same gene and a massive opinion malus to those who don't. The kind and the blind are able to look past these odd proclivities.</description>
+    <iconPath>Genes/Icons/BTEIst_InsectoidPresenceIcon</iconPath>
+    <displayCategory>BTE_Insectoid</displayCategory>
+    <displayOrderInCategory>73</displayOrderInCategory>
+    <biostatMet>2</biostatMet>
+    <biostatCpx>1</biostatCpx>
+  </GeneDef>
 <!-- SPELO-SPLICE -->
 
   <GeneDef ParentName="GeneTailBase">

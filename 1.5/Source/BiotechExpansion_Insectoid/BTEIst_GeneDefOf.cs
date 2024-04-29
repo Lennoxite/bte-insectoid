@@ -18,5 +18,7 @@ namespace BTE_IST
 
         public static GeneDef BTEIst_RapidEater;
 
+        public static GeneDef BTEIst_InsectoidPresence;
+
     }
 }

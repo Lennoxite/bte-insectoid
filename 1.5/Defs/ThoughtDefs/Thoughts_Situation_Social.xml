@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- affecting opinion -->
+
+  <ThoughtDef> <!--These thought workers react to whether both pawns have Insectoid Presence. -->
+    <defName>BTEIst_NoInsectoidPresence</defName>
+    <thoughtClass>Thought_SituationalSocial</thoughtClass>
+    <workerClass>BTE_IST.ThoughtWorker_NoInsectoidPresence</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>non insectoid vs insectoid</label>
+        <baseOpinionOffset>-40</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  <ThoughtDef>
+    <defName>BTEIst_InsectoidPresence</defName>
+    <thoughtClass>Thought_SituationalSocial</thoughtClass>
+    <workerClass>BTE_IST.ThoughtWorker_InsectoidPresence</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>both insectoids</label>
+        <baseOpinionOffset>20</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+ 
+  
+</Defs>

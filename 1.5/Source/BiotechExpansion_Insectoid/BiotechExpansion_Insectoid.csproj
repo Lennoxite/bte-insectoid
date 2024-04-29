@@ -78,6 +78,8 @@
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BTEIst_ThoughtDefOf.cs" />
+    <Compile Include="ThoughtWorker_InsectoidPresence.cs" />
+    <Compile Include="ThoughtWorker_NoInsectoidPresence.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
