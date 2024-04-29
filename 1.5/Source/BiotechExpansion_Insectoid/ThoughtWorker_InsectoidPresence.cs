@@ -19,14 +19,6 @@ namespace BTE_IST
 			{
 				return false;
 			}
-			if (!PawnHasInsectoidPresence(pawn)) //Pawn must have gene to react this way.
-			{
-				return false;
-			}
-			if (!PawnHasInsectoidPresence(other))
-            {
-				return false;
-            }
 			if (PawnUtility.IsBiologicallyBlind(pawn))
 			{
 				return false;
@@ -38,6 +30,19 @@ namespace BTE_IST
 			if (pawn.Ideo != null && pawn.Ideo.IdeoApprovesOfBlindness() && !RelationsUtility.IsDisfigured(other, pawn, true) && (PawnUtility.IsBiologicallyBlind(other) || ThoughtWorker_Precept_HalfBlind.IsHalfBlind(other)))
 			{
 				return false;
+			}
+			if (!PawnHasInsectoidPresence(other))
+			{
+				return false;
+			}
+			if (PawnHasInsectoidPresence(pawn)) //Pawn must have gene to react this way.
+			{
+				return ThoughtState.ActiveAtStage(1);
+			}
+			else  //Pawn must NOT have gene to react this way.
+			{
+				return ThoughtState.ActiveAtStage(0);
+
 			}
 			return true;
 		}
