@@ -12,7 +12,7 @@
       <li>BTEIst_MegaspiderHead</li> 
       <li>BTE_FeralMight</li>
       <li>AptitudeStrong_Shooting</li>
-      <li>VoiceRoar</li>
+      <li>BTEIst_MegaspiderVoice</li>
       <li>Beard_NoBeardOnly</li>
       <li>BTEIst_JellyLover</li>
       <li>Aggression_Aggressive</li>
@@ -60,7 +60,7 @@
       <li>DarkVision</li>
       <li>BTEIst_SpelopedeHead</li> 
       <li>AptitudeRemarkable_Shooting</li>
-      <li>VoiceRoar</li>
+      <li>BTEIst_SpelopedeVoice</li>
       <li>Beard_NoBeardOnly</li>
       <li>BTEIst_JellyLover</li>
       <li>Aggression_Aggressive</li>
@@ -103,7 +103,7 @@
       <li>BTEIst_MegascarabHead</li> 
       <li>ElongatedFingers</li>
       <li>Nearsighted</li>
-      <li>VoiceRoar</li>
+      <li>BTEIst_MegascarabVoice</li>
       <li>Beard_NoBeardOnly</li>
       <li>BTEIst_JellyLover</li>
       <li>Aggression_Aggressive</li>

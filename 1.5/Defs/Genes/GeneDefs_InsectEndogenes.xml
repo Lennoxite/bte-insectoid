@@ -298,6 +298,19 @@
     <biostatMet>2</biostatMet>
     <biostatCpx>1</biostatCpx>
   </GeneDef>
+  
+ 
+  <GeneDef ParentName="GeneVoiceBase">
+    <defName>BTEIst_MegaspiderVoice</defName>
+    <label>megaspider voice</label>
+    <description>Carriers have a megaspider's vocalizations.</description>
+    <iconPath>Genes/Icons/BTEIst_MegaspiderVoiceIcon</iconPath>
+    <displayOrderInCategory>9</displayOrderInCategory>
+    <displayCategory>BTE_Insectoid</displayCategory>
+	<soundWounded>Pawn_BigInsect_Pain</soundWounded>
+	<soundDeath>Pawn_BigInsect_Death</soundDeath>
+	<soundCall>Pawn_BigInsect_Call</soundCall>
+  </GeneDef>
 <!-- SPELO-SPLICE -->
 
   <GeneDef ParentName="GeneTailBase">
@@ -427,6 +440,19 @@
       <HediffDef>BTEIst_JellyBrained</HediffDef>
     </descriptionHyperlinks>
     <biostatMet>-1</biostatMet>
+  </GeneDef>
+ 
+
+  <GeneDef ParentName="GeneVoiceBase">
+    <defName>BTEIst_SpelopedeVoice</defName>
+    <label>spelopede voice</label>
+    <description>Carriers have a spelopede's vocalizations.</description>
+    <iconPath>Genes/Icons/BTEIst_SpelopedeVoiceIcon</iconPath>
+    <displayOrderInCategory>16</displayOrderInCategory>
+    <displayCategory>BTE_Insectoid</displayCategory>
+	<soundWounded>Pawn_Spelopede_Pain</soundWounded>
+	<soundDeath>Pawn_Spelopede_Death</soundDeath>
+	<soundCall>Pawn_Spelopede_Call</soundCall>
   </GeneDef>
  
 <!-- SPLICE-SCARAB -->
@@ -601,6 +627,20 @@
       <HediffDef>BTEIst_JellyLaborer</HediffDef>
     </descriptionHyperlinks>
     <biostatMet>-1</biostatMet>
+  </GeneDef>
+  
+
+
+  <GeneDef ParentName="GeneVoiceBase">
+    <defName>BTEIst_MegascarabVoice</defName>
+    <label>megascarab voice</label>
+    <description>Carriers have a megascarab's vocalizations.</description>
+    <iconPath>Genes/Icons/BTEIst_MegascarabVoiceIcon</iconPath>
+    <displayOrderInCategory>28</displayOrderInCategory>
+    <displayCategory>BTE_Insectoid</displayCategory>
+	<soundWounded>Pawn_Megascarab_Wounded</soundWounded>
+	<soundDeath>Pawn_Megascarab_Death</soundDeath>
+	<soundCall>Pawn_Megascarab_Call</soundCall>
   </GeneDef>
   
 </Defs>
