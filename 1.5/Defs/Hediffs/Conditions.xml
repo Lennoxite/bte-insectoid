@@ -183,6 +183,7 @@
     <labelNoun>gleaming sheath of chitin</labelNoun>
     <description>A hardened layer of chitin strengthened by insect jelly metabolism.</description>
     <hediffClass>HediffWithComps</hediffClass>
+    <everCurableByItem>false</everCurableByItem>
     <defaultLabelColor>(0.6, 0.9, 0.6)</defaultLabelColor>
     <initialSeverity>0</initialSeverity>
     <maxSeverity>1</maxSeverity>

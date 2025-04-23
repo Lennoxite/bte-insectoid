@@ -6,8 +6,8 @@
   
   <GeneDef ParentName="GeneTailBase">
     <defName>BTEIst_MegaspiderTail</defName>
-    <label>megaspider thorax</label>
-    <description>Carriers of this gene grow a megaspider thorax. It also has toxins within its stinger, which may be used to inject toxins in combat.</description>
+    <label>megaspider abdomen</label>
+    <description>Carriers of this gene grow a megaspider abdomen. It also has toxins within its stinger, which may be used to inject toxins in combat.</description>
     <iconPath>Genes/Icons/BTEIst_MegaspiderTailIcon</iconPath>
     <iconColor>(0.75, 0.75, 0.75)</iconColor>
     <displayOrderInCategory>1</displayOrderInCategory>
@@ -315,8 +315,8 @@
 
   <GeneDef ParentName="GeneTailBase">
     <defName>BTEIst_SpelopedeTail</defName>
-    <label>spelopede thorax</label>
-    <description>Carriers of this gene grow a spelopede thorax.</description>
+    <label>spelopede abdomen</label>
+    <description>Carriers of this gene grow a spelopede abdomen.</description>
     <iconPath>Genes/Icons/BTEIst_SpelopedeTailIcon</iconPath>
     <iconColor>(0.75, 0.75, 0.75)</iconColor>
     <displayOrderInCategory>10</displayOrderInCategory>
