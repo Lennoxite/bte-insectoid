@@ -10,7 +10,7 @@
       <li>
         <label>converted into insectoid xenotype</label>
         <description>I've become a twisted, horrid insect hybrid!</description>
-        <baseMoodEffect>-10</baseMoodEffect>
+        <baseMoodEffect>-25</baseMoodEffect>
       </li>
     </stages>
   </ThoughtDef>
