@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <AbilityDef>
+    <defName>BTEIst_ToxSmog</defName>
+    <label>toxic smog exhaust</label>
+    <description>Compress toxic pustules in the throat, creating a deadly fog of toxic gas. Range is doubled if the user is metabolizing jelly.</description>
+    <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+    <iconPath>Genes/Icons/BTEIst_ToxSmogIcon</iconPath>
+    <cooldownTicksRange>5000</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <ai_SearchAOEForTargets>true</ai_SearchAOEForTargets>
+    <targetRequired>false</targetRequired>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <showCastingProgressBar>true</showCastingProgressBar>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <warmupTime>1</warmupTime>
+      <requireLineOfSight>false</requireLineOfSight>
+      <range>3</range>
+      <drawAimPie>false</drawAimPie>      
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="BTE_IST.CompProperties_AbilityToxpop">
+        <smokeRadius>3</smokeRadius>
+      </li>	
+      <li Class="BTE.CompProperties_AbilityHungerCost">
+        <hungerCost>0.2</hungerCost>
+      </li>	
+    </comps>
+  </AbilityDef> 
+  <AbilityDef>
+    <defName>BTEIst_JellyConversion</defName>
+    <label>food to jelly conversion</label>
+    <description>Spend a significant amount of nutrition to regurgitate precious insect jelly.</description>
+    <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+    <iconPath>Genes/Icons/BTEIst_JellyConversionIcon</iconPath>
+    <cooldownTicksRange>60</cooldownTicksRange>
+    <aiCanUse>false</aiCanUse>
+    <targetRequired>false</targetRequired>
+	<hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <showCastingProgressBar>true</showCastingProgressBar>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <warmupTime>1</warmupTime>
+      <violent>false</violent>
+      <range>-1</range>
+      <requireLineOfSight>false</requireLineOfSight>
+      <drawAimPie>false</drawAimPie>      
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="BTE_IST.CompProperties_AbilityCreateJelly">
+	  <amount>10</amount>
+      </li>	
+      <li Class="BTE.CompProperties_AbilityHungerCost">
+        <hungerCost>0.5</hungerCost>
+      </li>	
+    </comps>
+  </AbilityDef> 
+  <AbilityDef>
+    <defName>BTEIst_JellyTransmutation</defName>
+    <label>food to jelly transmutation (OBSOLETE)</label>
+    <description>Convert some food in the world into precious insect jelly. Wastes a considerable amount of nutrition (20%). This is an old version of the ability for save compatibility purposes. Please reload the pawn's xenotype for the newer version. (Using this ability again when the pawn has the newer ability will delete this one.)</description>
+    <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+    <iconPath>Genes/Icons/BTEIst_JellyConversionIcon</iconPath>
+    <cooldownTicksRange>60000</cooldownTicksRange>
+    <aiCanUse>false</aiCanUse>
+    <targetRequired>true</targetRequired>
+	<hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <showCastingProgressBar>true</showCastingProgressBar>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <warmupTime>1</warmupTime>
+      <violent>false</violent>
+      <range>-1</range>
+      <requireLineOfSight>false</requireLineOfSight>
+      <drawAimPie>false</drawAimPie>      
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+		<canTargetItems>true</canTargetItems>
+		<mapObjectTargetsMustBeAutoAttackable>false</mapObjectTargetsMustBeAutoAttackable>
+		<canTargetPawns>false</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="BTE_IST.CompProperties_AbilityCreateJellyFromThing">
+		<fraction>0.8</fraction>
+      </li>	
+      <li Class="BTE.CompProperties_AbilityHungerCost">
+        <hungerCost>0.35</hungerCost>
+      </li>	
+      <li Class="BTE_IST.CompProperties_AbilityDeleteSelf">
+		<newerAbility>BTEIst_JellyTransmutationer</newerAbility>
+      </li>	
+    </comps>
+  </AbilityDef> 
+  <AbilityDef>
+    <defName>BTEIst_JellyTransmutationer</defName>
+    <label>food to jelly transmutation</label>
+	<gizmoClass>BTE_IST.Command_AbilityAutoCastableJelly</gizmoClass>
+    <description>Convert some food in the world into precious insect jelly. Wastes a considerable amount of nutrition (20%).</description>
+    <jobDef>CastAbilityOnThingMelee</jobDef>
+    <iconPath>Genes/Icons/BTEIst_JellyConversionIcon</iconPath>
+    <cooldownTicksRange>60000</cooldownTicksRange>
+    <aiCanUse>false</aiCanUse>
+    <targetRequired>true</targetRequired>
+	<hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <showCastingProgressBar>true</showCastingProgressBar>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityTouch</verbClass>
+      <warmupTime>1</warmupTime>
+      <violent>false</violent>
+      <range>-1</range>
+      <requireLineOfSight>false</requireLineOfSight>
+      <drawAimPie>false</drawAimPie>      
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+		<canTargetItems>true</canTargetItems>
+		<mapObjectTargetsMustBeAutoAttackable>false</mapObjectTargetsMustBeAutoAttackable>
+		<canTargetPawns>false</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="BTE_IST.CompProperties_AbilityCreateJellyFromThing">
+		<fraction>0.8</fraction>
+      </li>	
+      <li Class="BTE.CompProperties_AbilityHungerCost">
+        <hungerCost>0.35</hungerCost>
+      </li>	
+    </comps>
+  </AbilityDef> 
+  <AbilityDef>
+    <defName>BTEIst_ToxInject</defName>
+    <label>toxin injection</label>
+    <description>Use the abdomen to inject toxins directly into a target.</description>
+    <jobDef>CastAbilityOnThingMelee</jobDef>
+    <iconPath>Genes/Icons/BTEIst_MegaspiderTailIcon</iconPath>
+    <cooldownTicksRange>2500</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <ai_SearchAOEForTargets>false</ai_SearchAOEForTargets>
+    <targetRequired>true</targetRequired>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <showCastingProgressBar>true</showCastingProgressBar>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <warmupTime>1</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <range>-1</range>
+      <soundCast>MeleeHit_BionicPunch</soundCast>
+      <drawAimPie>true</drawAimPie>      
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetMechs>false</canTargetMechs>
+        <canTargetBloodfeeders>true</canTargetBloodfeeders>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <severity>0.2</severity>
+		<hediffDef>ToxicBuildup</hediffDef>
+		<compClass>CompAbilityEffect_GiveHediff</compClass>
+      </li>	
+      <li Class="BTE.CompProperties_AbilityHungerCost">
+        <hungerCost>0.1</hungerCost>
+      </li>	
+    </comps>
+  </AbilityDef> 
+
+  <AbilityDef>
+    <defName>BTEIst_ToxicStingLauncher</defName>
+    <label>toxic sting launcher</label>
+    <description>Fire a toxic stinger at a target. Damage, toxin severity, and armor penetration are doubled if the user is metabolizing jelly.</description>
+    <iconPath>Genes/Icons/BTEIst_ToxicInjectorIcon</iconPath>
+    <cooldownTicksRange>150</cooldownTicksRange>
+    <displayOrder>200</displayOrder>
+    <aiCanUse>true</aiCanUse>
+    <ai_SearchAOEForTargets>false</ai_SearchAOEForTargets>
+    <targetRequired>true</targetRequired>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>20</range>
+      <warmupTime>0.25</warmupTime>
+      <soundCast>PiercingSpine_Launch</soundCast>
+    </verbProperties>
+    <comps>
+      <li Class="BTE.CompProperties_AbilityHungerCost">
+        <hungerCost>0.1</hungerCost>
+      </li>	
+      <li Class="BTE_IST.CompProperties_AbilityLaunchProjectileJellyBuffable">
+        <projectileDef>BTEIst_ToxicSting</projectileDef>
+        <jellyBuffProjectileDef>BTEIst_ToxicStingBuffed</jellyBuffProjectileDef>
+      </li>
+    </comps>
+  </AbilityDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>BTEIst_ToxicSting</defName>
+    <label>toxic stinger</label>
+    <graphicData>
+      <texPath>Things/Projectile/PiercingSpine</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>BTEIst_ToxicStab</damageDef>
+      <damageAmountBase>5</damageAmountBase>
+      <armorPenetrationBase>0.33</armorPenetrationBase>
+      <stoppingPower>1</stoppingPower>
+      <speed>100</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>BTEIst_ToxicStingBuffed</defName>
+    <label>toxic stinger</label>
+    <graphicData>
+      <texPath>Things/Projectile/PiercingSpine</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>BTEIst_ToxicStab</damageDef>
+      <damageAmountBase>10</damageAmountBase>
+      <armorPenetrationBase>0.75</armorPenetrationBase>
+      <stoppingPower>1</stoppingPower>
+      <speed>100</speed>
+    </projectile>
+  </ThingDef>
+  
+
+  <AbilityDef>
+    <defName>BTEIst_VolatileStingLauncher</defName>
+    <label>volatile sting launcher</label>
+    <description>Fire a stinger with volatile toxins at a target which detonate on death. Very low damage, but high severity infliction. Severity is doubled while metabolizing jelly.</description>
+    <iconPath>Genes/Icons/BTEIst_VolatileInjectorIcon</iconPath>
+    <cooldownTicksRange>10000</cooldownTicksRange>
+    <displayOrder>200</displayOrder>
+    <aiCanUse>true</aiCanUse>
+    <ai_SearchAOEForTargets>false</ai_SearchAOEForTargets>
+    <targetRequired>true</targetRequired>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>20</range>
+      <warmupTime>1</warmupTime>
+      <soundCast>PiercingSpine_Launch</soundCast>
+    </verbProperties>
+    <comps>
+      <li Class="BTE.CompProperties_AbilityHungerCost">
+        <hungerCost>0.4</hungerCost>
+      </li>	
+      <li Class="BTE_IST.CompProperties_AbilityLaunchProjectileJellyBuffable">
+        <projectileDef>BTEIst_VolatileSting</projectileDef>
+        <jellyBuffProjectileDef>BTEIst_VolatileStingBuffed</jellyBuffProjectileDef>
+      </li>
+    </comps>
+  </AbilityDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>BTEIst_VolatileSting</defName>
+    <label>volatile stinger</label>
+    <graphicData>
+      <texPath>Things/Projectile/PiercingSpine</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>BTEIst_VolatileStab</damageDef>
+      <damageAmountBase>1</damageAmountBase>
+      <armorPenetrationBase>1</armorPenetrationBase>
+      <stoppingPower>1</stoppingPower>
+      <speed>100</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>BTEIst_VolatileStingBuffed</defName>
+    <label>volatile stinger</label>
+    <graphicData>
+      <texPath>Things/Projectile/PiercingSpine</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>BTEIst_VolatileStab</damageDef>
+      <damageAmountBase>2</damageAmountBase>
+      <armorPenetrationBase>1</armorPenetrationBase>
+      <stoppingPower>1</stoppingPower>
+      <speed>100</speed>
+    </projectile>
+  </ThingDef>
+  
+  
+ 
+  <AbilityDef>
+    <defName>BTEIst_TameInsectoid</defName>
+    <label>tame insectoid</label>
+    <description>Release calming pheromones to immediately tame an insectoid.</description>
+    <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+    <iconPath>Genes/Icons/BTEIst_TameInsectoidIcon</iconPath>
+    <cooldownTicksRange>60000</cooldownTicksRange>
+    <aiCanUse>false</aiCanUse>
+	<hostile>false</hostile>
+    <targetRequired>true</targetRequired>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <showCastingProgressBar>true</showCastingProgressBar>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <warmupTime>1</warmupTime>
+      <range>5</range>
+      <drawAimPie>false</drawAimPie> 
+      <violent>false</violent>     
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="BTE_IST.CompProperties_AbilityTameInsectoid">
+      </li>	
+    </comps>
+  </AbilityDef> 
+  
+
+  <AbilityDef>
+    <defName>BTEIst_InjectInsectoidGenes</defName>
+	<gizmoClass>BTE_IST.Command_AbilityXenotypeSelector</gizmoClass>
+    <label>inject insectoid genes</label>
+    <description>Inject a payload of mechanites that permanently rewires the original endogenetic code of a target. This specialized injection only allows insectoid xenotypes.</description>
+    <jobDef>CastAbilityOnThingMelee</jobDef>
+    <iconPath>Genes/Icons/BTEIst_InjectInsectoidGenesIcon</iconPath>
+    <cooldownTicksRange>900000</cooldownTicksRange>
+    <aiCanUse>false</aiCanUse>
+	<hostile>false</hostile>
+    <targetRequired>true</targetRequired>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <showCastingProgressBar>true</showCastingProgressBar>
+	<stunTargetWhileCasting>true</stunTargetWhileCasting>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityTouch</verbClass>
+      <warmupTime>1</warmupTime>
+      <range>-1</range>
+      <drawAimPie>false</drawAimPie> 
+      <violent>false</violent>     
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+		<onlyTargetColonistsOrPrisonersOrSlaves>true</onlyTargetColonistsOrPrisonersOrSlaves>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityFleckOnTarget">
+        <fleckDef>BloodSplash</fleckDef>
+      </li>
+      <li Class="BTE_IST.CompProperties_AbilityInjectEndogenes">
+	  <xenotypes>
+	  <li>BTEIst_Megaspider</li>
+	  <li>BTEIst_Spelopede</li>
+	  <li>BTEIst_Megascarab</li>
+	  </xenotypes>
+      </li>	
+    </comps>
+  </AbilityDef> 
+</Defs>

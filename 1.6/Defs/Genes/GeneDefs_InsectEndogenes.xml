@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--MEGASPIDER-->
+
+  
+  <GeneDef ParentName="GeneTailBase">
+    <defName>BTEIst_MegaspiderTail</defName>
+    <label>megaspider abdomen</label>
+    <description>Carriers of this gene grow a megaspider abdomen. It also has toxins within its stinger, which may be used to inject toxins in combat.</description>
+    <iconPath>Genes/Icons/BTEIst_MegaspiderTailIcon</iconPath>
+    <iconColor>(0.75, 0.75, 0.75)</iconColor>
+    <displayOrderInCategory>1</displayOrderInCategory>
+    <displayCategory>BTE_Insectoid</displayCategory>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>-1</biostatMet>
+	<renderNodeProperties>
+      <li>
+        <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+        <texPath>Things/Pawn/Humanlike/BodyAttachments/MegaspiderTail/MegaspiderTail</texPath>
+        <colorType>Skin</colorType>
+        <overrideMeshSize>(1, 1)</overrideMeshSize>
+        <parentTagDef>Body</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+          <defaultData>
+            <layer>-2</layer>
+          </defaultData>
+          <dataNorth>
+            <offset>(0, 0, -0.25)</offset>
+            <layer>90</layer>
+          </dataNorth>
+          <dataSouth>
+            <offset>(0, 0, -0.25)</offset>
+          </dataSouth>
+          <dataEast>
+            <offset>(-0.5, 0, -0.15)</offset>
+          </dataEast>
+          <dataWest>
+            <offset>(0.5, 0, -0.15)</offset>
+          </dataWest>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+    <abilities>
+      <li>BTEIst_ToxInject</li>
+    </abilities>
+    <descriptionHyperlinks>
+      <AbilityDef>BTEIst_ToxInject</AbilityDef>
+    </descriptionHyperlinks>
+	</GeneDef>
+
+  <GeneDef ParentName="GeneJawBase">
+	<defName>BTEIst_MegaspiderHead</defName>
+	<label>megaspider head</label>
+	<description>Carriers of this gene have a sharp megaspider head. Comes with a dangerous head claw that helps with mining.</description>
+	<iconPath>Genes/Icons/BTEIst_MegaspiderHeadIcon</iconPath>
+	<forcedHeadTypes>
+	  <li>BTEIst_MegaspiderHead</li>
+	</forcedHeadTypes>    
+	<geneClass>BTE.Gene_AddImplant</geneClass>
+	<modExtensions>
+		<li Class="BTE.GeneImplantInfo">
+			<hediffImplant>BTEIst_InsectoidClaw</hediffImplant>
+			<bodyPartImplant>Head</bodyPartImplant>
+		</li>
+	</modExtensions>
+	<displayCategory>BTE_Insectoid</displayCategory>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>-1</biostatMet>
+    <statFactors>
+		<MiningSpeed>1.25</MiningSpeed>
+    </statFactors>
+	<displayOrderInCategory>2</displayOrderInCategory>
+	<renderNodeProperties>
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <parentTagDef>Head</parentTagDef>
+        <colorType>Skin</colorType>
+        <useRottenColor>true</useRottenColor>
+        <useSkinShader>true</useSkinShader>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+		<texPaths>
+		<li>Things/Pawn/Humanlike/Heads/Genes/MegaspiderCrest/1/MegaspiderCrest</li>
+		<li>Things/Pawn/Humanlike/Heads/Genes/MegaspiderCrest/2/MegaspiderCrest</li>
+		<li>Things/Pawn/Humanlike/Heads/Genes/MegaspiderCrest/3/MegaspiderCrest</li>
+		</texPaths>
+        <narrowCrownHorizontalOffset>0.03</narrowCrownHorizontalOffset>
+        <drawData>
+          <defaultData>
+            <layer>70</layer>
+          </defaultData>
+          <dataEast>
+		  <offset>(0, 0, 0)</offset>
+          </dataEast>
+          <dataWest>
+		  <offset>(0, 0, 0)</offset>
+          </dataWest>
+          <dataSouth>
+		  <offset>(0, 0, 0)</offset>
+            <layer>6</layer>
+          </dataSouth>
+          <dataNorth>
+		  <offset>(0, 0, 0)</offset>
+          </dataNorth>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+  
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>BTEIst_MegaspiderHead</defName>
+    <graphicPath>Things/Pawn/Humanlike/Heads/Genes/MegaspiderHead/MegaspiderHead</graphicPath>
+    <randomChosen>false</randomChosen>
+    <gender>None</gender>
+    <requiredGenes>
+      <li>BTEIst_MegaspiderHead</li>
+    </requiredGenes>
+    <eyeOffsetEastWest>(0.15, 0, 0.175)</eyeOffsetEastWest>
+  </HeadTypeDef>
+  
+
+  <GeneDef ParentName="GeneSkinColorOverride">
+    <defName>BTEIst_MegaspiderSkin</defName>
+    <label>megaspider skin</label>
+    <description>Carriers of this gene produce a pigment that turns their skin a color similar to that of a megaspider.</description>
+    <skinColorOverride>(154,125,94)</skinColorOverride>
+	<displayCategory>BTE_Insectoid</displayCategory>
+    <displayOrderInCategory>3</displayOrderInCategory>
+  </GeneDef>
+  
+	<GeneDef>
+	<defName>BTEIst_ToxSmog</defName>
+	<label>toxic smog exhaust</label>
+	<description>Carriers of this gene have toxic pustules lining their respiratory tract. They may release the toxins within as a toxic smog at will. Range is doubled if the user is metabolizing jelly.</description>
+	<iconPath>Genes/Icons/BTEIst_ToxSmogIcon</iconPath>
+    <displayCategory>BTE_Insectoid</displayCategory>
+    <displayOrderInCategory>4</displayOrderInCategory>
+    <descriptionHyperlinks>
+      <AbilityDef>BTEIst_ToxSmog</AbilityDef>
+    </descriptionHyperlinks>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>-1</biostatMet>
+    <abilities>
+      <li>BTEIst_ToxSmog</li>
+    </abilities>
+  </GeneDef>
+  
+
+	<GeneDef>
+	<defName>BTEIst_ToxicHalo</defName>
+	<label>toxic halo</label>
+	<description>Carriers of this gene release wisps of toxic gas during combat as a show of aggression.</description>
+	<iconPath>Genes/Icons/BTEIst_ToxicHaloIcon</iconPath>
+	<renderNodeProperties>
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>BTE.PawnRenderNodeWorker_OnlyDraftedPulsing</workerClass>
+        <parentTagDef>Head</parentTagDef>
+        <!-- <colorType>Skin</colorType> -->
+		<color>(255, 255, 255)</color>
+        <useRottenColor>true</useRottenColor>
+        <useSkinShader>true</useSkinShader>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/ToxicHalo/ToxicHalo</texPath>
+        <narrowCrownHorizontalOffset>0.03</narrowCrownHorizontalOffset>
+        <drawData>
+          <defaultData>
+            <layer>90</layer>
+          </defaultData>
+          <dataSouth>
+            <layer>2</layer>
+          </dataSouth>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+    <displayCategory>BTE_Insectoid</displayCategory>
+    <displayOrderInCategory>5</displayOrderInCategory>
+
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>0</biostatMet>
+  </GeneDef>
+  
+  <GeneDef>
+    <defName>BTEIst_JellyLover</defName>
+	<geneClass>BTE_IST.Gene_JellyLover</geneClass>
+    <label>insect jelly metabolism</label>
+    <description>Carriers of this gene have their biology optimized towards consuming insect jelly. They are less active without it, but become much more active than normal with it. Some insectoid abilities are empowered while metabolizing jelly.</description>
+    <iconPath>Genes/Icons/BTEIst_JellyLoverIcon</iconPath>
+    <displayCategory>BTE_Insectoid</displayCategory>
+    <displayOrderInCategory>6</displayOrderInCategory>
+    <statOffsets>
+      <RestFallRateFactor>0.4</RestFallRateFactor>
+	  <InjuryHealingFactor>-0.2</InjuryHealingFactor>
+    </statOffsets>
+    <biostatMet>3</biostatMet>
+    <descriptionHyperlinks>
+      <HediffDef>BTEIst_JellyEnergized</HediffDef>
+    </descriptionHyperlinks>
+  </GeneDef>
+  
+
+  <GeneDef>
+    <defName>BTEIst_CaveLover</defName>
+    <label>cave lover</label>
+    <description>Carriers of this gene have an inherent desire to remain indoors and especially within mountains.</description>
+    <iconPath>Genes/Icons/BTEIst_CaveLoverIcon</iconPath>
+    <displayCategory>BTE_Insectoid</displayCategory>
+    <displayOrderInCategory>7</displayOrderInCategory>
+    <forcedTraits>
+      <li>
+        <def>Undergrounder</def>
+      </li>
+    </forcedTraits>
+    <biostatMet>3</biostatMet>
+    <biostatCpx>1</biostatCpx>
+  </GeneDef>
+  
+  <GeneDef>
+    <defName>BTEIst_JellyStrength</defName>
+	<geneClass>BTE_IST.Gene_JellyLover</geneClass>
+    <label>insect jelly bodybuilder</label>
+    <description>Carriers of this gene have their muscles optimized from consuming insect jelly. They are much stronger while metabolizing insect jelly.</description>
+    <iconPath>Genes/Icons/BTEIst_JellyBodyIcon</iconPath>
+    <displayCategory>BTE_Insectoid</displayCategory>
+    <displayOrderInCategory>8</displayOrderInCategory>
+    <prerequisite>BTEIst_JellyLover</prerequisite>
+	<modExtensions>
+		<li Class="BTE_IST.GeneJellyHediffGiver">
+			<hediff>BTEIst_JellyStrength</hediff>
+		</li>
+	</modExtensions>
+    <descriptionHyperlinks>
+      <HediffDef>BTEIst_JellyStrength</HediffDef>
+    </descriptionHyperlinks>
+    <biostatMet>-2</biostatMet>
+  </GeneDef>
+  
+  
+  <GeneDef>
+    <defName>BTEIst_HardenedChitin</defName>
+    <label>hardened chitin</label>
+    <description>Carriers of this gene have their bodies reinforced with a hard layer of chitin, granting some protection from physical attacks.</description>
+    <iconPath>Genes/Icons/BTEIst_HardenedChitinIcon</iconPath>
+    <displayCategory>BTE_Insectoid</displayCategory>
+    <displayOrderInCategory>70</displayOrderInCategory>
+	<statOffsets>
+	  <ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+	  <ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+	</statOffsets>
+    <biostatMet>-1</biostatMet>
+  </GeneDef>
+  
+  <GeneDef>
+    <defName>BTEIst_Exogelatin</defName>
+    <label>exogelatin</label>
+    <description>Carriers of this gene will have their chitin become stronger from consuming insect jelly, doubling the natural bonus from hardened chitin.</description>
+    <geneClass>BTE_IST.Gene_JellyLover</geneClass>
+    <iconPath>Genes/Icons/BTEIst_JellyExogelatinIcon</iconPath>
+    <displayCategory>BTE_Insectoid</displayCategory>
+    <prerequisite>BTEIst_HardenedChitin</prerequisite>
+    <displayOrderInCategory>71</displayOrderInCategory>
+	<modExtensions>
+		<li Class="BTE_IST.GeneJellyHediffGiver">
+			<hediff>BTEIst_Exogelatin</hediff>
+		</li>
+	</modExtensions>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>-1</biostatMet>
+  </GeneDef>
+  
+  
+  <GeneDef>
+    <defName>BTEIst_InjectInsectoidGenes</defName>
+    <label>genetic rewriter - insectoid</label>
+    <description>Carriers of this gene have a biomechanical organ which can permanently rewire another person's endogenetic code. This variant can only inject insectoid endogenes.</description>
+    <iconPath>Genes/Icons/BTEIst_InjectInsectoidGenesIcon</iconPath>
+    <displayCategory>BTE_Insectoid</displayCategory>
+    <displayOrderInCategory>72</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <descriptionHyperlinks>
+      <AbilityDef>BTEIst_InjectInsectoidGenes</AbilityDef>
+    </descriptionHyperlinks>
+    <abilities>
+      <li>BTEIst_InjectInsectoidGenes</li>
+    </abilities>
+  </GeneDef>
+  
+  <GeneDef>
+    <defName>BTEIst_InsectoidPresence</defName>
+    <label>insectoid presence</label>
+    <description>Carriers of this gene demonstrate subtle and explicit behaviors that aliken them to a feral insectoid, such as subconscious chittering and twitching erratically.\n\nThis freaks out people who do not share the same tendencies, but unites those who do, granting an opinion bonus to others with the same gene and a massive opinion malus to those who don't. The kind and the blind are able to look past these odd proclivities.</description>
+    <iconPath>Genes/Icons/BTEIst_InsectoidPresenceIcon</iconPath>
+    <displayCategory>BTE_Insectoid</displayCategory>
+    <displayOrderInCategory>73</displayOrderInCategory>
+    <biostatMet>2</biostatMet>
+    <biostatCpx>1</biostatCpx>
+  </GeneDef>
+  
+ 
+  <GeneDef ParentName="GeneVoiceBase">
+    <defName>BTEIst_MegaspiderVoice</defName>
+    <label>megaspider voice</label>
+    <description>Carriers have a megaspider's vocalizations.</description>
+    <iconPath>Genes/Icons/BTEIst_MegaspiderVoiceIcon</iconPath>
+    <displayOrderInCategory>9</displayOrderInCategory>
+    <displayCategory>BTE_Insectoid</displayCategory>
+	<soundWounded>Pawn_BigInsect_Pain</soundWounded>
+	<soundDeath>Pawn_BigInsect_Death</soundDeath>
+	<soundCall>Pawn_BigInsect_Call</soundCall>
+  </GeneDef>
+<!-- SPELO-SPLICE -->
+
+  <GeneDef ParentName="GeneTailBase">
+    <defName>BTEIst_SpelopedeTail</defName>
+    <label>spelopede abdomen</label>
+    <description>Carriers of this gene grow a spelopede abdomen.</description>
+    <iconPath>Genes/Icons/BTEIst_SpelopedeTailIcon</iconPath>
+    <iconColor>(0.75, 0.75, 0.75)</iconColor>
+    <displayOrderInCategory>10</displayOrderInCategory>
+    <displayCategory>BTE_Insectoid</displayCategory>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>0</biostatMet>
+	<renderNodeProperties>
+      <li>
+        <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+        <texPath>Things/Pawn/Humanlike/BodyAttachments/SpelopedeTail/SpelopedeTail</texPath>
+        <colorType>Skin</colorType>
+        <overrideMeshSize>(1, 1)</overrideMeshSize>
+        <parentTagDef>Body</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+          <defaultData>
+            <layer>-2</layer>
+          </defaultData>
+          <dataNorth>
+            <offset>(0, 0, -0.25)</offset>
+            <layer>90</layer>
+          </dataNorth>
+          <dataSouth>
+            <offset>(0, 0, -0.25)</offset>
+          </dataSouth>
+          <dataEast>
+            <offset>(-0.5, 0, -0.15)</offset>
+          </dataEast>
+          <dataWest>
+            <offset>(0.5, 0, -0.15)</offset>
+          </dataWest>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+	</GeneDef>
+
+  <GeneDef ParentName="GeneJawBase">
+	<defName>BTEIst_SpelopedeHead</defName>
+	<label>spelopede head</label>
+	<description>Carriers of this gene have a pointy spelopede head.</description>
+	<iconPath>Genes/Icons/BTEIst_SpelopedeHeadIcon</iconPath>
+	<forcedHeadTypes>
+	  <li>BTEIst_SpelopedeHead</li>
+	</forcedHeadTypes>
+	<displayCategory>BTE_Insectoid</displayCategory>
+	<displayOrderInCategory>11</displayOrderInCategory>
+  </GeneDef>
+  
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>BTEIst_SpelopedeHead</defName>
+    <graphicPath>Things/Pawn/Humanlike/Heads/Genes/SpelopedeHead/SpelopedeHead</graphicPath>
+    <randomChosen>false</randomChosen>
+    <gender>None</gender>
+    <requiredGenes>
+      <li>BTEIst_SpelopedeHead</li>
+    </requiredGenes>
+    <eyeOffsetEastWest>(0.15, 0, 0.175)</eyeOffsetEastWest>
+  </HeadTypeDef>
+  
+
+  <GeneDef ParentName="GeneSkinColorOverride">
+    <defName>BTEIst_SpelopedeSkin</defName>
+    <label>spelopede skin</label>
+    <description>Carriers of this gene produce a pigment that turns their skin a color similar to that of a spelopede.</description>
+    <skinColorOverride>(156,148,125)</skinColorOverride>
+	<displayCategory>BTE_Insectoid</displayCategory>
+    <displayOrderInCategory>12</displayOrderInCategory>
+  </GeneDef>
+
+
+  <GeneDef>
+    <defName>BTEIst_ToxicStingerLauncher</defName>
+    <label>toxic stinger launcher</label>
+    <description>Carriers can expend some nutrition to fire a toxin filled spike at a target. Damage and severity are doubled while metabolizing jelly.</description>
+    <iconPath>Genes/Icons/BTEIst_ToxicInjectorIcon</iconPath>
+    <displayCategory>BTE_Insectoid</displayCategory>
+    <displayOrderInCategory>13</displayOrderInCategory>
+    <abilities>
+      <li>BTEIst_ToxicStingLauncher</li>
+    </abilities>
+    <descriptionHyperlinks>
+      <AbilityDef>BTEIst_ToxicStingLauncher</AbilityDef>
+    </descriptionHyperlinks>
+    <biostatMet>-1</biostatMet>
+    <biostatCpx>1</biostatCpx>
+  </GeneDef>
+  <GeneDef>
+    <defName>BTEIst_VolatileStingerLauncher</defName>
+    <label>volatile stinger launcher</label>
+    <description>Carriers can expend considerable nutrition to fire a volatile venom filled spike at a target. Very low damage, but high severity infliction. Severity is doubled while metabolizing jelly.</description>
+    <iconPath>Genes/Icons/BTEIst_VolatileInjectorIcon</iconPath>
+    <displayCategory>BTE_Insectoid</displayCategory>
+    <displayOrderInCategory>14</displayOrderInCategory>
+    <abilities>
+      <li>BTEIst_VolatileStingLauncher</li>
+    </abilities>
+    <descriptionHyperlinks>
+      <AbilityDef>BTEIst_VolatileStingLauncher</AbilityDef>
+    </descriptionHyperlinks>
+    <biostatMet>-3</biostatMet>
+    <biostatCpx>1</biostatCpx>
+  </GeneDef>
+  
+
+  <GeneDef>
+    <defName>BTEIst_JellyThinker</defName>
+	<geneClass>BTE_IST.Gene_JellyLover</geneClass>
+    <label>insect jelly thinker</label>
+    <description>Carriers of this gene have their brain activity optimized from consuming insect jelly. They are more clever while metabolizing jelly.</description>
+    <iconPath>Genes/Icons/BTEIst_JellyThinkerIcon</iconPath>
+    <displayCategory>BTE_Insectoid</displayCategory>
+    <displayOrderInCategory>15</displayOrderInCategory>
+    <prerequisite>BTEIst_JellyLover</prerequisite>
+	<modExtensions>
+		<li Class="BTE_IST.GeneJellyHediffGiver">
+			<hediff>BTEIst_JellyBrained</hediff>
+		</li>
+	</modExtensions>
+    <descriptionHyperlinks>
+      <HediffDef>BTEIst_JellyBrained</HediffDef>
+    </descriptionHyperlinks>
+    <biostatMet>-1</biostatMet>
+  </GeneDef>
+ 
+
+  <GeneDef ParentName="GeneVoiceBase">
+    <defName>BTEIst_SpelopedeVoice</defName>
+    <label>spelopede voice</label>
+    <description>Carriers have a spelopede's vocalizations.</description>
+    <iconPath>Genes/Icons/BTEIst_SpelopedeVoiceIcon</iconPath>
+    <displayOrderInCategory>16</displayOrderInCategory>
+    <displayCategory>BTE_Insectoid</displayCategory>
+	<soundWounded>Pawn_Spelopede_Pain</soundWounded>
+	<soundDeath>Pawn_Spelopede_Death</soundDeath>
+	<soundCall>Pawn_Spelopede_Call</soundCall>
+  </GeneDef>
+ 
+<!-- SPLICE-SCARAB -->
+
+  <GeneDef ParentName="GeneTailBase">
+    <defName>BTEIst_MegascarabTail</defName>
+    <label>megascarab shell</label>
+    <description>Carriers of this gene grow a megascarab shell.</description>
+    <iconPath>Genes/Icons/BTEIst_MegascarabTailIcon</iconPath>
+    <iconColor>(0.75, 0.75, 0.75)</iconColor>
+    <displayOrderInCategory>20</displayOrderInCategory>
+    <displayCategory>BTE_Insectoid</displayCategory>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>0</biostatMet>
+	<renderNodeProperties>
+      <li>
+        <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+        <texPath>Things/Pawn/Humanlike/BodyAttachments/MegascarabTail/MegascarabTail</texPath>
+        <colorType>Skin</colorType>
+        <overrideMeshSize>(1, 1)</overrideMeshSize>
+        <parentTagDef>Body</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+          <defaultData>
+            <layer>-2</layer>
+          </defaultData>
+          <dataNorth>
+            <offset>(0, 0, -0.25)</offset>
+            <layer>90</layer>
+          </dataNorth>
+          <dataSouth>
+            <offset>(0, 0, -0.25)</offset>
+          </dataSouth>
+          <dataEast>
+            <offset>(-0.5, 0, -0.15)</offset>
+            <layer>90</layer>
+          </dataEast>
+          <dataWest>
+            <offset>(0.5, 0, -0.15)</offset>
+            <layer>90</layer>
+          </dataWest>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+	</GeneDef>
+
+  <GeneDef ParentName="GeneJawBase">
+	<defName>BTEIst_MegascarabHead</defName>
+	<label>Megascarab head</label>
+	<description>Carriers of this gene have a smooth megascarab head.</description>
+	<iconPath>Genes/Icons/BTEIst_MegascarabHeadIcon</iconPath>
+	<forcedHeadTypes>
+	  <li>BTEIst_MegascarabHead</li>
+	</forcedHeadTypes>
+	<displayCategory>BTE_Insectoid</displayCategory>
+	<displayOrderInCategory>21</displayOrderInCategory>
+  </GeneDef>
+  
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>BTEIst_MegascarabHead</defName>
+    <graphicPath>Things/Pawn/Humanlike/Heads/Genes/MegascarabHead/MegascarabHead</graphicPath>
+    <randomChosen>false</randomChosen>
+    <gender>None</gender>
+    <requiredGenes>
+      <li>BTEIst_MegascarabHead</li>
+    </requiredGenes>
+    <eyeOffsetEastWest>(0.15, 0, 0.175)</eyeOffsetEastWest>
+  </HeadTypeDef>
+  
+
+  <GeneDef ParentName="GeneSkinColorOverride">
+    <defName>BTEIst_MegascarabSkin</defName>
+    <label>megascarab skin</label>
+    <description>Carriers of this gene produce a pigment that turns their skin a color similar to that of a megascarab.</description>
+    <skinColorOverride>(114,107,84)</skinColorOverride>
+	<displayCategory>BTE_Insectoid</displayCategory>
+    <displayOrderInCategory>22</displayOrderInCategory>
+  </GeneDef>
+  
+
+  <GeneDef>
+    <defName>BTEIst_JellyProducer</defName>
+    <label>insect jelly producer</label>
+    <description>Carriers of this gene produce insect jelly, which they must regurgitate out every so often.</description>
+    <geneClass>BTE.Gene_ExcessMilkProduction</geneClass>
+    <iconPath>Genes/Icons/BTEIst_JellyIcon</iconPath>
+    <displayCategory>BTE_Insectoid</displayCategory>
+    <displayOrderInCategory>23</displayOrderInCategory>
+	<modExtensions>
+		<li Class="BTE.GeneMaterialProduced">
+			<produces>InsectJelly</produces>
+			<intervalDays>1</intervalDays>
+			<amount>11</amount>
+		</li>
+	</modExtensions>
+    <exclusionTags>
+      <li>Milk</li>
+    </exclusionTags>
+    <minAgeActive>18</minAgeActive>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>-2</biostatMet>
+  </GeneDef>
+  <GeneDef>
+    <defName>BTEIst_JellyConverter</defName>
+    <label>insect jelly converter</label>
+    <description>Carriers of this gene may process food into insect jelly.</description>
+    <iconPath>Genes/Icons/BTEIst_JellyConversionIcon</iconPath>
+    <displayCategory>BTE_Insectoid</displayCategory>
+    <displayOrderInCategory>24</displayOrderInCategory>
+    <abilities>
+      <li>BTEIst_JellyConversion</li>
+      <li>BTEIst_JellyTransmutationer</li>
+    </abilities>
+    <descriptionHyperlinks>
+      <AbilityDef>BTEIst_JellyConversion</AbilityDef>
+      <AbilityDef>BTEIst_JellyTransmutationer</AbilityDef>
+    </descriptionHyperlinks>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>-1</biostatMet>
+  </GeneDef>
+  
+
+  <GeneDef>
+    <defName>BTEIst_RapidEater</defName>
+    <label>rapid eater</label>
+    <description>Carriers of this gene consume food rapidly.</description>
+    <iconPath>Genes/Icons/BTEIst_RapidEaterIcon</iconPath>
+    <displayCategory>BTE_Insectoid</displayCategory>
+    <displayOrderInCategory>25</displayOrderInCategory>
+    <statOffsets>
+      <EatingSpeed>4</EatingSpeed>
+    </statOffsets>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>-1</biostatMet>
+  </GeneDef>
+  
+
+  <GeneDef>
+    <defName>BTEIst_TameInsectoid</defName>
+    <label>tame insectoid</label>
+    <description>Carriers may release pheromones that pacifies insectoids.</description>
+    <iconPath>Genes/Icons/BTEIst_TameInsectoidIcon</iconPath>
+    <displayCategory>BTE_Insectoid</displayCategory>
+    <displayOrderInCategory>26</displayOrderInCategory>
+    <abilities>
+      <li>BTEIst_TameInsectoid</li>
+    </abilities>
+    <descriptionHyperlinks>
+      <AbilityDef>BTEIst_TameInsectoid</AbilityDef>
+    </descriptionHyperlinks>
+    <biostatMet>-1</biostatMet>
+    <biostatCpx>1</biostatCpx>
+  </GeneDef>
+  
+
+  <GeneDef>
+    <defName>BTEIst_JellyLaborer</defName>
+	<geneClass>BTE_IST.Gene_JellyLover</geneClass>
+    <label>insect jelly laborer</label>
+    <description>Carriers of this gene have their dexterity and focus amplified from consuming insect jelly. They work faster while metabolizing insect jelly.</description>
+    <iconPath>Genes/Icons/BTEIst_JellyLaborerIcon</iconPath>
+    <displayCategory>BTE_Insectoid</displayCategory>
+    <displayOrderInCategory>27</displayOrderInCategory>
+    <prerequisite>BTEIst_JellyLover</prerequisite>
+	<modExtensions>
+		<li Class="BTE_IST.GeneJellyHediffGiver">
+			<hediff>BTEIst_JellyLaborer</hediff>
+		</li>
+	</modExtensions>
+    <descriptionHyperlinks>
+      <HediffDef>BTEIst_JellyLaborer</HediffDef>
+    </descriptionHyperlinks>
+    <biostatMet>-1</biostatMet>
+  </GeneDef>
+  
+
+
+  <GeneDef ParentName="GeneVoiceBase">
+    <defName>BTEIst_MegascarabVoice</defName>
+    <label>megascarab voice</label>
+    <description>Carriers have a megascarab's vocalizations.</description>
+    <iconPath>Genes/Icons/BTEIst_MegascarabVoiceIcon</iconPath>
+    <displayOrderInCategory>28</displayOrderInCategory>
+    <displayCategory>BTE_Insectoid</displayCategory>
+	<soundWounded>Pawn_Megascarab_Wounded</soundWounded>
+	<soundDeath>Pawn_Megascarab_Death</soundDeath>
+	<soundCall>Pawn_Megascarab_Call</soundCall>
+  </GeneDef>
+  
+</Defs>

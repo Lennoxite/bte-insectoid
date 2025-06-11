@@ -1,0 +1,9 @@
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\bte-insectoid\1.5\Assemblies\BiotechExpansion_Insectoid.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\bte-insectoid\1.5\Source\BiotechExpansion_Insectoid\obj\Debug\BiotechExpansion_Insectoid.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\bte-insectoid\1.5\Source\BiotechExpansion_Insectoid\obj\Debug\BiotechExpansion_Insectoid.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\bte-insectoid\1.5\Source\BiotechExpansion_Insectoid\obj\Debug\BiotechExpansion_Insectoid.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\bte-insectoid\1.6\Source\BiotechExpansion_Insectoid\obj\Debug\BiotechExpansion_Insectoid.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\bte-insectoid\1.6\Source\BiotechExpansion_Insectoid\obj\Debug\BiotechExpansion_Insectoid.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\bte-insectoid\1.6\Source\BiotechExpansion_Insectoid\obj\Debug\BiotechExpansion_Insectoid.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\bte-insectoid\1.6\Assemblies\BiotechExpansion_Insectoid.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\bte-insectoid\1.6\Source\BiotechExpansion_Insectoid\obj\Debug\BiotechExpansion_Insectoid.csproj.CopyComplete

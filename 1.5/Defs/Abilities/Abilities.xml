@@ -148,7 +148,7 @@
   <AbilityDef>
     <defName>BTEIst_ToxInject</defName>
     <label>toxin injection</label>
-    <description>Use the thorax to inject toxins directly into a target.</description>
+    <description>Use the abdomen to inject toxins directly into a target.</description>
     <jobDef>CastAbilityOnThingMelee</jobDef>
     <iconPath>Genes/Icons/BTEIst_MegaspiderTailIcon</iconPath>
     <cooldownTicksRange>2500</cooldownTicksRange>

@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ECB4A8F3-CBCD-456D-BA13-0DB837BEF062}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BTE_IST</RootNamespace>
+    <AssemblyName>BiotechExpansion_Insectoid</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp, Version=1.6.9293.21513, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BTEIst_AbilityDefOf.cs" />
+    <Compile Include="BTEIst_GeneDefOf.cs" />
+    <Compile Include="BTEIst_HediffDefOf.cs" />
+    <Compile Include="Command_AbilityAutoCastableJelly.cs" />
+    <Compile Include="Command_AbilityXenotypeSelector.cs" />
+    <Compile Include="CompAbilityEffect_CreateJelly.cs" />
+    <Compile Include="CompAbilityEffect_CreateJellyFromThing.cs" />
+    <Compile Include="CompAbilityEffect_DeleteSelf.cs" />
+    <Compile Include="CompAbilityEffect_InjectEndogenes.cs" />
+    <Compile Include="CompAbilityEffect_LaunchProjectileJellyBuffable.cs" />
+    <Compile Include="CompAbilityEffect_TameInsectoid.cs" />
+    <Compile Include="CompAbilityEffect_Toxpop.cs" />
+    <Compile Include="CompProperties_AbilityCreateJelly.cs" />
+    <Compile Include="CompProperties_AbilityCreateJellyFromThing.cs" />
+    <Compile Include="CompProperties_AbilityDeleteSelf.cs" />
+    <Compile Include="CompProperties_AbilityInjectEndogenes.cs" />
+    <Compile Include="CompProperties_AbilityLaunchProjectileJellyBuffable.cs" />
+    <Compile Include="CompProperties_AbilityTameInsectoid.cs" />
+    <Compile Include="CompProperties_AbilityToxpop.cs" />
+    <Compile Include="ConditionalStatAffector_JellyBuffed.cs" />
+    <Compile Include="GeneJellyHediffGiver.cs" />
+    <Compile Include="Gene_JellyLover.cs" />
+    <Compile Include="HediffCompProperties_ExplodeOnDeathSeverityBased.cs" />
+    <Compile Include="HediffComp_ExplodeOnDeathSeverityBased.cs" />
+    <Compile Include="JobGiver_TransmuteFood.cs" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BTEIst_ThoughtDefOf.cs" />
+    <Compile Include="ThoughtWorker_InsectoidPresence.cs" />
+    <Compile Include="ThoughtWorker_NoInsectoidPresence.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
