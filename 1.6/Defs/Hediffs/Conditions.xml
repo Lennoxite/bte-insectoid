@@ -294,8 +294,8 @@
     <stages>
       <li>
         <statFactors>
-          <MeleeCooldownFactor>0.5</MeleeCooldownFactor>
-          <RangedCooldownFactor>0.65</RangedCooldownFactor>
+          <MeleeCooldownFactor>0.75</MeleeCooldownFactor>
+          <RangedCooldownFactor>0.80</RangedCooldownFactor>
         </statFactors>
         <statOffsets>
           <MoveSpeed>3</MoveSpeed>
