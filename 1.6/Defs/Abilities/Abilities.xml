@@ -368,8 +368,75 @@
 	  <li>BTEIst_Megaspider</li>
 	  <li>BTEIst_Spelopede</li>
 	  <li>BTEIst_Megascarab</li>
+	  <li MayRequire="Ludeon.RimWorld.Odyssey">BTEIst_Locust</li>
 	  </xenotypes>
       </li>	
     </comps>
   </AbilityDef> 
+  
+
+  <AbilityDef>
+    <defName>BTEIst_LocustJump</defName>
+    <label>locust jump</label>
+    <description>Hop to a nearby location.</description>
+    <iconPath>Genes/Icons/BTEIst_LocustWingIcon</iconPath>
+    <cooldownTicksRange>200</cooldownTicksRange>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityJump</verbClass>
+      <label>jump</label>
+      <violent>false</violent>
+      <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+      <warmupTime>0.35</warmupTime>
+      <range>20</range>
+      <requireLineOfSight>true</requireLineOfSight>
+      <soundCast>Longjump_Jump</soundCast>
+      <soundLanding>Longjump_Land</soundLanding>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>      
+      <li Class="BTE.CompProperties_AbilityHungerCost">
+        <hungerCost>0.1</hungerCost>
+      </li>	
+      <li Class="BTE_IST.CompProperties_NeedsJelly" />
+    </comps>
+  </AbilityDef>
+  
+  <AbilityDef>
+    <defName>BTEIst_OverclockReflexes</defName>
+    <label>overclock reflexes</label>
+    <description>Vastly boost the speed of the mind and body for a short period of time. If the user isn't metabolizing insect jelly when the effect ends, they will enter a protective Psychic Shock for a couple hours.</description>
+    <iconPath>Genes/Icons/BTEIst_OverclockReflexesIcon</iconPath>
+    <cooldownTicksRange>15000</cooldownTicksRange>
+    <hostile>false</hostile>
+    <groupAbility>true</groupAbility>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <aiCanUse>true</aiCanUse>
+    <ai_IsOffensive>true</ai_IsOffensive>
+    <targetRequired>false</targetRequired>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <drawAimPie>false</drawAimPie>
+      <requireLineOfSight>false</requireLineOfSight>
+      <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+      <soundCast>FireSpew_Resolve</soundCast>
+      <targetable>false</targetable>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>BTEIst_OverclockedReflexes</hediffDef>
+        <onlyApplyToSelf>True</onlyApplyToSelf>
+        <replaceExisting>true</replaceExisting>
+      </li>
+    </comps>
+  </AbilityDef>
 </Defs>

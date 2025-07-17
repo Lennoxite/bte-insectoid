@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- ========== SharpClaws ========== -->
+
+<Operation Class="PatchOperationFindMod">
+  <mods>
+    <li>Odyssey</li>
+  </mods>
+	<match Class="PatchOperationSequence">
+	  <operations>
+		<li Class="PatchOperationReplace">
+			<xpath>Defs/FactionDef[defName="BTEIst_SpliceHive"]/xenotypeSet/xenotypeChances/BTEIst_Spelopede</xpath>
+			<value>
+				
+			<BTEIst_Spelopede>0.28</BTEIst_Spelopede>
+			<BTEIst_Locust>0.05</BTEIst_Locust>
+			</value>
+		</li>
+	  </operations>
+	</match>
+</Operation>
+</Patch>

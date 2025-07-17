@@ -62,6 +62,7 @@
     <Compile Include="CompAbilityEffect_DeleteSelf.cs" />
     <Compile Include="CompAbilityEffect_InjectEndogenes.cs" />
     <Compile Include="CompAbilityEffect_LaunchProjectileJellyBuffable.cs" />
+    <Compile Include="CompAbilityEffect_NeedsJelly.cs" />
     <Compile Include="CompAbilityEffect_TameInsectoid.cs" />
     <Compile Include="CompAbilityEffect_Toxpop.cs" />
     <Compile Include="CompProperties_AbilityCreateJelly.cs" />
@@ -69,13 +70,16 @@
     <Compile Include="CompProperties_AbilityDeleteSelf.cs" />
     <Compile Include="CompProperties_AbilityInjectEndogenes.cs" />
     <Compile Include="CompProperties_AbilityLaunchProjectileJellyBuffable.cs" />
+    <Compile Include="CompProperties_AbilityNeedsJelly.cs" />
     <Compile Include="CompProperties_AbilityTameInsectoid.cs" />
     <Compile Include="CompProperties_AbilityToxpop.cs" />
     <Compile Include="ConditionalStatAffector_JellyBuffed.cs" />
     <Compile Include="GeneJellyHediffGiver.cs" />
     <Compile Include="Gene_JellyLover.cs" />
     <Compile Include="HediffCompProperties_ExplodeOnDeathSeverityBased.cs" />
+    <Compile Include="HediffCompProperties_HediffOnRemovalWithJelly.cs" />
     <Compile Include="HediffComp_ExplodeOnDeathSeverityBased.cs" />
+    <Compile Include="HediffComp_HediffOnRemovalWithJelly.cs" />
     <Compile Include="JobGiver_TransmuteFood.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

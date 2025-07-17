@@ -280,4 +280,35 @@
       </li>
     </comps>
   </HediffDef>
+  
+
+  <HediffDef>
+    <defName>BTEIst_OverclockedReflexes</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>overclocked reflexes</label>
+    <description>Mind and body are vastly accelerated. Without metabolizing insect jelly, the creature will suffer from Psychic Shock as soon as it fades.</description>
+    <defaultLabelColor>(1,0.4,0.4)</defaultLabelColor>
+    <initialSeverity>1</initialSeverity>
+    <maxSeverity>1</maxSeverity>
+    <everCurableByItem>false</everCurableByItem>
+    <stages>
+      <li>
+        <statFactors>
+          <MeleeCooldownFactor>0.5</MeleeCooldownFactor>
+        </statFactors>
+        <statOffsets>
+          <MoveSpeed>3</MoveSpeed>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-12</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+      <li Class="BTE_IST.HediffCompProperties_HediffOnRemovalWithJelly">
+        <withoutJelly>PsychicShock</withoutJelly>
+      </li>
+    </comps>
+  </HediffDef>
 </Defs>

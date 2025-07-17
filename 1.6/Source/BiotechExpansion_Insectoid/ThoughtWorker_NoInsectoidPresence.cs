@@ -44,7 +44,7 @@ namespace BTE_IST
 
 		private bool PawnHasInsectoidPresence(Pawn pwn)
         {
-			return pwn.genes.HasGene(BTEIst_GeneDefOf.BTEIst_InsectoidPresence);
+			return pwn.genes.HasActiveGene(BTEIst_GeneDefOf.BTEIst_InsectoidPresence);
         }
 	}
 }

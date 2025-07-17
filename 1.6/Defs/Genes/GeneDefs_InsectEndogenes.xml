@@ -643,4 +643,169 @@
 	<soundCall>Pawn_Megascarab_Call</soundCall>
   </GeneDef>
   
+<!-- LOCUST (ODYSSEY) -->
+
+  <GeneDef ParentName="GeneJawBase" MayRequire="Ludeon.RimWorld.Odyssey">
+	<defName>BTEIst_LocustHead</defName>
+	<label>Locust head</label>
+	<description>Carriers of this gene have a smooth megascarab head.</description>
+	<iconPath>Genes/Icons/BTEIst_LocustHeadIcon</iconPath>
+	<forcedHeadTypes>
+	  <li>BTEIst_LocustHead</li>
+	</forcedHeadTypes>
+	<displayCategory>BTE_Insectoid</displayCategory>
+	<displayOrderInCategory>30</displayOrderInCategory>
+  </GeneDef>
+  
+  <HeadTypeDef ParentName="AverageBase" MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>BTEIst_LocustHead</defName>
+    <graphicPath>Things/Pawn/Humanlike/Heads/Genes/LocustHead/LocustHead</graphicPath>
+    <randomChosen>false</randomChosen>
+    <gender>None</gender>
+    <requiredGenes>
+      <li>BTEIst_LocustHead</li>
+    </requiredGenes>
+    <eyeOffsetEastWest>(0.15, 0, 0.175)</eyeOffsetEastWest>
+  </HeadTypeDef>
+  
+  <GeneDef ParentName="GeneTailBase" MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>BTEIst_LocustTail</defName>
+    <label>locust abdomen</label>
+    <description>Carriers of this gene grow a locust abdomen.</description>
+    <iconPath>Genes/Icons/BTEIst_LocustTailIcon</iconPath>
+    <iconColor>(0.75, 0.75, 0.75)</iconColor>
+    <displayOrderInCategory>31</displayOrderInCategory>
+    <displayCategory>BTE_Insectoid</displayCategory>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>0</biostatMet>
+	<renderNodeProperties>
+      <li>
+        <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+        <texPath>Things/Pawn/Humanlike/BodyAttachments/LocustTail/LocustTail</texPath>
+        <colorType>Skin</colorType>
+        <overrideMeshSize>(1, 1)</overrideMeshSize>
+        <parentTagDef>Body</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+          <defaultData>
+            <layer>-2</layer>
+          </defaultData>
+          <dataNorth>
+            <offset>(0, 0, -0.25)</offset>
+            <layer>90</layer>
+          </dataNorth>
+          <dataSouth>
+            <offset>(0, 0, -0.25)</offset>
+          </dataSouth>
+          <dataEast>
+            <offset>(-0.5, 0, -0.15)</offset>
+          </dataEast>
+          <dataWest>
+            <offset>(0.5, 0, -0.15)</offset>
+          </dataWest>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+	</GeneDef>
+	
+	<GeneDef ParentName="GeneHeadboneBase" MayRequire="Ludeon.RimWorld.Odyssey">
+	<defName>BTEIst_LocustWings</defName>
+	<label>locust wings</label>
+	<description>Carriers of this gene grow two locust wings out of the back of their head. Enables two kinds of jump abilities, but one requires insect jelly to be metabolized.</description>
+	<iconPath>Genes/Icons/BTEIst_LocustWingIcon</iconPath>
+	<renderNodeProperties>
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <parentTagDef>Head</parentTagDef>
+
+        <colorType>Skin</colorType>
+        <useRottenColor>true</useRottenColor>
+        <useSkinShader>true</useSkinShader>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/LocustHeadwings/LocustHeadwings</texPath>
+        <narrowCrownHorizontalOffset>0.03</narrowCrownHorizontalOffset>
+        <drawData>
+          <defaultData>
+            <layer>80</layer>
+          </defaultData>
+          <dataEast>
+		  <offset>(0, 0, 0)</offset>
+          </dataEast>
+          <dataWest>
+		  <offset>(0, 0, 0)</offset>
+          </dataWest>
+          <dataSouth>
+            <layer>3</layer>
+          </dataSouth>
+          <dataNorth>
+            <layer>80</layer>
+          </dataNorth>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+    <displayCategory>BTE_Insectoid</displayCategory>
+    <displayOrderInCategory>32</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>-1</biostatMet>
+    <abilities>
+      <li>BTEIst_LocustJump</li>
+    </abilities>
+  </GeneDef>
+
+  <GeneDef ParentName="GeneSkinColorOverride" MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>BTEIst_LocustSkin</defName>
+    <label>locust skin</label>
+    <description>Carriers of this gene produce a pigment that turns their skin a color similar to that of a locust.</description>
+    <skinColorOverride>(145,140,109)</skinColorOverride>
+	<displayCategory>BTE_Insectoid</displayCategory>
+    <displayOrderInCategory>33</displayOrderInCategory>
+  </GeneDef>
+  
+ 
+  <GeneDef ParentName="GeneVoiceBase" MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>BTEIst_LocustVoice</defName>
+    <label>locust voice</label>
+    <description>Carriers have a locust's vocalizations.</description>
+    <iconPath>Genes/Icons/BTEIst_LocustVoiceIcon</iconPath>
+    <displayOrderInCategory>34</displayOrderInCategory>
+    <displayCategory>BTE_Insectoid</displayCategory>
+    <soundWounded>Pawn_Locust_Wounded</soundWounded>
+    <soundDeath>Pawn_Locust_Death</soundDeath>
+    <soundCall>Pawn_Locust_Call</soundCall>
+  </GeneDef>
+
+
+  <GeneDef MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>BTEIst_OverclockReflexes</defName>
+    <label>overclock reflexes</label>
+    <description>Carriers may give themselves brief bursts of speed, but will suffer a brief coma without insect jelly metabolism.</description>
+    <iconPath>Genes/Icons/BTEIst_OverclockReflexesIcon</iconPath>
+    <displayCategory>BTE_Insectoid</displayCategory>
+    <displayOrderInCategory>35</displayOrderInCategory>
+    <abilities>
+      <li>BTEIst_OverclockReflexes</li>
+    </abilities>
+    <descriptionHyperlinks>
+      <AbilityDef>BTEIst_OverclockReflexes</AbilityDef>
+    </descriptionHyperlinks>
+    <biostatMet>-2</biostatMet>
+    <biostatCpx>1</biostatCpx>
+  </GeneDef>
+  
+  <GeneDef MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>BTEIst_InternalCompass</defName>
+    <label>internal compass</label>
+    <description>Carriers have a deeply developed internal compass that boosts their ability to pilot ships and travel the world.</description>
+    <iconPath>Genes/Icons/BTEIst_InternalCompassIcon</iconPath>
+    <displayCategory>BTE_Insectoid</displayCategory>
+    <displayOrderInCategory>36</displayOrderInCategory>
+    <statOffsets>
+      <PilotingAbility>0.5</PilotingAbility>
+      <CaravanBonusSpeedFactor>0.5</CaravanBonusSpeedFactor>
+    </statOffsets>
+    <biostatMet>-1</biostatMet>
+    <biostatCpx>1</biostatCpx>
+  </GeneDef>
 </Defs>
