@@ -712,7 +712,7 @@
 	<GeneDef ParentName="GeneHeadboneBase" MayRequire="Ludeon.RimWorld.Odyssey">
 	<defName>BTEIst_LocustWings</defName>
 	<label>locust wings</label>
-	<description>Carriers of this gene grow two locust wings out of the back of their head. Enables two kinds of jump abilities, but one requires insect jelly to be metabolized.</description>
+	<description>Carriers of this gene grow two locust wings out of the back of their head. Can be used to jump while metabolizing insect jelly.</description>
 	<iconPath>Genes/Icons/BTEIst_LocustWingIcon</iconPath>
 	<renderNodeProperties>
       <li>
