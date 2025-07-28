@@ -447,7 +447,7 @@
     <label>inject insectoid egg</label>
     <description>Inject an insectoid egg into the target pawn. Bigger insectoids need bigger bodies to gestate.</description>
     <jobDef>CastAbilityOnThingMelee</jobDef>
-    <iconPath>Genes/Icons/BTEIst_InjectInsectoidGenesIcon</iconPath>
+    <iconPath>Genes/Icons/BTEIst_InjectInsectoidEggIcon</iconPath>
     <cooldownTicksRange>12000</cooldownTicksRange>
     <aiCanUse>false</aiCanUse>
 	<hostile>true</hostile>

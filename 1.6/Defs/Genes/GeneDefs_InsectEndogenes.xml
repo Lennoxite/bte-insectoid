@@ -808,4 +808,25 @@
     <biostatMet>-1</biostatMet>
     <biostatCpx>1</biostatCpx>
   </GeneDef>
+  
+  
+<!-- HIVE QUEEN (ODYSSEY) -->
+
+  
+  <GeneDef>
+    <defName>BTEIst_InjectInsectoidEgg</defName>
+    <label>genetic rewriter - insectoid</label>
+    <description>Carriers of this gene can inject regular insectoid eggs into living beings. The bigger the insectoid, the bigger the living being's body needs to be to gestate it.</description>
+    <iconPath>Genes/Icons/BTEIst_InjectInsectoidEggIcon</iconPath>
+    <displayCategory>BTE_Insectoid</displayCategory>
+    <displayOrderInCategory>40</displayOrderInCategory>
+    <biostatMet>-3</biostatMet>
+    <biostatCpx>1</biostatCpx>
+    <descriptionHyperlinks>
+      <AbilityDef>BTEIst_InjectInsectoidEgg</AbilityDef>
+    </descriptionHyperlinks>
+    <abilities>
+      <li>BTEIst_InjectInsectoidEgg</li>
+    </abilities>
+  </GeneDef>
 </Defs>
