@@ -312,4 +312,100 @@
       </li>
     </comps>
   </HediffDef>
+  <HediffDef ParentName="DiseaseBase">
+    <defName>BTEIst_GestatingInsectoid</defName>
+    <label>gestating insectoid</label>
+    <description>An insectoid is growing inside the body. Without a surgical extraction, the resulting insectoid will soon burst out, killing its host.</description>
+    <hediffClass>BTE_IST.Hediff_GestatingInsectoid</hediffClass>
+    <defaultLabelColor>(0.25,0.9,0.25)</defaultLabelColor>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>24</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_Effecter">
+        <stateEffecter>Damage_HitFlesh</stateEffecter>
+        <severityIndices>4</severityIndices>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>bump</label>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.6</minSeverity>
+        <label>distended</label>
+        <vomitMtbDays>1.5</vomitMtbDays>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.5</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.85</minSeverity>
+        <label>swollen</label>
+        <lifeThreatening>true</lifeThreatening>
+        <vomitMtbDays>0.75</vomitMtbDays>
+        <painOffset>0.5</painOffset>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <setMax>0.1</setMax>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.95</minSeverity>
+        <label>bursting</label>
+        <lifeThreatening>true</lifeThreatening>
+        <vomitMtbDays>0.25</vomitMtbDays>
+        <painOffset>1</painOffset>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <setMax>0.1</setMax>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>BTEIst_ExtractInsectoidEgg</defName>
+    <label>extract insectoid egg</label>
+    <description>This surgical operation removes a gestating insectoid within a patient.</description>
+    <workerClass>Recipe_RemoveHediff</workerClass>
+    <jobString>Extracting insectoid egg.</jobString>
+    <workAmount>2000</workAmount>
+    <hideBodyPartNames>true</hideBodyPartNames>
+    <isViolation>false</isViolation>
+    <targetsBodyPart>false</targetsBodyPart>
+    <removesHediff>BTEIst_GestatingInsectoid</removesHediff>
+    <successfullyRemovedHediffMessage>{0} has successfully extracted {1}'s insectoid egg.</successfullyRemovedHediffMessage>
+    <skillRequirements>
+      <Medicine>5</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+  </RecipeDef>
 </Defs>

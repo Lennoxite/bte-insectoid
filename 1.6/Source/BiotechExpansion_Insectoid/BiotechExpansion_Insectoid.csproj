@@ -80,6 +80,7 @@
     <Compile Include="HediffCompProperties_HediffOnRemovalWithJelly.cs" />
     <Compile Include="HediffComp_ExplodeOnDeathSeverityBased.cs" />
     <Compile Include="HediffComp_HediffOnRemovalWithJelly.cs" />
+    <Compile Include="Hediff_GestatingInsectoid.cs" />
     <Compile Include="JobGiver_TransmuteFood.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
