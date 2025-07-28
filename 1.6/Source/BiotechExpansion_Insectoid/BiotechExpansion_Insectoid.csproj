@@ -53,14 +53,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BTEIst_AbilityDefOf.cs" />
+    <Compile Include="BTEIst_BugBodySizeDefExtension.cs" />
+    <Compile Include="BTEIst_BugBodySizePair.cs" />
     <Compile Include="BTEIst_GeneDefOf.cs" />
     <Compile Include="BTEIst_HediffDefOf.cs" />
     <Compile Include="Command_AbilityAutoCastableJelly.cs" />
+    <Compile Include="Command_AbilityInsectoidSelector.cs" />
     <Compile Include="Command_AbilityXenotypeSelector.cs" />
     <Compile Include="CompAbilityEffect_CreateJelly.cs" />
     <Compile Include="CompAbilityEffect_CreateJellyFromThing.cs" />
     <Compile Include="CompAbilityEffect_DeleteSelf.cs" />
     <Compile Include="CompAbilityEffect_InjectEndogenes.cs" />
+    <Compile Include="CompAbilityEffect_InjectInsectoidEgg.cs" />
     <Compile Include="CompAbilityEffect_LaunchProjectileJellyBuffable.cs" />
     <Compile Include="CompAbilityEffect_NeedsJelly.cs" />
     <Compile Include="CompAbilityEffect_TameInsectoid.cs" />
@@ -69,6 +73,7 @@
     <Compile Include="CompProperties_AbilityCreateJellyFromThing.cs" />
     <Compile Include="CompProperties_AbilityDeleteSelf.cs" />
     <Compile Include="CompProperties_AbilityInjectEndogenes.cs" />
+    <Compile Include="CompProperties_AbilityInjectInsectoidEgg.cs" />
     <Compile Include="CompProperties_AbilityLaunchProjectileJellyBuffable.cs" />
     <Compile Include="CompProperties_AbilityNeedsJelly.cs" />
     <Compile Include="CompProperties_AbilityTameInsectoid.cs" />

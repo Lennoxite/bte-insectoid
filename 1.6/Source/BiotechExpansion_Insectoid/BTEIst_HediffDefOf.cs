@@ -12,6 +12,7 @@ namespace BTE_IST
 		}
 
 		public static HediffDef BTEIst_JellyEnergized;
+        public static HediffDef BTEIst_GestatingInsectoid;
 
 
     }

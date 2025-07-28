@@ -317,14 +317,15 @@
     <label>gestating insectoid</label>
     <description>An insectoid is growing inside the body. Without a surgical extraction, the resulting insectoid will soon burst out, killing its host.</description>
     <hediffClass>BTE_IST.Hediff_GestatingInsectoid</hediffClass>
+    <makesSickThought>true</makesSickThought>
     <defaultLabelColor>(0.25,0.9,0.25)</defaultLabelColor>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>24</severityPerDay>
+        <severityPerDay>0.33</severityPerDay>
       </li>
       <li Class="HediffCompProperties_Effecter">
-        <stateEffecter>Damage_HitFlesh</stateEffecter>
-        <severityIndices>4</severityIndices>
+        <stateEffecter>BTEIst_BuggyEffect</stateEffecter>
+        <severityIndices>2~4</severityIndices>
       </li>
     </comps>
     <stages>

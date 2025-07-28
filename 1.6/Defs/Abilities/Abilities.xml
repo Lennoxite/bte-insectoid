@@ -439,4 +439,65 @@
       </li>
     </comps>
   </AbilityDef>
+
+
+  <AbilityDef>
+    <defName>BTEIst_InjectInsectoidEgg</defName>
+	<gizmoClass>BTE_IST.Command_AbilityInsectoidSelector</gizmoClass>
+    <label>inject insectoid egg</label>
+    <description>Inject an insectoid egg into the target pawn. Bigger insectoids need bigger bodies to gestate.</description>
+    <jobDef>CastAbilityOnThingMelee</jobDef>
+    <iconPath>Genes/Icons/BTEIst_InjectInsectoidGenesIcon</iconPath>
+    <cooldownTicksRange>12000</cooldownTicksRange>
+    <aiCanUse>false</aiCanUse>
+	<hostile>true</hostile>
+    <targetRequired>true</targetRequired>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <showCastingProgressBar>true</showCastingProgressBar>
+	<stunTargetWhileCasting>true</stunTargetWhileCasting>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityTouch</verbClass>
+      <warmupTime>1</warmupTime>
+      <range>-1</range>
+      <drawAimPie>false</drawAimPie> 
+      <violent>false</violent>     
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+		<canTargetMechs>false</canTargetMechs>
+		<canTargetHumans>true</canTargetHumans>
+		<canTargetAnimals>true</canTargetAnimals>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityFleckOnTarget">
+        <fleckDef>BloodSplash</fleckDef>
+      </li>
+      <li Class="BTE_IST.CompProperties_InjectInsectoidEgg">
+	  <pawnkindPairs>
+	  <li>
+		<pawnkind>Megascarab</pawnkind> <!-- The insectoid to gestate. -->
+		<bodySize>0.25</bodySize> <!-- How big does the target need to be. -->
+	  </li>
+	  <li>
+		<pawnkind>Spelopede</pawnkind>
+		<bodySize>0.5</bodySize>
+	  </li>
+	  <li>
+		<pawnkind>Megaspider</pawnkind>
+		<bodySize>1</bodySize>
+	  </li>
+	  <li>
+		<pawnkind>Locust</pawnkind>
+		<bodySize>0.5</bodySize>
+	  </li>
+	  <li>
+		<pawnkind>HiveQueen</pawnkind>
+		<bodySize>4</bodySize>
+	  </li>
+	  </pawnkindPairs>
+      </li>	
+    </comps>
+  </AbilityDef>
 </Defs>

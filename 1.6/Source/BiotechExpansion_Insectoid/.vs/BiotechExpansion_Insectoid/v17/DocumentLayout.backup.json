@@ -11,12 +11,12 @@
       "RelativeMoniker": "D:0:0:{ECB4A8F3-CBCD-456D-BA13-0DB837BEF062}|BiotechExpansion_Insectoid.csproj|solutionrelative:compabilityeffect_injectinsectoidegg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ECB4A8F3-CBCD-456D-BA13-0DB837BEF062}|BiotechExpansion_Insectoid.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\bte-insectoid\\1.6\\Source\\BiotechExpansion_Insectoid\\compabilityeffect_injectendogenes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ECB4A8F3-CBCD-456D-BA13-0DB837BEF062}|BiotechExpansion_Insectoid.csproj|solutionrelative:compabilityeffect_injectendogenes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{ECB4A8F3-CBCD-456D-BA13-0DB837BEF062}|BiotechExpansion_Insectoid.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\bte-insectoid\\1.6\\Source\\BiotechExpansion_Insectoid\\compabilityeffect_createjellyfromthing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ECB4A8F3-CBCD-456D-BA13-0DB837BEF062}|BiotechExpansion_Insectoid.csproj|solutionrelative:compabilityeffect_createjellyfromthing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECB4A8F3-CBCD-456D-BA13-0DB837BEF062}|BiotechExpansion_Insectoid.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\bte-insectoid\\1.6\\Source\\BiotechExpansion_Insectoid\\compabilityeffect_injectendogenes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECB4A8F3-CBCD-456D-BA13-0DB837BEF062}|BiotechExpansion_Insectoid.csproj|solutionrelative:compabilityeffect_injectendogenes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ECB4A8F3-CBCD-456D-BA13-0DB837BEF062}|BiotechExpansion_Insectoid.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\bte-insectoid\\1.6\\Source\\BiotechExpansion_Insectoid\\bteist_abilitydefof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -185,27 +185,27 @@
               "RelativeDocumentMoniker": "Command_AbilityInsectoidSelector.cs",
               "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\bte-insectoid\\1.6\\Source\\BiotechExpansion_Insectoid\\Command_AbilityInsectoidSelector.cs",
               "RelativeToolTip": "Command_AbilityInsectoidSelector.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBwAAABOAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABwAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-28T07:06:10.7Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "CompAbilityEffect_InjectEndogenes.cs",
               "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\bte-insectoid\\1.6\\Source\\BiotechExpansion_Insectoid\\CompAbilityEffect_InjectEndogenes.cs",
               "RelativeDocumentMoniker": "CompAbilityEffect_InjectEndogenes.cs",
               "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\bte-insectoid\\1.6\\Source\\BiotechExpansion_Insectoid\\CompAbilityEffect_InjectEndogenes.cs",
               "RelativeToolTip": "CompAbilityEffect_InjectEndogenes.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAYwBoAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBoAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-11T20:55:55.332Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "CompAbilityEffect_CreateJellyFromThing.cs",
               "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\bte-insectoid\\1.6\\Source\\BiotechExpansion_Insectoid\\CompAbilityEffect_CreateJellyFromThing.cs",
               "RelativeDocumentMoniker": "CompAbilityEffect_CreateJellyFromThing.cs",

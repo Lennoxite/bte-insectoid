@@ -14,12 +14,28 @@ namespace BTE_IST
         {
             get
             {
-                if (parent != null)
+                return LabelBase + BugType;
+            }
+        }
+
+        private string bugType = null;
+
+        public string BugType
+        {
+            get
+            {
+                if (bugType == null)
                 {
-                    if (parent.IsColonist)
-                        return LabelBase + " (friendly " + bugSpawn.label + ")";
+                    if (parent != null)
+                    {
+                        if (parent.IsColonist)
+                            bugType = " [friendly " + bugSpawn.label + "]";
+                    }
+                    bugType = " [" + bugSpawn.label + "]";
+
                 }
-                return LabelBase + " (" +  bugSpawn.label + ")";
+
+                return bugType;
             }
         }
 
@@ -68,6 +84,9 @@ namespace BTE_IST
 
                         SoundDefOf.Designate_Tame.PlayOneShot(new TargetInfo(positionHeld, pawn.Map));
                     }
+                    SoundDefOf.CocoonDestroyed.PlayOneShot(new TargetInfo(positionHeld, pawn.Map));
+
+                    FleckMaker.AttachedOverlay(pawn, FleckDefOf.FlashHollow, new Vector3(0f, 0f, 0.26f));
                 }    
              
                 pawn.Kill(null);
