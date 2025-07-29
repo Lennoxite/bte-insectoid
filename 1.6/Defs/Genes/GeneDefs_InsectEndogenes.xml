@@ -813,9 +813,9 @@
 <!-- HIVE QUEEN (ODYSSEY) -->
 
   
-  <GeneDef>
+  <GeneDef MayRequire="Ludeon.RimWorld.Odyssey">
     <defName>BTEIst_InjectInsectoidEgg</defName>
-    <label>genetic rewriter - insectoid</label>
+    <label>insectoid egg injector</label>
     <description>Carriers of this gene can inject regular insectoid eggs into living beings. The bigger the insectoid, the bigger the living being's body needs to be to gestate it.</description>
     <iconPath>Genes/Icons/BTEIst_InjectInsectoidEggIcon</iconPath>
     <displayCategory>BTE_Insectoid</displayCategory>
@@ -828,5 +828,26 @@
     <abilities>
       <li>BTEIst_InjectInsectoidEgg</li>
     </abilities>
+  </GeneDef>
+  
+
+  <GeneDef MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>BTEIst_JellyMajesty</defName>
+	<geneClass>BTE_IST.Gene_JellyLover</geneClass>
+    <label>insect jelly majesty</label>
+    <description>Carriers of this gene have their social abilities optimized from consuming insect jelly. They are more convincing while metabolizing jelly.</description>
+    <iconPath>Genes/Icons/BTEIst_JellyMajestyIcon</iconPath>
+    <displayCategory>BTE_Insectoid</displayCategory>
+    <displayOrderInCategory>41</displayOrderInCategory>
+    <prerequisite>BTEIst_JellyLover</prerequisite>
+	<modExtensions>
+		<li Class="BTE_IST.GeneJellyHediffGiver">
+			<hediff>BTEIst_JellyMajesty</hediff>
+		</li>
+	</modExtensions>
+    <descriptionHyperlinks>
+      <HediffDef>BTEIst_JellyMajesty</HediffDef>
+    </descriptionHyperlinks>
+    <biostatMet>-1</biostatMet>
   </GeneDef>
 </Defs>

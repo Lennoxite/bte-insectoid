@@ -49,11 +49,6 @@ namespace BTE_IST
             newBug.bugSpawn = thisBug;
 
 
-            Ability ab = target.Pawn.abilities.GetAbility(BTEIst_AbilityDefOf.BTEIst_InjectInsectoidEgg);
-            if (ab != null)
-            {
-                ab.StartCooldown(180000);
-            }
         }
 
 
