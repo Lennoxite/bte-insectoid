@@ -9,7 +9,8 @@ namespace BTE_IST
     public class Hediff_GestatingInsectoid : HediffWithComps
     {
         public PawnKindDef bugSpawn = PawnKindDefOf.Megaspider;
-        public Pawn parent = null;
+        //public Pawn parent = null;
+        public Faction parent = null;
         public override string Label
         {
             get
@@ -28,7 +29,7 @@ namespace BTE_IST
                 {
                     if (parent != null)
                     {
-                        if (parent.IsColonist)
+                        if (parent == Faction.OfPlayer)
                             bugType = " [friendly " + bugSpawn.label + "]";
                     }
                     bugType = " [" + bugSpawn.label + "]";
@@ -56,7 +57,7 @@ namespace BTE_IST
                     Faction newFaction = Faction.OfInsects;
                     if (parent != null)
                     {
-                        newFaction = parent.Faction;
+                        newFaction = parent;
                     }
                     Pawn newPawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(bugSpawn, newFaction));
                     if (!GenAdj.TryFindRandomAdjacentCell8WayWithRoom(pawn.SpawnedParentOrMe, out var result))

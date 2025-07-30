@@ -45,7 +45,7 @@ namespace BTE_IST
 
             Hediff_GestatingInsectoid newBug = (Hediff_GestatingInsectoid)target.Pawn.health.AddHediff(BTEIst_HediffDefOf.BTEIst_GestatingInsectoid);
 
-            newBug.parent = this.parent.pawn;
+            newBug.parent = this.parent.pawn.Faction;
             newBug.bugSpawn = thisBug;
 
 
