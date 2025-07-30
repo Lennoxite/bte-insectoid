@@ -935,7 +935,7 @@
   
   <GeneDef ParentName="GeneJawBase" MayRequire="Ludeon.RimWorld.Odyssey">
 	<defName>BTEIst_HiveQueenHead</defName>
-	<label>Locust head</label>
+	<label>hive queen head</label>
 	<description>Carriers of this gene have a regal hive queen head.</description>
 	<iconPath>Genes/Icons/BTEIst_HiveQueenHeadIcon</iconPath>
 	<forcedHeadTypes>
