@@ -369,6 +369,7 @@
 	  <li>BTEIst_Spelopede</li>
 	  <li>BTEIst_Megascarab</li>
 	  <li MayRequire="Ludeon.RimWorld.Odyssey">BTEIst_Locust</li>
+	  <li MayRequire="Ludeon.RimWorld.Odyssey">BTEIst_HiveQueen</li>
 	  </xenotypes>
       </li>	
     </comps>
@@ -488,11 +489,11 @@
 		<pawnkind>Megaspider</pawnkind>
 		<bodySize>1</bodySize>
 	  </li>
-	  <li>
+	  <li MayRequire="Ludeon.RimWorld.Odyssey">
 		<pawnkind>Locust</pawnkind>
 		<bodySize>0.5</bodySize>
 	  </li>
-	  <li>
+	  <li MayRequire="Ludeon.RimWorld.Odyssey">
 		<pawnkind>HiveQueen</pawnkind>
 		<bodySize>4</bodySize>
 	  </li>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- ========== SharpClaws ========== -->
+
+<Operation Class="PatchOperationFindMod">
+  <mods>
+    <li>Odyssey</li>
+  </mods>
+	<match Class="PatchOperationSequence">
+	  <operations>
+		<li Class="PatchOperationFindMod">
+		  <mods>
+			<li>Big and Small - Genes &amp; More</li>
+		  </mods>
+			<match Class="PatchOperationInsert">
+				<xpath>Defs/XenotypeDef[defName="BTEIst_HiveQueen"]/genes/li[text()="BTEIst_InjectInsectoidGenes"]</xpath>
+				<value>
+					<li>HalfColossusFrame</li>
+					<li>Body_FemaleOnly</li>
+				</value>
+			</match>
+		</li>
+	  </operations>
+	</match>
+</Operation>
+</Patch>

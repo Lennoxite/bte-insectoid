@@ -850,4 +850,135 @@
     </descriptionHyperlinks>
     <biostatMet>-1</biostatMet>
   </GeneDef>
+ 
+  <GeneDef ParentName="GeneVoiceBase" MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>BTEIst_HiveQueenVoice</defName>
+    <label>hive queen voice</label>
+    <description>Carriers have a hive queen's vocalizations.</description>
+    <iconPath>Genes/Icons/BTEIst_HiveQueenVoiceIcon</iconPath>
+    <displayOrderInCategory>42</displayOrderInCategory>
+    <displayCategory>BTE_Insectoid</displayCategory>
+  <soundWounded>Pawn_HiveQueen_Wounded</soundWounded>
+  <soundDeath>Pawn_HiveQueen_Death</soundDeath>
+  <soundCall>Pawn_HiveQueen_Call</soundCall>
+  </GeneDef>
+  
+  <GeneDef ParentName="GeneTailBase" MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>BTEIst_HiveQueenTail</defName>
+    <label>hive queen abdomen</label>
+    <description>Carriers of this gene grow a hive queen abdomen.</description>
+    <iconPath>Genes/Icons/BTEIst_HiveQueenTailIcon</iconPath>
+    <iconColor>(0.75, 0.75, 0.75)</iconColor>
+    <displayOrderInCategory>43</displayOrderInCategory>
+    <displayCategory>BTE_Insectoid</displayCategory>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>0</biostatMet>
+	<renderNodeProperties>
+      <li>
+        <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+        <texPath>Things/Pawn/Humanlike/BodyAttachments/HiveQueenTail/HiveQueenTail</texPath>
+		<color>(255, 255, 255)</color>
+        <overrideMeshSize>(1, 1)</overrideMeshSize>
+        <parentTagDef>Body</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+		  <scale>1.3</scale>
+          <defaultData>
+            <layer>-2</layer>
+          </defaultData>
+          <dataNorth>
+            <offset>(0, 0, -0.25)</offset>
+            <layer>90</layer>
+          </dataNorth>
+          <dataSouth>
+            <offset>(0, 0, 0.1)</offset>
+          </dataSouth>
+          <dataEast>
+            <offset>(-0.6, 0, 0)</offset>
+          </dataEast>
+          <dataWest>
+            <offset>(0.6, 0, 0)</offset>
+          </dataWest>
+        </drawData>
+      </li>
+      <li>
+        <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+        <texPath>Things/Pawn/Humanlike/BodyAttachments/HiveQueenAttach/HiveQueenAttach</texPath>
+		<color>(255, 255, 255)</color>
+        <overrideMeshSize>(1, 1)</overrideMeshSize>
+        <parentTagDef>Body</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+		  <scale>1.2</scale>
+          <defaultData>
+            <layer>90</layer>
+          </defaultData>
+          <dataNorth>
+            <offset>(0, 0, -0.1)</offset>
+            <layer>89</layer>
+          </dataNorth>
+          <dataSouth>
+            <offset>(0, 0, -0.05)</offset>
+          </dataSouth>
+          <dataEast>
+            <offset>(0, 0, -0.1)</offset>
+          </dataEast>
+          <dataWest>
+            <offset>(0, 0, -0.1)</offset>
+          </dataWest>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+	</GeneDef>
+  
+  <GeneDef ParentName="GeneJawBase" MayRequire="Ludeon.RimWorld.Odyssey">
+	<defName>BTEIst_HiveQueenHead</defName>
+	<label>Locust head</label>
+	<description>Carriers of this gene have a regal hive queen head.</description>
+	<iconPath>Genes/Icons/BTEIst_HiveQueenHeadIcon</iconPath>
+	<forcedHeadTypes>
+	  <li>BTEIst_HiveQueenHead</li>
+	</forcedHeadTypes>
+	<displayCategory>BTE_Insectoid</displayCategory>
+	<displayOrderInCategory>44</displayOrderInCategory>
+  </GeneDef>
+  
+  <HeadTypeDef ParentName="AverageBase" MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>BTEIst_HiveQueenHead</defName>
+    <graphicPath>Things/Pawn/Humanlike/Heads/Genes/HiveQueenHead/HiveQueenHead</graphicPath>
+    <randomChosen>false</randomChosen>
+    <gender>None</gender>
+    <requiredGenes>
+      <li>BTEIst_HiveQueenHead</li>
+    </requiredGenes>
+    <eyeOffsetEastWest>(0.15, 0, 0.175)</eyeOffsetEastWest>
+  </HeadTypeDef>
+  
+  <GeneDef ParentName="GeneSkinColorOverride" MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>BTEIst_HiveQueenSkin</defName>
+    <label>hive queen skin</label>
+    <description>Carriers of this gene produce a pigment that turns their skin a color similar to that of a hive queen.</description>
+    <skinColorOverride>(119,103,87)</skinColorOverride>
+	<displayCategory>BTE_Insectoid</displayCategory>
+    <displayOrderInCategory>45</displayOrderInCategory>
+  </GeneDef>
+  
+  <GeneDef MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>BTEIst_EggSpewer</defName>
+    <label>egg spewer</label>
+    <description>Carriers of this gene can spew out eggs like regular hive queens.</description>
+    <iconPath>UI/Commands/EggSpew</iconPath>
+    <displayCategory>BTE_Insectoid</displayCategory>
+    <displayOrderInCategory>46</displayOrderInCategory>
+    <biostatMet>-1</biostatMet>
+    <biostatCpx>1</biostatCpx>
+    <descriptionHyperlinks>
+      <AbilityDef>EggSpew</AbilityDef>
+    </descriptionHyperlinks>
+    <abilities>
+      <li>EggSpew</li>
+    </abilities>
+  </GeneDef>
 </Defs>

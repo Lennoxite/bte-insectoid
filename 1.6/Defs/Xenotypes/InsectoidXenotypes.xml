@@ -173,6 +173,51 @@
 	  <li>BTEIst_InjectInsectoidGenes</li>
     </genes>
   </XenotypeDef>
+  <XenotypeDef MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>BTEIst_HiveQueen</defName>
+    <label>splice-queen</label>
+    <description>Beautiful and thoughtful, splice-queens are born from an unethical insectoid gene operation. They handle animals and people with ease, and can create a legion of regular insectoids all on their own, but need an entire hive to support themselves.</description>
+    <descriptionShort>Splice-queens handle animals and people with ease, and can create a legion of regular insectoids all on their own, but need an entire hive to support themselves.</descriptionShort>
+    <iconPath>UI/Xenotypes/Splice_Queen</iconPath>
+    <inheritable>true</inheritable>
+    <genes>
+      <li>DarkVision</li>
+      <li>BTEIst_HiveQueenHead</li> 
+      <li>BTEIst_HiveQueenVoice</li>
+      <li>Fertile</li>
+      <li>BTEIst_EggSpewer</li>
+      <li>BTEIst_InjectInsectoidEgg</li>
+      <li>Beard_NoBeardOnly</li>
+      <li>BTEIst_JellyLover</li>
+      <li>Aggression_Aggressive</li>
+	  <li>StrongStomach</li>
+      <li>AptitudeRemarkable_Animals</li>
+      <li>AptitudeRemarkable_Social</li>
+      <li>AptitudeStrong_Artistic</li>
+      <li>AptitudePoor_Melee</li>
+      <li>AptitudePoor_Shooting</li>
+      <li>Beauty_Beautiful</li>
+      <li>PsychicAbility_Extreme</li>
+      <li>MoveSpeed_Slow</li>
+      <li>Hair_Gray</li>
+      <li>Sleepy</li>
+      <li>Nearsighted</li>
+      <li>Robust</li>
+      <li>NakedSpeed</li>
+      <li>AptitudeTerrible_Mining</li>
+      <li>AptitudeTerrible_Plants</li>
+      <li>Body_Standard</li>
+      <li>BTEIst_JellyMajesty</li>
+      <li>ToxicEnvironmentResistance_Total</li>
+      <li>BTEIst_CaveLover</li>
+      <li>BTEIst_HiveQueenTail</li>
+      <li>BTEIst_HiveQueenSkin</li>
+      <li>PollutionRush</li>
+      <li>UVSensitivity_Mild</li>
+      <li>BTEIst_InsectoidPresence</li>
+	  <li>BTEIst_InjectInsectoidGenes</li>
+    </genes>
+  </XenotypeDef>
   
  
 </Defs>
