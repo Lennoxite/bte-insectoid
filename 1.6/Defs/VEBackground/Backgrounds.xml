@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <VBE.BackgroundImageDef MayRequire="vanillaexpanded.backgrounds">
+        <label>BTE Insectoids</label>
+        <description>Bugs for everyone.</description>
+        <defName>BTEIst_BG</defName>
+        <path>BiotechExpansionInsectoidBG</path>
+        <iconPath>BiotechExpansionInsectoidIcon</iconPath>
+    </VBE.BackgroundImageDef>
+	
+
+	
+</Defs>
