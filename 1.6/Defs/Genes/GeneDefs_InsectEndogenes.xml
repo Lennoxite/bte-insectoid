@@ -648,7 +648,7 @@
   <GeneDef ParentName="GeneJawBase" MayRequire="Ludeon.RimWorld.Odyssey">
 	<defName>BTEIst_LocustHead</defName>
 	<label>Locust head</label>
-	<description>Carriers of this gene have a smooth megascarab head.</description>
+	<description>Carriers of this gene have a pointy locust head.</description>
 	<iconPath>Genes/Icons/BTEIst_LocustHeadIcon</iconPath>
 	<forcedHeadTypes>
 	  <li>BTEIst_LocustHead</li>
