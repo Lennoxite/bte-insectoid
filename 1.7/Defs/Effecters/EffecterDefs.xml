@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <EffecterDef>
+    <defName>BTEIst_BuggyEffect</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_DrifterEmoteChance</subEffecterClass>
+        <scale>0.3~0.9</scale>
+        <chancePerTick>0.04</chancePerTick>
+        <positionRadius>0.3</positionRadius>
+        <moteDef>BTEIst_BugMote</moteDef>
+        <speed>0~1</speed>
+        <angle>0~359</angle>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <ThingDef ParentName="MoteBase">
+    <defName>BTEIst_BugMote</defName>
+    <graphicData>
+		<texPath>Motes/BugMote</texPath>
+		<graphicClass>Graphic_MoteRandom</graphicClass>
+    </graphicData>
+    <thingClass>MoteThrownAttached</thingClass>
+    <altitudeLayer>MetaOverlays</altitudeLayer>
+    <mote>
+      <fadeInTime>0.10</fadeInTime>
+      <solidTime>0.5</solidTime>
+      <fadeOutTime>0.1</fadeOutTime>
+      <attachedDrawOffset>(0, 0, 0)</attachedDrawOffset>
+    </mote>
+  </ThingDef>
+</Defs>

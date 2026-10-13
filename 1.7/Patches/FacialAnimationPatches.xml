@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- ========== SharpClaws ========== -->
+
+<Operation Class="PatchOperationFindMod">
+  <mods>
+    <li>[NL] Facial Animation - WIP</li>
+  </mods>
+	<match Class="PatchOperationSequence">
+	  <operations>
+		<li Class="PatchOperationAdd">
+			<xpath>Defs/GeneDef[defName="BTEIst_MegaspiderHead"]/renderNodeProperties</xpath>
+			<value>
+			  <li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<parentTagDef>Head</parentTagDef>
+				<colorType>Skin</colorType>
+				<useRottenColor>true</useRottenColor>
+				<useSkinShader>true</useSkinShader>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<texPath>Things/Pawn/Humanlike/Heads/Genes/MegaspiderHeadFA/MegaspiderHeadFA</texPath>
+				<narrowCrownHorizontalOffset>0.03</narrowCrownHorizontalOffset>
+				<drawData>
+				  <defaultData>
+					<layer>50.1</layer>
+				  </defaultData>
+				  <dataEast>
+				  <offset>(0, 0, 0)</offset>
+				  </dataEast>
+				  <dataWest>
+				  <offset>(0, 0, 0)</offset>
+				  </dataWest>
+				  <dataSouth>
+				  <offset>(0, 0, 0)</offset>
+				  </dataSouth>
+				  <dataNorth>
+				  <offset>(0, 0, 0)</offset>
+				  </dataNorth>
+				</drawData>
+			  </li>
+			</value>
+		</li>
+		<li Class="PatchOperationAdd">
+			<xpath>Defs/GeneDef[defName="BTEIst_SpelopedeHead"]</xpath>
+			<value>
+			<renderNodeProperties>
+			  <li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<parentTagDef>Head</parentTagDef>
+				<colorType>Skin</colorType>
+				<useRottenColor>true</useRottenColor>
+				<useSkinShader>true</useSkinShader>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<texPath>Things/Pawn/Humanlike/Heads/Genes/SpelopedeHeadFA/SpelopedeHeadFA</texPath>
+				<narrowCrownHorizontalOffset>0.03</narrowCrownHorizontalOffset>
+				<drawData>
+				  <defaultData>
+					<layer>50.1</layer>
+				  </defaultData>
+				  <dataEast>
+				  <offset>(0, 0, 0)</offset>
+				  </dataEast>
+				  <dataWest>
+				  <offset>(0, 0, 0)</offset>
+				  </dataWest>
+				  <dataSouth>
+				  <offset>(0, 0, 0)</offset>
+				  </dataSouth>
+				  <dataNorth>
+				  <offset>(0, 0, 0)</offset>
+				  </dataNorth>
+				</drawData>
+			  </li>
+			
+			</renderNodeProperties>
+			</value>
+		</li>
+		<li Class="PatchOperationAdd">
+			<xpath>Defs/GeneDef[defName="BTEIst_MegascarabHead"]</xpath>
+			<value>
+			<renderNodeProperties>
+			  <li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<parentTagDef>Head</parentTagDef>
+				<colorType>Skin</colorType>
+				<useRottenColor>true</useRottenColor>
+				<useSkinShader>true</useSkinShader>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<texPath>Things/Pawn/Humanlike/Heads/Genes/MegascarabHeadFA/MegascarabHeadFA</texPath>
+				<narrowCrownHorizontalOffset>0.03</narrowCrownHorizontalOffset>
+				<drawData>
+				  <defaultData>
+					<layer>50.1</layer>
+				  </defaultData>
+				  <dataEast>
+				  <offset>(0, 0, 0)</offset>
+				  </dataEast>
+				  <dataWest>
+				  <offset>(0, 0, 0)</offset>
+				  </dataWest>
+				  <dataSouth>
+				  <offset>(0, 0, 0)</offset>
+				  </dataSouth>
+				  <dataNorth>
+				  <offset>(0, 0, 0)</offset>
+				  </dataNorth>
+				</drawData>
+			  </li>
+			
+			</renderNodeProperties>
+			</value>
+		</li>
+	  </operations>
+	</match>
+</Operation>
+</Patch>
